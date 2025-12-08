@@ -37,4 +37,94 @@
       border-radius: 8px;
       font-weight: 600;
       font-size: 1.125rem;
-      text-decoration: none
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .cta-button:hover {
+      background: #1d4ed8;
+      text-decoration: none;
+    }
+
+    /* Benefits */
+    .section { padding: 3rem 0; }
+    .section-title { text-align: center; margin-bottom: 2.5rem; font-size: 1.875rem; color: #0c4a6e; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .card { background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+    .card h3 { color: #1e40af; }
+
+    /* Offer */
+    .offer { background: #fff; border: 2px solid #dbeafe; border-radius: 16px; padding: 2.5rem; margin: 2rem 0; }
+    .price { font-size: 1.5rem; font-weight: 700; color: #1e40af; margin: 1.5rem 0; }
+
+    /* Footer */
+    footer { background: #1e3a8a; color: white; padding: 2rem 0; text-align: center; }
+    footer a { color: #93c5fd; }
+    footer a:hover { color: white; }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 1.75rem; }
+      .section-title { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+      <div class="logo">Value Network Lab</div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>¿Está su organización perdiendo millones por redes de valor rotas?</h1>
+      <p>Usted invierte en innovación, IA y transformación… pero el valor no fluye. Sus equipos están en silos. Sus sistemas no hablan. Sus pérdidas son invisibles.</p>
+      <a href="#offer" class="cta-button">Agende su Formación-Acción Inicial</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Beneficios Tangibles para Grandes Empresas</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>🔍 Valor oculto revelado</h3>
+          <p>Hasta 3–5% del EBITDA perdido en procesos como Order-to-Cash, invisible para KPIs tradicionales.</p>
+        </div>
+        <div class="card">
+          <h3>⚡ Ciclos operativos acelerados</h3>
+          <p>Reducción de 150 a 30 días en contratación al eliminar actividades innecesarias.</p>
+        </div>
+        <div class="card">
+          <h3>🤝 Colaboración real</h3>
+          <p>Rompa silos entre negocio, IT e innovación con un lenguaje común basado en redes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="offer">
+    <div class="container">
+      <h2 class="section-title">Formación-Acción Inicial: Descubra VNA en 3 horas</h2>
+      <div class="offer">
+        <p>¿Quiere probar la metodología antes de comprometer un proyecto de 6-7 cifras?</p>
+        <ul style="text-align: left; margin: 1.5rem 0; padding-left: 1.5rem;">
+          <li>Introducción práctica a la lógica de redes de valor</li>
+          <li>Ejercicio colaborativo con una red crítica de su organización</li>
+          <li>Diagnóstico preliminar de “fugas de valor”</li>
+          <li>Ruta clara hacia un proyecto con ROI cuantificable</li>
+        </ul>
+        <div class="price">Inversión: €2,500 (incluye informe ejecutivo personalizado)</div>
+        <a href="mailto:contacto@valuenetworklab.com?subject=Quiero agendar mi Formación-Acción VNA" class="cta-button">RESERVAR MI SESIÓN AHORA</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>Value Network Lab — Basado en la metodología de Verna Allee. Validado en empresas globales como IKEA.</p>
+      <p><a href="mailto:contacto@valuenetworklab.com">contacto@valuenetworklab.com</a></p>
+    </div>
+  </footer>
+</body>
+</html>
