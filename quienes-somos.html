@@ -151,6 +151,7 @@
 
       <div class="team-grid">
         <div class="profile">
+          <img src="https://placehold.co/120?text=AS" alt="Álvaro Solache" style="width:120px; height:120px; border-radius:50%; object-fit:cover; margin-bottom:1rem;">
           <h2>Álvaro Solache</h2>
           <p class="role">Socio Fundador | Estrategia de Redes de Valor</p>
           <p>Consultor estratégico con experiencia en el análisis de redes de valor en organizaciones complejas. Ha aplicado la metodología de Verna Allee en contextos como IKEA, mapeando flujos intangibles y tangibles para revelar oportunidades de co-creación de valor. Profundo conocedor de sistemas vivos, gobernanza distribuida y diseño de ecosistemas colaborativos.</p>
@@ -161,9 +162,10 @@
         </div>
 
         <div class="profile">
+          <img src="https://placehold.co/120?text=NT" alt="Nerea T. Ruiz" style="width:120px; height:120px; border-radius:50%; object-fit:cover; margin-bottom:1rem;">
           <h2>Nerea T. Ruiz</h2>
           <p class="role">Socia Fundadora | Transformación y Coordinación Humano-Máquina</p>
-          <p>Ingeniera Experta en la intersección entre personas, procesos y máquinas. Su trabajo se centra en cómo los equipos directivos pueden rediseñar sus redes de coordinación para integrar eficazmente, reducir silos y acelerar la toma de decisiones. Combina metodologías de análisis de redes con enfoques prácticos de implementación en entornos de alta complejidad.</p>
+          <p>Experta en la intersección entre personas, procesos y agentes inteligentes. Su trabajo se centra en cómo los equipos directivos pueden rediseñar sus redes de coordinación para integrar eficazmente la IA, reducir silos y acelerar la toma de decisiones. Combina metodologías de análisis de redes con enfoques prácticos de implementación en entornos de alta complejidad.</p>
           <p>
             <a href="https://www.linkedin.com/in/nerea-t-ruiz-17800747/" target="_blank">LinkedIn</a>
           </p>
@@ -171,16 +173,8 @@
       </div>
 
       <div class="contact-box">
-        <p>¿Quiere ofrecernos a sus cientes o tiene una pregunta sobre su red de valor?</p>
-       <p><strong>Email de contacto:</strong> <a id="contact-email" href=""></a></p>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const email = 'asolache' + '@' + 'mac.com';
-    const el = document.getElementById('contact-email');
-    el.href = 'mailto:' + email;
-    el.textContent = email;
-  });
-</script>
+        <p>¿Quiere trabajar con nosotros o tiene una pregunta sobre su red de valor?</p>
+        <p id="contact-email"></p>
       </div>
     </div>
   </div>
@@ -188,16 +182,23 @@
   <footer>
     <div class="container">
       <p>Value Network Lab — Basado en la metodología de Verna Allee. Validado en empresas globales como IKEA.</p>
-      <p><strong>Email de contacto:</strong> <a id="contact-email" href=""></a></p>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const email = 'asolache' + '@' + 'mac.com';
-    const el = document.getElementById('contact-email');
-    el.href = 'mailto:' + email;
-    el.textContent = email;
-  });
-</script>
+      <p id="footer-email"></p>
     </div>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const email = 'asolache' + '@' + 'mac.com';
+      const contactEl = document.getElementById('contact-email');
+      const footerEl = document.getElementById('footer-email');
+      
+      if (contactEl) {
+        contactEl.innerHTML = '<a href="mailto:' + email + '">' + email + '</a>';
+      }
+      if (footerEl) {
+        footerEl.innerHTML = '<a href="mailto:' + email + '">' + email + '</a>';
+      }
+    });
+  </script>
 </body>
 </html>
