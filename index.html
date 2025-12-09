@@ -6,7 +6,6 @@
   <title>Value Network Lab | Optimice su red de valor</title>
   <meta name="description" content="Consultoría estratégica basada en Value Network Analysis para grandes empresas.">
   <style>
-    /* Reset y base */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -16,7 +15,6 @@
     }
     .container { width: 90%; max-width: 1100px; margin: 0 auto; padding: 2rem 0; }
 
-    /* Header y menú */
     header {
       background: #fff;
       box-shadow: 0 1px 8px rgba(0,0,0,0.08);
@@ -33,7 +31,7 @@
     .logo {
       font-size: 1.5rem;
       font-weight: 800;
-      color: #1e3a8a;
+      color: #1e40af;
       text-decoration: none;
     }
     nav ul {
@@ -54,7 +52,6 @@
       color: #1e40af;
     }
 
-    /* Hero */
     .hero {
       background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
       padding: 4rem 0;
@@ -86,7 +83,6 @@
       text-decoration: none;
     }
 
-    /* Footer */
     footer {
       background: #1e3a8a;
       color: white;
@@ -102,13 +98,8 @@
     }
 
     @media (max-width: 700px) {
-      nav ul {
-        gap: 1rem;
-        font-size: 0.9rem;
-      }
-      .hero h1 {
-        font-size: 1.75rem;
-      }
+      nav ul { gap: 1rem; font-size: 0.9rem; }
+      .hero h1 { font-size: 1.75rem; }
     }
   </style>
 </head>
@@ -120,7 +111,7 @@
         <ul>
           <li><a href="abstract.html">Abstract</a></li>
           <li><a href="formacion.html">Formación-Acción</a></li>
-           <li><a href="quienes-somos.html">Quienes somos </a></li>
+          <li><a href="quienes-somos.html">Quiénes Somos</a></li>
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </nav>
@@ -138,16 +129,18 @@
   <footer>
     <div class="container">
       <p>Basado en la metodología de Verna Allee. Validado en empresas globales.</p>
-      <p><strong>Email de contacto:</strong> <a id="contact-email" href=""></a></p>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const email = 'asolache' + '@' + 'mac.com';
-    const el = document.getElementById('contact-email');
-    el.href = 'mailto:' + email;
-    el.textContent = email;
-  });
-</script>
+      <p id="footer-email"></p>
     </div>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const email = 'asolache' + '@' + 'mac.com';
+      const footerEl = document.getElementById('footer-email');
+      if (footerEl) {
+        footerEl.innerHTML = '<a href="mailto:' + email + '">' + email + '</a>';
+      }
+    });
+  </script>
 </body>
 </html>
