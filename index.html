@@ -138,7 +138,15 @@
   <footer>
     <div class="container">
       <p>Basado en la metodología de Verna Allee. Validado en empresas globales.</p>
-      <p><a href="mailto:asolache@mac.com">asolache@mac.com</a></p>
+      <p><strong>Email de contacto:</strong> <a id="contact-email" href=""></a></p>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const email = 'asolache' + '@' + 'mac.com';
+    const el = document.getElementById('contact-email');
+    el.href = 'mailto:' + email;
+    el.textContent = email;
+  });
+</script>
     </div>
   </footer>
 </body>
