@@ -3,32 +3,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Value Network Lab | Optimice su red de valor en 3 horas</title>
-  <meta name="description" content="Formación-acción de Value Network Analysis para equipos directivos de grandes empresas. Descubra fugas de valor ocultas.">
+  <title>Value Network Lab | Optimice su red de valor</title>
+  <meta name="description" content="Consultoría estratégica basada en Value Network Analysis para grandes empresas.">
   <style>
     /* Reset y base */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-      color: #1a1a1a;
-      background-color: #fafafa;
+      line-height: 1.65;
+      color: #111827;
+      background-color: #f9fafb;
     }
     .container { width: 90%; max-width: 1100px; margin: 0 auto; padding: 2rem 0; }
-    h1, h2, h3 { font-weight: 700; margin-bottom: 1rem; }
-    p { margin-bottom: 1.25rem; }
-    a { color: #1e40af; text-decoration: none; }
-    a:hover { text-decoration: underline; }
 
-    /* Header */
-    header { background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 10; }
-    .header-content { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
-    .logo { font-size: 1.5rem; font-weight: 800; color: #1e3a8a; }
-    
+    /* Header y menú */
+    header {
+      background: #fff;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #1e3a8a;
+      text-decoration: none;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+    nav a {
+      color: #374151;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 0.25rem 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s;
+    }
+    nav a:hover, nav a.active {
+      border-bottom-color: #1e40af;
+      color: #1e40af;
+    }
+
     /* Hero */
-    .hero { background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 4rem 0; text-align: center; }
-    .hero h1 { font-size: 2.25rem; margin-bottom: 1.5rem; color: #0c4a6e; }
-    .hero p { font-size: 1.125rem; max-width: 700px; margin: 0 auto 2rem; }
+    .hero {
+      background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+      padding: 4rem 0;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.25rem;
+      color: #0c4a6e;
+      margin-bottom: 1.25rem;
+    }
+    .hero p {
+      font-size: 1.125rem;
+      max-width: 720px;
+      margin: 0 auto 2rem;
+    }
     .cta-button {
       display: inline-block;
       background: #1e40af;
@@ -45,84 +86,57 @@
       text-decoration: none;
     }
 
-    /* Benefits */
-    .section { padding: 3rem 0; }
-    .section-title { text-align: center; margin-bottom: 2.5rem; font-size: 1.875rem; color: #0c4a6e; }
-    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-    .card { background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-    .card h3 { color: #1e40af; }
-
-    /* Offer */
-    .offer { background: #fff; border: 2px solid #dbeafe; border-radius: 16px; padding: 2.5rem; margin: 2rem 0; }
-    .price { font-size: 1.5rem; font-weight: 700; color: #1e40af; margin: 1.5rem 0; }
-
     /* Footer */
-    footer { background: #1e3a8a; color: white; padding: 2rem 0; text-align: center; }
-    footer a { color: #93c5fd; }
-    footer a:hover { color: white; }
+    footer {
+      background: #1e3a8a;
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+      margin-top: 4rem;
+    }
+    footer a {
+      color: #93c5fd;
+    }
+    footer a:hover {
+      color: white;
+    }
 
-    /* Responsive */
-    @media (max-width: 600px) {
-      .hero h1 { font-size: 1.75rem; }
-      .section-title { font-size: 1.5rem; }
+    @media (max-width: 700px) {
+      nav ul {
+        gap: 1rem;
+        font-size: 0.9rem;
+      }
+      .hero h1 {
+        font-size: 1.75rem;
+      }
     }
   </style>
 </head>
 <body>
   <header>
     <div class="container header-content">
-      <div class="logo">Value Network Lab</div>
+      <a href="index.html" class="logo">Value Network Lab</a>
+      <nav>
+        <ul>
+          <li><a href="abstract.html">Abstract</a></li>
+          <li><a href="formacion.html">Formación-Acción</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
   <section class="hero">
     <div class="container">
-      <h1>¿Está su organización perdiendo millones por redes de valor rotas?</h1>
-      <p>Usted invierte en innovación, IA y transformación… pero el valor no fluye. Sus equipos están en silos. Sus sistemas no hablan. Sus pérdidas son invisibles.</p>
-      <a href="#offer" class="cta-button">Agende su Formación-Acción Inicial</a>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">Beneficios Tangibles para Grandes Empresas</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>🔍 Valor oculto revelado</h3>
-          <p>Hasta 3–5% del EBITDA perdido en procesos como Order-to-Cash, invisible para KPIs tradicionales.</p>
-        </div>
-        <div class="card">
-          <h3>⚡ Ciclos operativos acelerados</h3>
-          <p>Reducción de 150 a 30 días en contratación al eliminar actividades innecesarias.</p>
-        </div>
-        <div class="card">
-          <h3>🤝 Colaboración real</h3>
-          <p>Rompa silos entre negocio, IT e innovación con un lenguaje común basado en redes.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="offer">
-    <div class="container">
-      <h2 class="section-title">Formación-Acción Inicial: Descubra VNA en 3 horas</h2>
-      <div class="offer">
-        <p>¿Quiere probar la metodología antes de comprometer un proyecto de 6-7 cifras?</p>
-        <ul style="text-align: left; margin: 1.5rem 0; padding-left: 1.5rem;">
-          <li>Introducción práctica a la lógica de redes de valor</li>
-          <li>Ejercicio colaborativo con una red crítica de su organización</li>
-          <li>Diagnóstico preliminar de “fugas de valor”</li>
-          <li>Ruta clara hacia un proyecto con ROI cuantificable</li>
-        </ul>
-        <div class="price">Inversión: €2,500 (incluye informe ejecutivo personalizado)</div>
-        <a href="mailto:asolache@mac.com?subject=Quiero agendar mi Formación-Acción VNA" class="cta-button">RESERVAR MI SESIÓN AHORA</a>
-      </div>
+      <h1>Recupere valor oculto en su organización con Value Network Analysis</h1>
+      <p>Diseñado para equipos directivos de empresas con alto presupuesto: IKEA, Inditex, Siemens, y más.</p>
+      <a href="formacion.html" class="cta-button">Agende su Formación-Acción Inicial</a>
     </div>
   </section>
 
   <footer>
     <div class="container">
-      <p>Value Network Lab — Basado en la metodología de Verna Allee. Validado en empresas globales como IKEA.</p>
+      <p>Basado en la metodología de Verna Allee. Validado en empresas globales.</p>
       <p><a href="mailto:contacto@valuenetworklab.com">contacto@valuenetworklab.com</a></p>
     </div>
   </footer>
