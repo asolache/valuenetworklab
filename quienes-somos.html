@@ -172,7 +172,15 @@
 
       <div class="contact-box">
         <p>¿Quiere ofrecernos a sus cientes o tiene una pregunta sobre su red de valor?</p>
-        <p><strong>Email de contacto:</strong> <a href="mailto:asolache@mac.com">asolache@mac.com</a></p>
+       <p><strong>Email de contacto:</strong> <a id="contact-email" href=""></a></p>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const email = 'asolache' + '@' + 'mac.com';
+    const el = document.getElementById('contact-email');
+    el.href = 'mailto:' + email;
+    el.textContent = email;
+  });
+</script>
       </div>
     </div>
   </div>
@@ -180,7 +188,15 @@
   <footer>
     <div class="container">
       <p>Value Network Lab — Basado en la metodología de Verna Allee. Validado en empresas globales como IKEA.</p>
-      <p><a href="mailto:asolache@mac.com">Contactar</a></p>
+      <p><strong>Email de contacto:</strong> <a id="contact-email" href=""></a></p>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const email = 'asolache' + '@' + 'mac.com';
+    const el = document.getElementById('contact-email');
+    el.href = 'mailto:' + email;
+    el.textContent = email;
+  });
+</script>
     </div>
   </footer>
 </body>
