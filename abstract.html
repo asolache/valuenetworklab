@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Value Network Lab | Abstract Gratuito: Cómo las grandes empresas recuperan valor oculto</title>
-  <meta name="description" content="Descargue gratis nuestro abstract ejecutivo sobre Value Network Analysis. Ideal para directivos de innovación en empresas como IKEA, Inditex o Siemens.">
+  <title>Abstract Ejecutivo | Value Network Lab</title>
+  <meta name="description" content="Abstract gratuito: cómo las grandes empresas recuperan valor oculto con Value Network Analysis. Para directivos de innovación y operaciones.">
   <style>
     /* Reset y base */
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -15,102 +15,167 @@
       background-color: #f9fafb;
     }
     .container { width: 90%; max-width: 1100px; margin: 0 auto; padding: 2rem 0; }
-    h1, h2, h3 { font-weight: 700; margin-bottom: 1rem; }
-    p { margin-bottom: 1.25rem; }
-    a { color: #1d4ed8; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    
-    /* Header */
-    header { background: #fff; box-shadow: 0 1px 8px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 10; }
-    .header-content { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
-    .logo { font-size: 1.5rem; font-weight: 800; color: #1e3a8a; }
 
-    /* Hero */
-    .hero { background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); padding: 4rem 0; text-align: center; }
-    .hero h1 { font-size: 2.25rem; color: #0c4a6e; margin-bottom: 1.25rem; }
-    .hero p { font-size: 1.125rem; max-width: 720px; margin: 0 auto 2rem; }
+    /* Header y menú */
+    header {
+      background: #fff;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #1e40af;
+      text-decoration: none;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+    nav a {
+      color: #374151;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 0.25rem 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s;
+    }
+    nav a:hover, nav a.active {
+      border-bottom-color: #1e40af;
+      color: #1e40af;
+    }
 
-    /* Abstract section */
-    .abstract { background: white; border-radius: 16px; padding: 2.5rem; margin: 2.5rem 0; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
-    .abstract h2 { font-size: 1.75rem; color: #1e40af; text-align: center; margin-bottom: 1.5rem; }
-    .abstract-content { text-align: left; line-height: 1.8; font-size: 1.05rem; }
+    /* Contenido principal */
+    .page-content {
+      background: white;
+      border-radius: 16px;
+      padding: 2.5rem;
+      margin: 2rem 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+    .page-content h1 {
+      font-size: 2rem;
+      color: #1e40af;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    .page-content p {
+      margin-bottom: 1.25rem;
+      font-size: 1.05rem;
+    }
+    .page-content ul {
+      padding-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .page-content li {
+      margin-bottom: 0.75rem;
+    }
 
-    /* CTA section */
-    .cta-section { background: #1e40af; color: white; padding: 4rem 0; text-align: center; }
-    .cta-section h2 { font-size: 2rem; margin-bottom: 1.5rem; }
-    .cta-section p { max-width: 700px; margin: 0 auto 2rem; font-size: 1.125rem; opacity: 0.95; }
+    /* CTA final */
+    .cta-box {
+      background: #eff6ff;
+      border-left: 4px solid #1e40af;
+      padding: 1.5rem;
+      margin-top: 2rem;
+      border-radius: 8px;
+    }
     .cta-button {
       display: inline-block;
-      background: white;
-      color: #1e40af;
-      padding: 0.875rem 2.25rem;
+      background: #1e40af;
+      color: white;
+      padding: 0.75rem 1.75rem;
       border-radius: 8px;
-      font-weight: 700;
-      font-size: 1.125rem;
+      font-weight: 600;
       text-decoration: none;
-      transition: all 0.3s;
+      margin-top: 1rem;
     }
     .cta-button:hover {
-      background: #f1f5f9;
-      transform: translateY(-2px);
+      background: #1d4ed8;
       text-decoration: none;
     }
 
     /* Footer */
-    footer { background: #1e3a8a; color: white; padding: 2rem 0; text-align: center; }
-    footer a { color: #93c5fd; }
-    footer a:hover { color: white; }
+    footer {
+      background: #1e3a8a;
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+      margin-top: 4rem;
+    }
+    footer a {
+      color: #93c5fd;
+    }
+    footer a:hover {
+      color: white;
+    }
 
-    @media (max-width: 600px) {
-      .hero h1 { font-size: 1.75rem; }
-      .abstract { padding: 1.75rem; }
-      .cta-section h2 { font-size: 1.6rem; }
+    @media (max-width: 700px) {
+      nav ul {
+        gap: 1rem;
+        font-size: 0.9rem;
+      }
+      .page-content {
+        padding: 1.75rem;
+      }
+      .page-content h1 {
+        font-size: 1.6rem;
+      }
     }
   </style>
 </head>
 <body>
   <header>
     <div class="container header-content">
-      <div class="logo">Value Network Lab</div>
+      <a href="index.html" class="logo">Value Network Lab</a>
+      <nav>
+        <ul>
+          <li><a href="abstract.html" class="active">Abstract</a></li>
+          <li><a href="formacion.html">Formación-Acción</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <h1>Descubra cómo las grandes empresas recuperan millones en valor oculto</h1>
-      <p>Acceda ahora a nuestro abstract ejecutivo gratuito: una visión estratégica sobre Value Network Analysis para equipos directivos en organizaciones con alto presupuesto.</p>
-    </div>
-  </section>
+  <div class="container">
+    <div class="page-content">
+      <h1>Abstract Ejecutivo:  
+        “La Fractura Invisible en su Red de Valor”</h1>
 
-  <section class="container">
-    <div class="abstract">
-      <h2>bstract Ejecutivo: “La Fractura Invisible en su Red de Valor”</h2>
-      <div class="abstract-content">
-        <p><strong>El dilema:</strong> Las empresas invierten millones en innovación, IA y transformación, pero menos del 20% logran impacto material en su EBIT. ¿Por qué? Porque optimizan procesos… no redes.</p>
-        <p><strong>La solución:</strong> Value Network Analysis (VNA), la metodología desarrollada por Verna Allee, revela cómo el valor se co-crea (o se destruye) a través de interacciones entre personas, equipos, socios y agentes de IA.</p>
-        <p><strong>Hallazgos clave:</strong></p>
-        <ul style="padding-left: 1.5rem; margin-bottom: 1.5rem;">
-          <li>Las <strong>pérdidas invisibles</strong> en procesos como Order-to-Cash representan del 3% al 5% del EBITDA.</li>
-          <li>El 72% de las iniciativas de IA se desarrollan en silos, impidiendo su integración en flujos de valor reales.</li>
-          <li>Las redes descentralizadas (ej. cadenas de suministro) exigen nuevos marcos de coordinación que los mapas de procesos no ofrecen.</li>
-        </ul>
-        <p><strong>Conclusión:</strong> La próxima frontera de la eficiencia no está en la automatización de tareas, sino en la <strong>optimización de la red de valor</strong>. El primer paso no es un proyecto de 6 meses… es una Formación-Acción de 3 horas para validar el potencial en su contexto real.</p>
+      <p><strong>El dilema:</strong> Las empresas invierten millones en innovación, IA y transformación, pero menos del 20% logran impacto material en su EBIT. ¿Por qué? Porque optimizan procesos… no redes.</p>
+
+      <p><strong>La solución:</strong> Value Network Analysis (VNA), la metodología desarrollada por Verna Allee, revela cómo el valor se co-crea (o se destruye) a través de interacciones entre personas, equipos, socios y agentes de IA.</p>
+
+      <p><strong>Hallazgos clave:</strong></p>
+      <ul>
+        <li>Las <strong>pérdidas invisibles</strong> en procesos como Order-to-Cash representan del <strong>3% al 5% del EBITDA</strong>.</li>
+        <li>El <strong>72% de las iniciativas de IA</strong> se desarrollan en silos, impidiendo su integración en flujos de valor reales.</li>
+        <li>Las redes descentralizadas (ej. cadenas de suministro) exigen nuevos marcos de coordinación que los mapas de procesos no ofrecen.</li>
+        <li>La infraestructura heredada frena la innovación en el <strong>87% de las grandes empresas</strong>.</li>
+      </ul>
+
+      <p><strong>Conclusión estratégica:</strong> La próxima frontera de la eficiencia no está en la automatización de tareas, sino en la <strong>optimización de la red de valor</strong>. El primer paso no es un proyecto de 6 meses… es una <strong>Formación-Acción de 3 horas</strong> para validar el potencial en su contexto real.</p>
+
+      <div class="cta-box">
+        <p>Este abstract es el punto de partida. La siguiente fase es <strong>aplicar</strong> la metodología a su organización con una sesión práctica y diagnóstico preliminar.</p>
+        <a href="formacion.html" class="cta-button">Agendar mi Formación-Acción Inicial</a>
       </div>
     </div>
-  </section>
-
-  <section class="cta-section">
-    <div class="container">
-      <h2>¿Listo para diagnosticar su red de valor?</h2>
-      <p>Convertimos este abstract en una sesión práctica con su equipo directivo. En 3 horas, mapearemos una red crítica de su organización y le entregaremos un diagnóstico preliminar con oportunidades de valor cuantificables.</p>
-      <a href="mailto:asolache@mac.com?subject=Quiero mi Formación-Acción VNA" class="cta-button">Agendar mi Formación-Acción Inicial</a>
-    </div>
-  </section>
+  </div>
 
   <footer>
     <div class="container">
       <p>Value Network Lab — Basado en la metodología de Verna Allee. Validado en empresas globales como IKEA.</p>
-      <p><a href="mailto:asolache@mac.com">contactar</a></p>
+      <p><a href="mailto:contacto@valuenetworklab.com">contacto@valuenetworklab.com</a></p>
     </div>
   </footer>
 </body>
