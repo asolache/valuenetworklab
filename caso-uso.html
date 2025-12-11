@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Caso de Uso | Value Network Lab</title>
+  <meta name="description" content="Ejemplo práctico de Value Network Analysis en una cooperativa de innovación social. Descubra cómo se identifican y valoran las transacciones intangibles.">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+      color: #111827;
+      background-color: #f9fafb;
+    }
+    .container { width: 90%; max-width: 1100px; margin: 0 auto; padding: 2rem 0; }
+
+    header {
+      background: #fff;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #1e40af;
+      text-decoration: none;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+    nav a {
+      color: #374151;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 0.25rem 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s;
+    }
+    nav a:hover, nav a.active {
+      border-bottom-color: #1e40af;
+      color: #1e40af;
+    }
+
+    .page-content {
+      background: white;
+      border-radius: 16px;
+      padding: 2.5rem;
+      margin: 2rem 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+    .page-content h1 {
+      font-size: 2rem;
+      color: #1e40af;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    .page-content h2 {
+      margin: 1.75rem 0 1rem;
+      color: #1e40af;
+    }
+    .page-content p, .page-content li {
+      margin-bottom: 1.1rem;
+      font-size: 1.05rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .highlight-box {
+      background: #f0fdf4;
+      border-left: 4px solid #10b981;
+      padding: 1.25rem;
+      margin: 1.5rem 0;
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+    }
+
+    .step {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px dashed #e5e7eb;
+    }
+    .step:last-child {
+      border-bottom: none;
+    }
+
+    .cta-box {
+      background: #eff6ff;
+      border-left: 4px solid #1e40af;
+      padding: 1.5rem;
+      margin-top: 2.5rem;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .cta-button {
+      display: inline-block;
+      background: #1e40af;
+      color: white;
+      padding: 0.875rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1.125rem;
+      text-decoration: none;
+      transition: background 0.3s;
+      margin-top: 1rem;
+    }
+    .cta-button:hover {
+      background: #1d4ed8;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #1e3a8a;
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+      margin-top: 4rem;
+    }
+    footer a {
+      color: #93c5fd;
+    }
+    footer a:hover {
+      color: white;
+    }
+
+    @media (max-width: 700px) {
+      nav ul { gap: 1rem; font-size: 0.9rem; }
+      .page-content { padding: 1.75rem; }
+      .page-content h1 { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+      <a href="index.html" class="logo">Value Network Lab</a>
+      <nav>
+        <ul>
+          <li><a href="abstract.html">Abstract</a></li>
+          <li><a href="formacion.html">Formación-Acción</a></li>
+          <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+          <li><a href="caso-uso.html" class="active">Caso de Uso</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="page-content">
+      <h1>Caso de Uso: VNA en una Cooperativa de Innovación Social</h1>
+
+      <p><strong>Contexto:</strong> “Raíces Comunes” es una cooperativa de economía social que diseña programas de formación en sostenibilidad para empresas y escuelas. Aunque su misión es clara, enfrentaban un problema: <em>altos niveles de frustración entre los equipos, dificultad para escalar su impacto y financiación inestable</em>, a pesar de tener clientes satisfechos y contenido de alta calidad.</p>
+
+      <p>Aplicamos un <strong>Value Network Analysis</strong> durante una Formación-Acción de 3 horas con su equipo directivo y aliados clave, siguiendo la metodología de Verna Allee y Pantheon Work.</p>
+
+      <div class="highlight-box">
+        “No teníamos problemas de contenido… teníamos una red de valor rota por la invisibilidad de lo intangible.”
+      </div>
+
+      <h2>Resultados del Análisis</h2>
+
+      <div class="step">
+        <h3>1. Roles identificados (más allá del organigrama)</h3>
+        <ul>
+          <li><strong>Diseñadores de experiencia</strong> (no solo “formadores”)</li>
+          <li><strong>Guardianes del propósito</strong> (equipo de misión social)</li>
+          <li><strong>Puentes comunitarios</strong> (personas que conectan con escuelas y ONGs)</li>
+          <li><strong>Aliados estratégicos</strong> (fundaciones, universidades)</li>
+          <li><strong>Clientes conscientes</strong> (empresas con ESG activo)</li>
+        </ul>
+      </div>
+
+      <div class="step">
+        <h3>2. Transacciones intangibles descubiertas (antes invisibles)</h3>
+        <ul>
+          <li><strong>Confianza emocional</strong> entre Guardianes y Diseñadores → sin ella, los contenidos se volvían técnicos y fríos</li>
+          <li><strong>Reconocimiento público</strong> de Aliados → clave para atraer nuevos clientes</li>
+          <li><strong>Escucha activa</strong> de Puentes comunitarios → fuente de innovación en temáticas</li>
+          <li><strong>Bienestar psicológico</strong> del equipo → directamente vinculado a la calidad de la experiencia</li>
+        </ul>
+      </div>
+
+      <div class="step">
+        <h3>3. Hallazgos estratégicos</h3>
+        <ul>
+          <li>El rol de <strong>“Guardianes del propósito”</strong> estaba sobrecargado y no recibía entregables intangibles de reconocimiento ni apoyo emocional.</li>
+          <li>Los <strong>Aliados estratégicos</strong> daban financiación (tangible), pero no se les devolvía visibilidad ni co-autoría (intangible), reduciendo su compromiso.</li>
+          <li>Los <strong>Clientes conscientes</strong> valoraban más el sentido de pertenencia que el descuento.</li>
+        </ul>
+      </div>
+
+      <h2>Intervenciones basadas en el VNA</h2>
+      <ul>
+        <li>**Rediseño de entregables**: Se crearon “cartas de reconocimiento” mensuales entre roles.</li>
+        <li>**Nueva métrica**: “Índice de cohesión de propósito” (encuesta interna cada trimestre).</li>
+        <li>**Alianzas reforzadas**: Co-creación de informes de impacto con logos compartidos.</li>
+        <li>**Nuevas transacciones**: Clientes pasan a ser “Comuneros” con voz en el diseño de futuros talleres.</li>
+      </ul>
+
+      <h2>Impacto en 6 meses</h2>
+      <ul>
+        <li>✅ <strong>+35%</strong> en retención de talento</li>
+        <li>✅ <strong>+50%</strong> en renovación de alianzas con fundaciones</li>
+        <li>✅ <strong>+22%</strong> en ingresos recurrentes</li>
+        <li>✅ Nacimiento de una nueva línea de “formación-acción para comunidades”</li>
+      </ul>
+
+      <div class="cta-box">
+        <p>Este caso no es único. Cada organización tiene una red de valor llena de transacciones intangibles invisibles… hasta que las mapea.</p>
+        <a id="cta-mailto" class="cta-button">Agendar mi Formación-Acción VNA</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>Value Network Lab — Basado en la metodología de Verna Allee. Validado en empresas globales como IKEA.</p>
+      <p id="footer-email"></p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const email = 'asolache' + '@' + 'mac.com';
+      const cta = document.getElementById('cta-mailto');
+      const footerEl = document.getElementById('footer-email');
+      
+      if (cta) {
+        cta.href = 'mailto:' + email + '?subject=Quiero agendar mi Formación-Acción V
