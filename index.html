@@ -13,8 +13,13 @@
       color: #111827;
       background-color: #f9fafb;
     }
-    .container { width: 90%; max-width: 1100px; margin: 0 auto; padding: 2rem 0; }
-
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 0;
+      text-align: center;
+    }
     header {
       background: #fff;
       box-shadow: 0 1px 8px rgba(0,0,0,0.08);
@@ -51,7 +56,6 @@
       border-bottom-color: #1e40af;
       color: #1e40af;
     }
-
     .hero {
       background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
       padding: 4rem 0;
@@ -60,12 +64,16 @@
     .hero h1 {
       font-size: 2.25rem;
       color: #0c4a6e;
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.5rem;
     }
     .hero p {
       font-size: 1.125rem;
-      max-width: 720px;
+      max-width: 750px;
       margin: 0 auto 2rem;
+      line-height: 1.7;
+    }
+    .hero a.cta-button {
+      margin-top: 1rem;
     }
     .cta-button {
       display: inline-block;
@@ -82,7 +90,6 @@
       background: #1d4ed8;
       text-decoration: none;
     }
-
     .comparison {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -105,14 +112,15 @@
     .card-red h3 { color: #ef4444; }
     .card-blue h3 { color: #1e40af; }
     .card-green h3 { color: #10b981; }
-    .card ul { padding-left: 1.25rem; line-height: 1.7; }
+    .card ul {
+      padding-left: 1.25rem;
+      line-height: 1.7;
+      text-align: left;
+    }
     .card li { margin-bottom: 0.6rem; }
 
-    .map-section {
-      text-align: center;
-      margin: 4rem 0;
-    }
-    .map-section h2 {
+    .map-section h2,
+    .final-cta h2 {
       font-size: 1.75rem;
       color: #0c4a6e;
       margin-bottom: 1.5rem;
@@ -123,7 +131,7 @@
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.05);
       display: inline-block;
-      margin: 0 auto;
+      margin: 0 auto 1.5rem;
     }
     .map-container img {
       width: 100%;
@@ -133,33 +141,21 @@
     .map-caption {
       font-style: italic;
       color: #6b7280;
-      margin-top: 1rem;
+      margin: 1rem auto 0;
       max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
     }
 
-    .final-cta {
-      text-align: center;
-      margin: 4rem 0;
-    }
-    .final-cta h2 {
-      font-size: 2rem;
-      color: #0c4a6e;
-      margin-bottom: 1.25rem;
-    }
     .final-cta p {
       font-size: 1.125rem;
-      max-width: 720px;
+      max-width: 750px;
       margin: 0 auto 2rem;
-      color: #374151;
+      line-height: 1.7;
     }
 
     footer {
       background: #1e3a8a;
       color: white;
       padding: 2rem 0;
-      text-align: center;
       margin-top: 3rem;
     }
     footer a {
@@ -193,9 +189,19 @@
 
   <section class="hero">
     <div class="container">
-      <h1>Recupere valor oculto en su organización con Value Network Analysis</h1>
-      <p>Diseñado para equipos directivos de empresas con alto presupuesto: IKEA, Inditex, Siemens, y más.</p>
-      <a href="formacion.html" class="cta-button">Agende su Formación-Acción Inicial</a>
+      <h1>¿Por qué su organización pierde valor… sin darse cuenta?</h1>
+      <p>
+        Usted invierte millones en innovación, en IA, en transformación digital.  
+        Pero sus proyectos se estancan en silos.  
+        Sus equipos están frustrados.  
+        Y el impacto financiero real… no aparece.  
+      </p>
+      <p>
+        <strong>El problema no es lo que hace… es lo que no ve.</strong>  
+        Los procesos tradicionales ignoran las transacciones <em>intangibles</em> —confianza, propósito, co-creación—  
+        que son el verdadero motor del valor en la era digital.
+      </p>
+      <a href="abstract.html" class="cta-button">Descubra el abstract ejecutivo gratuito</a>
     </div>
   </section>
 
@@ -203,33 +209,33 @@
   <div class="container">
     <div class="comparison">
       <div class="card card-red">
-        <h3>❌ Lo que hace su empresa HOY</h3>
+        <h3>❌ El dolor que nadie nombra</h3>
         <ul>
-          <li>Optimiza procesos lineales</li>
-          <li>Mide solo lo tangible</li>
-          <li>Ignora lo fuera del organigrama</li>
-          <li>Proyectos de IA en silos</li>
-          <li>Pierde 3–5% del EBITDA</li>
+          <li>IA en pilotos aislados sin impacto real</li>
+          <li>Silos que rompen la experiencia del cliente</li>
+          <li>Pérdidas invisibles: 3–5% del EBITDA</li>
+          <li>Talentos que se van por falta de sentido</li>
+          <li>Reuniones que no generan decisión</li>
         </ul>
       </div>
       <div class="card card-blue">
-        <h3>✅ Lo que hace VNA</h3>
+        <h3>✅ La solución deliciosa</h3>
         <ul>
-          <li>Mapea redes vivas</li>
-          <li>Revela transacciones intangibles</li>
-          <li>Identifica roles reales</li>
-          <li>Conecta humanos y máquinas</li>
-          <li>Hace visible lo invisible</li>
+          <li>Mapa vivo de <strong>cómo se crea valor realmente</strong></li>
+          <li>Roles reales, no cargos del organigrama</li>
+          <li>Transacciones intangibles <strong>hechas visibles</strong></li>
+          <li>Lenguaje común entre negocio e innovación</li>
+          <li>Diagnóstico en 3 horas, no en 3 meses</li>
         </ul>
       </div>
       <div class="card card-green">
-        <h3>🎯 El resultado</h3>
+        <h3>🎯 El resultado que anhela</h3>
         <ul>
-          <li>Alineación real</li>
-          <li>Mayor ROI en IA</li>
-          <li>Menos silos, más decisión</li>
-          <li>Lealtad por propósito</li>
-          <li>Millones en valor recuperado</li>
+          <li>ROI real en sus inversiones digitales</li>
+          <li>Equipos alineados por propósito, no por KPIs</li>
+          <li>Mayor agilidad y resiliencia operativa</li>
+          <li>Clientes leales por experiencia, no por descuento</li>
+          <li>Valor recuperado → millones en eficiencia</li>
         </ul>
       </div>
     </div>
@@ -244,12 +250,15 @@
     <p class="map-caption">
       ¿Su organización mapea solo los flujos de dinero… o también los flujos de confianza y propósito?
     </p>
+    <a href="caso-uso.html" class="cta-button">Vea un caso de uso real</a>
   </div>
 
   <!-- Call to Action final -->
   <div class="container final-cta">
     <h2>¿Listo para descubrir el valor que su organización no está viendo?</h2>
-    <p>Escríbanos y le enviaremos una guía ejecutiva gratuita + una propuesta personalizada para su primera Formación-Acción en Value Network Analysis.</p>
+    <p>
+      Escríbanos y le enviaremos una guía ejecutiva gratuita + una propuesta personalizada para su primera Formación-Acción en Value Network Analysis.
+    </p>
     <a id="final-cta-mail" class="cta-button">Contáctenos por email</a>
   </div>
 
