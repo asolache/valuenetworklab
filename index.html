@@ -191,4 +191,88 @@
     </div>
   </header>
 
- 
+  <section class="hero">
+    <div class="container">
+      <h1>Recupere valor oculto en su organización con Value Network Analysis</h1>
+      <p>Diseñado para equipos directivos de empresas con alto presupuesto: IKEA, Inditex, Siemens, y más.</p>
+      <a href="formacion.html" class="cta-button">Agende su Formación-Acción Inicial</a>
+    </div>
+  </section>
+
+  <!-- Esquema de valor disruptivo -->
+  <div class="container">
+    <div class="comparison">
+      <div class="card card-red">
+        <h3>❌ Lo que hace su empresa HOY</h3>
+        <ul>
+          <li>Optimiza procesos lineales</li>
+          <li>Mide solo lo tangible</li>
+          <li>Ignora lo fuera del organigrama</li>
+          <li>Proyectos de IA en silos</li>
+          <li>Pierde 3–5% del EBITDA</li>
+        </ul>
+      </div>
+      <div class="card card-blue">
+        <h3>✅ Lo que hace VNA</h3>
+        <ul>
+          <li>Mapea redes vivas</li>
+          <li>Revela transacciones intangibles</li>
+          <li>Identifica roles reales</li>
+          <li>Conecta humanos y máquinas</li>
+          <li>Hace visible lo invisible</li>
+        </ul>
+      </div>
+      <div class="card card-green">
+        <h3>🎯 El resultado</h3>
+        <ul>
+          <li>Alineación real</li>
+          <li>Mayor ROI en IA</li>
+          <li>Menos silos, más decisión</li>
+          <li>Lealtad por propósito</li>
+          <li>Millones en valor recuperado</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mapa de Valor Ético-Cooperativo -->
+  <div class="container map-section">
+    <h2>Mapa de Valor Ético-Cooperativo</h2>
+    <div class="map-container">
+      <img src="mapa-valor-etico.svg" alt="Mapa de Valor Ético-Cooperativo: roles, transacciones tangibles e intangibles">
+    </div>
+    <p class="map-caption">
+      ¿Su organización mapea solo los flujos de dinero… o también los flujos de confianza y propósito?
+    </p>
+  </div>
+
+  <!-- Call to Action final -->
+  <div class="container final-cta">
+    <h2>¿Listo para descubrir el valor que su organización no está viendo?</h2>
+    <p>Escríbanos y le enviaremos una guía ejecutiva gratuita + una propuesta personalizada para su primera Formación-Acción en Value Network Analysis.</p>
+    <a id="final-cta-mail" class="cta-button">Contáctenos por email</a>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>Value Network Lab — Basado en la metodología de Verna Allee. Validado en empresas globales como IKEA.</p>
+      <p id="footer-email"></p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const email = 'asolache' + '@' + 'mac.com';
+      const cta = document.getElementById('final-cta-mail');
+      const footer = document.getElementById('footer-email');
+      
+      if (cta) {
+        cta.href = 'mailto:' + email + '?subject=Quiero descubrir el valor oculto en mi organización';
+      }
+      if (footer) {
+        footer.innerHTML = '<a href="mailto:' + email + '">' + email + '</a>';
+      }
+    });
+  </script>
+</body>
+</html>
