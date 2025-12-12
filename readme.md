@@ -89,7 +89,6 @@ Este sitio se basa en:
 
 ¿Listo para diagnosticar su red de valor?
 
-📧 **Email**: [asolache@mac.com](mailto:asolache@mac.com)  
 🔗 **LinkedIn – Álvaro Solache**: https://www.linkedin.com/in/alvarosolache  
 🔗 **LinkedIn – Nerea T. Ruiz**: https://www.linkedin.com/in/nerea-t-ruiz-17800747/
 
