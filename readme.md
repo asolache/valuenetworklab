@@ -1,84 +1,44 @@
 # Value Network Lab  
-### Optimizamos redes de valor, no procesos
+### Web oficial – Versión pública
 
-> **Para equipos directivos y de innovación en empresas con alto presupuesto**  
-> *(Retail, Manufactura, Pharma, Logística, Plataformas)*
-
----
-
-## 🎯 ¿Qué hacemos?
-
-En **Value Network Lab**, ayudamos a organizaciones como **IKEA** a **recuperar millones en valor oculto** que se pierden no por procesos mal diseñados, sino por **redes de valor rotas**: silos entre equipos, IA en pilotos aislados, coordinación deficiente entre humanos y sistemas, y flujos de valor invisibles para los KPIs tradicionales.
-
-Nuestra metodología se basa en el **Value Network Analysis (VNA)**, creada por **Verna Allee**, y adaptada a los desafíos actuales de la colaboración humano-máquina y los ecosistemas complejos.
+> 🌐 Sitio web de **Value Network Lab**: consultoría especializada en **Value Network Analysis (VNA)** para organizaciones que buscan recuperar valor oculto, superar silos y transformar su forma de crear valor en la era digital.
 
 ---
 
-## 💡 ¿Por qué VNA —y no BPM, Six Sigma o Value Stream Mapping?
+## 🎯 Propósito de este sitio
 
-Porque **el problema ya no está *dentro* de los procesos, sino *entre* ellos**.
+Este sitio no es solo una página institucional. Es una **herramienta de generación de valor y conversión**, diseñada para:
 
-| Indicador | Lo que revela VNA |
-|----------|------------------|
-| **72%** de las iniciativas de IA se desarrollan en **silos** | → No se integran en flujos de valor reales |
-| **3–5% del EBITDA** se pierde en procesos como Order-to-Cash, **invisible para KPIs tradicionales** | → Pérdidas por malas interacciones, no por pasos ineficientes |
-| **87%** de las empresas dicen que su infraestructura heredada frena la innovación | → Falta de coordinación, no falta de tecnología |
+- ✅ Ofrecer un **abstract ejecutivo gratuito** que revela el “dolor invisible” en grandes organizaciones.
+- ✅ Presentar una **Formación-Acción Inicial de 3 horas** (€2.500 + IVA) como puerta de entrada a proyectos de alto impacto.
+- ✅ Mostrar un **caso de uso real** donde transacciones intangibles (confianza, propósito, reconocimiento) se convierten en resultados tangibles (+35% retención, +22% ingresos).
+- ✅ Inspirar con un **Mapa de Valor Ético-Cooperativo** que actúa como “caballo de Troya” para visibilizar lo que los procesos tradicionales ignoran.
+- ✅ Generar **presupuestos a medida** para PYMEs y grandes empresas (ej. IKEA, Siemens).
 
-VNA no mapea “qué se hace”, sino **cómo los actores (personas, equipos, agentes de IA) interactúan para crear —o destruir— valor**.
-
----
-
-## 🚀 Nuestra propuesta: empiece en 3 horas
-
-No pedimos un proyecto de 6 meses. Proponemos una **Formación-Acción Inicial**:
-
-✅ **Duración**: 3 horas  
-✅ **Participantes**: Equipos directivos / innovación (máx. 8 personas)  
-✅ **Entregable**: Diagnóstico preliminar + informe ejecutivo personalizado  
-✅ **Inversión**: €2,500  
-
-En esta sesión:
-- Mapeamos una red crítica de su organización (ej. innovación, logística, customer journey)
-- Identificamos fugas de valor ocultas
-- Diseñamos juntos la ruta hacia un proyecto de impacto con ROI cuantificable
-
-👉 **Este sitio web es su punto de partida**. [Visite la versión online](https://valuenetworklab.netlify.app) (una vez desplegada).
+Basado en la metodología de **Verna Allee** y adaptado a los desafíos actuales de IA, gobernanza distribuida y colaboración humano-máquina.
 
 ---
 
-## 👥 Quiénes somos
+## 🧩 Contenido clave
 
-### Álvaro Solache  
-[Socio Fundador | Estrategia de Redes de Valor](https://www.linkedin.com/in/alvarosolache)  
-Consultor con experiencia aplicando VNA en contextos globales como IKEA. Profundo conocedor de sistemas vivos, gobernanza distribuida y diseño de ecosistemas colaborativos.
+### 📄 Páginas principales
+- [`index.html`](./index.html) – Punto de entrada con narrativa clara: **dolor → solución → resultado**.
+- [`abstract.html`](./abstract.html) – Abstract ejecutivo con datos reales, enlaces a Verna Allee y metodología de Pantheon Work.
+- [`caso-uso.html`](./caso-uso.html) – Ejemplo práctico de diagnóstico en una organización de innovación social.
+- [`formacion.html`](./formacion.html) – Producto inicial: Formación-Acción como validación de valor (ideal para PYMEs o como primer paso en grandes empresas).
+- [`quienes-somos.html`](./quienes-somos.html) – Perfiles de **Álvaro Solache** y **Nerea T. Ruiz**, con fotos y enlaces profesionales.
+- [`contacto.html`](./contacto.html) – CTA épico para solicitar presupuestos, no solo información.
 
-### Nerea T. Ruiz  
-[Socia Fundadora | Transformación y Coordinación Humano-Máquina](https://www.linkedin.com/in/nerea-t-ruiz-17800747/)  
-Experta en integrar IA, personas y procesos en redes de alto rendimiento. Su enfoque combina análisis sistémico con implementación práctica en entornos de alta complejidad.
-
----
-
-## 🌐 ¿Por qué este repositorio es público?
-
-Porque creemos en la **transparencia estratégica**:
-- El código de este sitio es estático, ligero y sin dependencias.
-- El contenido refleja **nuestra forma de pensar**, no solo lo que vendemos.
-- Si su equipo técnico quiere entender cómo estructuramos nuestra propuesta, ¡está todo aquí!
-
-> ℹ️ **Nota**: Este repositorio **no contiene datos confidenciales de clientes**, solo el front-end de nuestra web institucional.
+### 🗺️ Activos estratégicos
+- [`mapa-valor-etico.svg`](./mapa-valor-etico.svg) – Mapa visual de red de valor con roles, transacciones tangibles (azul) e intangibles (verde punteado).
+- `alvaro.jpg`, `nerea.jpg` – Fotos de los fundadores (guardadas en raíz).
 
 ---
 
-## 📬 ¿Listo para diagnosticar su red de valor?
+## 🛠️ Tecnología y despliegue
 
-No necesita leer todo el código.  
-**Simplemente visite nuestro sitio web** o escríbanos directamente:
-
-📧 **Email**: [asolache@mac.com](mailto:asolache@mac.com)  
-🌐 **Web (en desarrollo)**: próximamente en `valuenetworklab.com`
-
----
-
-> **Value Network Lab**  
-> *"El valor no fluye por procesos… fluye por redes."*  
-> Basado en la metodología de Verna Allee. Validado en empresas globales.
+- **Stack**: HTML5 + CSS3 + JavaScript (puro, sin frameworks).
+- **Diseño**: Responsive, accesible, rápido (< 0.5s de carga).
+- **Seguridad**: Email de contacto (`asolache@mac.com`) protegido contra bots scrapeadores mediante generación dinámica en JS.
+- **Despliegue**: Listo para **Netlify** (o cualquier host estático).
+- **Estructura**:
