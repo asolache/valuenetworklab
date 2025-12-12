@@ -13,7 +13,7 @@
       color: #111827;
       background-color: #f9fafb;
     }
-    .container { width: 90%; max-width: 1100px; margin: 0 auto; padding: 2rem 0; }
+    .container { width: 90%; max-width: 1100px; margin: 0 auto; padding: 2rem 0; text-align: center; }
 
     header {
       background: #fff;
@@ -58,7 +58,6 @@
       padding: 2.5rem;
       margin: 2rem 0;
       box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-      text-align: center;
     }
     .page-content h1 {
       font-size: 2rem;
@@ -67,16 +66,26 @@
     }
     .page-content p {
       font-size: 1.1rem;
-      max-width: 600px;
+      max-width: 700px;
       margin: 0 auto 1.5rem;
+      line-height: 1.7;
     }
 
-    .contact-item {
-      margin: 1.5rem 0;
+    .hero-cta {
+      background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%);
+      padding: 2.5rem;
+      border-radius: 16px;
+      margin: 2.5rem 0;
     }
-    .contact-item h3 {
-      color: #1e40af;
-      margin-bottom: 0.5rem;
+    .hero-cta h2 {
+      font-size: 1.75rem;
+      color: #0c4a6e;
+      margin-bottom: 1rem;
+    }
+    .hero-cta p {
+      font-size: 1.125rem;
+      max-width: 750px;
+      margin: 0 auto 1.5rem;
     }
 
     .cta-button {
@@ -114,6 +123,7 @@
       nav ul { gap: 1rem; font-size: 0.9rem; }
       .page-content { padding: 1.75rem; }
       .page-content h1 { font-size: 1.6rem; }
+      .hero-cta h2 { font-size: 1.5rem; }
     }
   </style>
 </head>
@@ -124,8 +134,8 @@
       <nav>
         <ul>
           <li><a href="abstract.html">Abstract</a></li>
+          <li><a href="caso-uso.html">Caso de Uso</a></li>
           <li><a href="formacion.html">Formación-Acción</a></li>
-          <li><a href="caso-uso.html" class="active">Caso de Uso</a></li>
           <li><a href="quienes-somos.html">Quiénes Somos</a></li>
           <li><a href="contacto.html" class="active">Contacto</a></li>
         </ul>
@@ -135,22 +145,18 @@
 
   <div class="container">
     <div class="page-content">
-      <h1>Contáctenos</h1>
-      <p>¿Listo para diagnosticar su red de valor o tiene una pregunta específica para su sector (retail, pharma, logística, manufactura)?</p>
+      <h1>¿Listo para transformar su red de valor?</h1>
+      <p>No necesitamos una reunión para empezar. Solo una pregunta clara.</p>
 
-      <div class="contact-item">
-        <h3>📧 Email</h3>
-        <p id="contact-email"></p>
+      <div class="hero-cta">
+        <h2>“¿Dónde se está perdiendo valor en su organización… y cómo lo vamos a recuperar?”</h2>
+        <p>Contáctenos y reciba en 48h una propuesta personalizada:  
+        - Para PYMEs: diagnóstico + Formación-Acción de €2.500 + IVA  
+        - Para grandes empresas (ej. IKEA, Siemens): presupuesto a medida con enfoque por “zoom” en áreas críticas</p>
+        <a id="cta-mailto" class="cta-button">Enviar solicitud de presupuesto</a>
       </div>
 
-      <div class="contact-item">
-        <h3>💼 Para empresas con presupuesto > €100K</h3>
-        <p>Ofrecemos diagnósticos estratégicos personalizados basados en Value Network Analysis.</p>
-      </div>
-
-      <div style="margin-top: 2rem;">
-        <a id="contact-cta" class="cta-button">Enviar mensaje</a>
-      </div>
+      <p>Trabajamos solo con organizaciones que entienden que <strong>el verdadero valor no está en los procesos… está en las relaciones</strong>.</p>
     </div>
   </div>
 
@@ -164,15 +170,11 @@
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const email = 'asolache' + '@' + 'mac.com';
-      const contactEl = document.getElementById('contact-email');
-      const cta = document.getElementById('contact-cta');
+      const cta = document.getElementById('cta-mailto');
       const footerEl = document.getElementById('footer-email');
       
-      if (contactEl) {
-        contactEl.innerHTML = '<a href="mailto:' + email + '">' + email + '</a>';
-      }
       if (cta) {
-        cta.href = 'mailto:' + email + '?subject=Consulta sobre Value Network Analysis';
+        cta.href = 'mailto:' + email + '?subject=Solicitud de presupuesto para Value Network Analysis';
       }
       if (footerEl) {
         footerEl.innerHTML = '<a href="mailto:' + email + '">' + email + '</a>';
