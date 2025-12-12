@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prototipado de Redes de Valor | Value Network Lab</title>
+  <meta name="description" content="Aprenda los fundamentos de Value Network Analysis: roles, transacciones y entregables. Cree su primer mapa de valor en minutos.">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+      color: #111827;
+      background-color: #f9fafb;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 0;
+    }
+    header {
+      background: #fff;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.08);
+      padding: 1rem 0;
+      margin-bottom: 2rem;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #1e40af;
+      text-decoration: none;
+    }
+    h1, h2, h3 {
+      color: #1e40af;
+      margin-bottom: 1.25rem;
+    }
+    h1 { text-align: center; font-size: 2.25rem; margin-bottom: 1.5rem; }
+    p, li {
+      margin-bottom: 1rem;
+      font-size: 1.05rem;
+    }
+    .card {
+      background: white;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+      margin-bottom: 2rem;
+    }
+    .concepts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .concept-card {
+      background: #f8fafc;
+      border-left: 4px solid #1e40af;
+      padding: 1.5rem;
+      border-radius: 0 8px 8px 0;
+    }
+    .concept-card h3 { margin-top: 0; }
+    .highlight { background: #ecfdf5; padding: 0.25rem 0.5rem; font-weight: 600; border-radius: 4px; }
+    .app-section {
+      background: white;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+    textarea {
+      width: 100%;
+      height: 200px;
+      padding: 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-family: monospace;
+      font-size: 14px;
+      margin: 1rem 0;
+    }
+    button {
+      background: #1e40af;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    button:hover { background: #1d4ed8; }
+    svg {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      width: 100%;
+      min-height: 400px;
+      margin-top: 1rem;
+    }
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding: 2rem 0;
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 700px) {
+      .concepts { grid-template-columns: 1fr; }
+      h1 { font-size: 1.75rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">Value Network Lab</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <h1>Prototipado de Redes de Valor</h1>
+    <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">
+      Antes de mapear su red de valor, entienda los tres conceptos esenciales.  
+      Luego, use esta herramienta para crear su primer prototipo en minutos.
+    </p>
+
+    <div class="card">
+      <h2>¿Por qué no basta con los procesos tradicionales?</h2>
+      <p>
+        Los mapas de procesos lineales optimizan <em>cómo</em> se hace algo, pero ignoran <em>quién</em> lo hace, <em>con quién</em> se coordina y <em>qué intangibles</em> (confianza, reconocimiento, propósito) sostienen el valor real.  
+        Como dice Melvin Conway: <em>“El software refleja la estructura de comunicación de la organización.”</em>
+      </p>
+      <p>
+        <strong>Value Network Analysis (VNA)</strong> revela lo invisible: las interacciones humanas y sistémicas que verdaderamente generan valor.  
+        Y todo empieza con tres elementos.
+      </p>
+    </div>
+
+    <div class="concepts">
+      <div class="concept-card">
+        <h3>1. Roles (no cargos)</h3>
+        <p>Un <span class="highlight">rol</span> es la forma en que una persona o entidad <strong>contribuye a una actividad</strong>.  
+        No es su puesto en el organigrama, sino su función real en la red de valor.  
+        Ej: “Guardián del propósito”, “Puente comunitario”, “Diseñador de experiencia”.</p>
+      </div>
+      <div class="concept-card">
+        <h3>2. Transacciones (de valor)</h3>
+        <p>Una <span class="highlight">transacción</span> es un intercambio entre dos roles.  
+        Puede ser <strong>tangible</strong> (pedido, factura) o <strong>intangible</strong> (confianza, feedback, reconocimiento).  
+        En VNA, las flechas continuas = tangibles; flechas discontinuas = intangibles.</p>
+      </div>
+      <div class="concept-card">
+        <h3>3. Entregables (verificables)</h3>
+        <p>Un <span class="highlight">entregable</span> es lo que se intercambia en una transacción.  
+        Debe ser <strong>observable y verificable</strong> (nunca un verbo: “colaborar”, sino un sustantivo: “informe”, “acuerdo”, “visibilidad”).  
+        Según Pantheon, hay <strong>MUST</strong> (exigibles) e <strong>EXTRA</strong> (cortesía que fortalece la red).</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Regla de oro para empezar</h2>
+      <p><em>“Trabaje siempre en términos de <strong>actividad</strong>, no de proceso.”</em></p>
+      <p>En lugar de “proceso de venta”, pregúntese: <strong>“¿Qué roles, transacciones y entregables hacen posible la venta de un servicio complejo?”</strong></p>
+    </div>
+
+    <div class="app-section">
+      <h2>Cree su primer prototipo de red de valor</h2>
+      <p>Use el formato siguiente. Una línea por transacción:</p>
+      <p><code>Origen → Destino | tipo | Entregable</code><br>
+        Tipo: <code>tangible</code> o <code>intangible</code></p>
+      <p>Ejemplo:</p>
+      <p><code>Cliente → Vendedor | tangible | Pedido</code><br>
+        <code>Vendedor → Cliente | intangible | Confianza</code></p>
+
+      <textarea id="input" placeholder="Cliente → Vendedor | tangible | Pedido&#10;Vendedor → Diseñador | intangible | Feedback&#10;Diseñador → Cliente | tangible | Producto"></textarea>
+      <br>
+      <button onclick="drawNetwork()">Dibujar mi red de valor</button>
+
+      <svg id="network-svg" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg"></svg>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      Basado en la metodología de Verna Allee y Pantheon Work.  
+      <a href="https://pantheon.work/blog/2018/11/30/como-hacer-tu-primer-analisis-de-la-red-de-valor/" target="_blank">Guía completa de Pantheon Work</a>
+    </div>
+  </footer>
+
+  <script>
+    function drawNetwork() {
+      const svg = document.getElementById('network-svg');
+      svg.innerHTML = '';
+
+      const input = document.getElementById('input').value;
+      if (!input.trim()) return;
+
+      const lines = input.trim().split('\n');
+      const nodes = new Set();
+      const links = [];
+
+      for (let line of lines) {
+        line = line.trim();
+        if (!line || line.startsWith('#')) continue;
+
+        const parts = line.split('|').map(p => p.trim());
+        if (parts.length !== 3) continue;
+
+        const roles = parts[0].split('→').map(r => r.trim());
+        if (roles.length !== 2) continue;
+
+        const source = roles[0];
+        const target = roles[1];
+        const type = parts[1].toLowerCase();
+        const deliverable = parts[2];
+
+        if (!['tangible', 'intangible'].includes(type)) continue;
+
+        nodes.add(source);
+        nodes.add(target);
+        links.push({ source, target, type, deliverable });
+      }
+
+      const nodeArray = Array.from(nodes);
+      const nodeCount = nodeArray.length;
+      if (nodeCount === 0) return;
+
+      const centerX = 400;
+      const centerY = 300;
+      const radius = Math.min(250, 150 + nodeCount * 15);
+
+      const positions = {};
+      nodeArray.forEach((node, i) => {
+        const angle = (i / nodeCount) * 2 * Math.PI - Math.PI / 2;
+        positions[node] = {
+          x: centerX + radius * Math.cos(angle),
+          y: centerY + radius * Math.sin(angle)
+        };
+      });
+
+      links.forEach(link => {
+        const start = positions[link.source];
+        const end = positions[link.target];
+        if (!start || !end) return;
+
+        const dx = end.x - start.x;
+        const dy = end.y - start.y;
+        const len = Math.sqrt(dx*dx + dy*dy);
+        const normX = dx / len;
+        const normY = dy / len;
+
+        const arrowStartX = start.x + 40 * normX;
+        const arrowStartY = start.y + 40 * normY;
+        const arrowEndX = end.x - 40 * normX;
+        const arrowEndY = end.y - 40 * normY;
+
+        const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        line.setAttribute("x1", arrowStartX);
+        line.setAttribute("y1", arrowStartY);
+        line.setAttribute("x2", arrowEndX);
+        line.setAttribute("y2", arrowEndY);
+        line.setAttribute("stroke", link.type === 'tangible' ? '#1e40af' : '#10b981');
+        line.setAttribute("stroke-width", "2");
+        if (link.type === 'intangible') {
+          line.setAttribute("stroke-dasharray", "6,4");
+        }
+
+        const headLen = 12;
+        const angle = Math.atan2(arrowEndY - arrowStartY, arrowEndX - arrowStartX);
+        const headX1 = arrowEndX - headLen * Math.cos(angle - Math.PI / 6);
+        const headY1 = arrowEndY - headLen * Math.sin(angle - Math.PI / 6);
+        const headX2 = arrowEndX - headLen * Math.cos(angle + Math.PI / 6);
+        const headY2 = arrowEndY - headLen * Math.sin(angle + Math.PI / 6);
+
+        const head = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+        head.setAttribute("points", `${arrowEndX},${arrowEndY} ${headX1},${headY1} ${headX2},${headY2}`);
+        head.setAttribute("fill", link.type === 'tangible' ? '#1e40af' : '#10b981');
+        svg.appendChild(line);
+        svg.appendChild(head);
+
+        const midX = (arrowStartX + arrowEndX) / 2;
+        const midY = (arrowStartY + arrowEndY) / 2;
+        const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        text.setAttribute("x", midX);
+        text.setAttribute("y", midY - 8);
+        text.setAttribute("font-family", "sans-serif");
+        text.setAttribute("font-size", "12");
+        text.setAttribute("text-anchor", "middle");
+        text.setAttribute("fill", "#374151");
+        text.textContent = link.deliverable;
+        svg.appendChild(text);
+      });
+
+      nodeArray.forEach(node => {
+        const pos = positions[node];
+        const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+        circle.setAttribute("cx", pos.x);
+        circle.setAttribute("cy", pos.y);
+        circle.setAttribute("r", "40");
+        circle.setAttribute("fill", "#dbeafe");
+        circle.setAttribute("stroke", "#1e40af");
+        circle.setAttribute("stroke-width", "2");
+        svg.appendChild(circle);
+
+        const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        text.setAttribute("x", pos.x);
+        text.setAttribute("y", pos.y + 4);
+        text.setAttribute("font-family", "sans-serif");
+        text.setAttribute("font-size", "14");
+        text.setAttribute("text-anchor", "middle");
+        text.setAttribute("fill", "#1e40af");
+        text.setAttribute("font-weight", "600");
+        const words = node.split(' ');
+        if (words.length === 1) {
+          text.textContent = node;
+        } else {
+          const tspan1 = document.createElementNS("http://www.w3.org/2000/svg", "tspan");
+          tspan1.setAttribute("x", pos.x);
+          tspan1.setAttribute("dy", "-0.4em");
+          tspan1.textContent = words[0];
+          const tspan2 = document.createElementNS("http://www.w3.org/2000/svg", "tspan");
+          tspan2.setAttribute("x", pos.x);
+          tspan2.setAttribute("dy", "1.2em");
+          tspan2.textContent = words.slice(1).join(' ');
+          text.appendChild(tspan1);
+          text.appendChild(tspan2);
+        }
+        svg.appendChild(text);
+      });
+    }
+
+    window.onload = () => {
+      drawNetwork();
+    };
+  </script>
+</body>
+</html>
