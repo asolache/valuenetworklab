@@ -42,3 +42,59 @@ Basado en la metodología de **Verna Allee** y adaptado a los desafíos actuales
 - **Seguridad**: Email de contacto (`asolache@mac.com`) protegido contra bots scrapeadores mediante generación dinámica en JS.
 - **Despliegue**: Listo para **Netlify** (o cualquier host estático).
 - **Estructura**:
+
+raíz/
+  ├── index.html
+  ├── abstract.html
+  ├── caso-uso.html
+  ├── formacion.html
+  ├── quienes-somos.html
+  ├── contacto.html
+  ├── mapa-valor-etico.svg
+  ├── alvaro.jpg
+  ├── nerea.jpg
+  └── README.md
+
+  
+---
+
+## 📚 Fundamentos metodológicos
+
+Este sitio se basa en:
+
+- **Value Network Analysis (VNA)**, desarrollado por **Verna Allee**  
+→ Libro: [*Value Networks and the True Nature of Collaboration*](https://www.amazon.com/Value-Networks-True-Nature-Collaboration/dp/1412902489)  
+→ Video introductorio: [Verna Allee on VNA (YouTube)](https://www.youtube.com/watch?v=4qkT7kFhX9A)
+
+- **Metodología práctica** de [Pantheon Work](https://pantheon.work)  
+→ Artículo de referencia: [Cómo hacer tu primer análisis de la red de valor](https://pantheon.work/blog/2018/11/30/como-hacer-tu-primer-analisis-de-la-red-de-valor/)
+
+- **Principios clave**:
+- Enfoque en **roles**, no en cargos del organigrama.
+- Distinción entre entregables **MUST** (tangibles) y **EXTRA** (intangibles).
+- Optimización de **múltiples vías de valor**, no de un único proceso lineal.
+- Capacidad de generar **Kaikaku** (transformación disruptiva), no solo Kaizen (mejora continua).
+
+---
+
+## 📬 ¿Quieres colaborar o usar este sitio?
+
+- **Para clientes**: Visite la versión online en [valuenetworklab.netlify.app](https://valuenetworklab.netlify.app) (una vez desplegada).
+- **Para desarrolladores**: Clone este repositorio y edite los archivos HTML directamente.
+- **Para consultores**: Este modelo es replicable en otros contextos —solo respete la autoría de Verna Allee y Pantheon Work.
+
+---
+
+## 💌 Contacto
+
+¿Listo para diagnosticar su red de valor?
+
+📧 **Email**: [asolache@mac.com](mailto:asolache@mac.com)  
+🔗 **LinkedIn – Álvaro Solache**: https://www.linkedin.com/in/alvarosolache  
+🔗 **LinkedIn – Nerea T. Ruiz**: https://www.linkedin.com/in/nerea-t-ruiz-17800747/
+
+---
+
+> **Value Network Lab**  
+> *“El valor no fluye por procesos… fluye por redes.”*  
+> Validado en empresas globales. Basado en la ciencia de las redes de valor.
