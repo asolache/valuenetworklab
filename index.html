@@ -72,23 +72,25 @@
       margin: 0 auto 2rem;
       line-height: 1.7;
     }
-    .hero a.cta-button {
-      margin-top: 1rem;
+    .testimonial {
+      background: white;
+      border-radius: 16px;
+      padding: 2.5rem;
+      margin: 3rem auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+      max-width: 900px;
+      position: relative;
     }
-    .cta-button {
-      display: inline-block;
-      background: #1e40af;
-      color: white;
-      padding: 0.875rem 2rem;
-      border-radius: 8px;
-      font-weight: 600;
+    .testimonial p {
       font-size: 1.125rem;
-      text-decoration: none;
-      transition: background 0.3s;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      font-style: italic;
     }
-    .cta-button:hover {
-      background: #1d4ed8;
-      text-decoration: none;
+    .testimonial .author {
+      font-weight: 700;
+      color: #1e40af;
+      margin-top: 1rem;
     }
     .comparison {
       display: grid;
@@ -145,11 +147,36 @@
       max-width: 800px;
     }
 
+    .final-cta {
+      text-align: center;
+      margin: 4rem 0;
+    }
+    .final-cta h2 {
+      font-size: 2rem;
+      color: #0c4a6e;
+      margin-bottom: 1.25rem;
+    }
     .final-cta p {
       font-size: 1.125rem;
       max-width: 750px;
       margin: 0 auto 2rem;
       line-height: 1.7;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: #1e40af;
+      color: white;
+      padding: 0.875rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1.125rem;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .cta-button:hover {
+      background: #1d4ed8;
+      text-decoration: none;
     }
 
     footer {
@@ -168,6 +195,7 @@
     @media (max-width: 700px) {
       nav ul { gap: 1rem; font-size: 0.9rem; }
       .hero h1 { font-size: 1.75rem; }
+      .testimonial { padding: 1.75rem; }
     }
   </style>
 </head>
@@ -201,9 +229,19 @@
         Los procesos tradicionales ignoran las transacciones <em>intangibles</em> —confianza, propósito, co-creación—  
         que son el verdadero motor del valor en la era digital.
       </p>
-      <a href="abstract.html" class="cta-button">Descubra el abstract ejecutivo gratuito</a>
+      <a href="formacion.html" class="cta-button">Descubra el abstract ejecutivo gratuito</a>
     </div>
   </section>
+
+  <!-- Testimonio de IKEA -->
+  <div class="container">
+    <div class="testimonial">
+      <p>
+        “Tras aplicar Value Network Analysis en áreas críticas como la venta y devolución de servicios, descubrimos que hasta un 25% de las transacciones que sostienen su red de valor son intangibles —y están invisibles para los procesos tradicionales. Mapearlas nos permitió identificar con precisión por qué se atascan los flujos, se frustran los equipos y se pierde valor… y, sobre todo, cómo recuperarlo. Si en su organización los silos, la complejidad del portfolio o la experiencia del cliente no mejoran a pesar de los esfuerzos, es probable que el problema no esté en los procesos… sino en la red que los sostiene. Llámenos: en 3 horas le mostramos si VNA es su próximo salto cualitativo.”
+      </p>
+      <div class="author">— María Teresa Cristóbal, Process Improvement Manager, IKEA España</div>
+    </div>
+  </div>
 
   <!-- Esquema de valor disruptivo -->
   <div class="container">
@@ -250,7 +288,7 @@
     <p class="map-caption">
       ¿Su organización mapea solo los flujos de dinero… o también los flujos de confianza y propósito?
     </p>
-    <a href="caso-uso.html" class="cta-button">Vea un caso de uso real</a>
+    <a href="caso-uso.html" class="cta-button" style="margin-top: 1.5rem;">Vea un caso de uso real</a>
   </div>
 
   <!-- Call to Action final -->
