@@ -26,6 +26,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 1;
       padding: 1rem 0;
     }
     .logo {
@@ -65,16 +66,25 @@
       margin-bottom: 1.5rem;
       text-align: center;
     }
-    .page-content p {
-      margin-bottom: 1.25rem;
+    .page-content h2 {
+      margin: 1.5rem 0 1rem;
+      color: #1e40af;
+    }
+    .page-content p, .page-content li {
+      margin-bottom: 1.1rem;
       font-size: 1.05rem;
     }
-    .page-content ul {
+    ul, ol {
       padding-left: 1.5rem;
       margin-bottom: 1.5rem;
     }
-    .page-content li {
-      margin-bottom: 0.75rem;
+
+    .resource-box {
+      background: #f0f9ff;
+      border-left: 4px solid #1e40af;
+      padding: 1.25rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
     }
 
     .cta-box {
@@ -83,6 +93,7 @@
       padding: 1.5rem;
       margin-top: 2rem;
       border-radius: 8px;
+      text-align: center;
     }
     .cta-button {
       display: inline-block;
@@ -127,8 +138,8 @@
       <nav>
         <ul>
           <li><a href="abstract.html" class="active">Abstract</a></li>
+          <li><a href="caso-uso.html">Caso de Uso</a></li>
           <li><a href="formacion.html">Formación-Acción</a></li>
-          <li><a href="caso-uso.html" class="active">Caso de Uso</a></li>
           <li><a href="quienes-somos.html">Quiénes Somos</a></li>
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
@@ -138,40 +149,47 @@
 
   <div class="container">
     <div class="page-content">
-      <h1>Abstract Ejecutivo:  
-        “La Fractura Invisible en su Red de Valor”</h1>
+      <h1>Abstract Ejecutivo:<br>“La Fractura Invisible en su Red de Valor”</h1>
 
-      <p><strong>El dilema:</strong> Las empresas invierten millones en innovación, IA y transformación, pero menos del 20% logran impacto material en su EBIT. ¿Por qué? Porque optimizan procesos… no redes.</p>
+      <p><strong>El dilema:</strong> Las empresas invierten millones en IA, transformación digital y R&D —entre el 6% y el 19% de sus ingresos—, pero menos del 20% ven un impacto material en su EBIT. ¿Por qué? Porque optimizan procesos… no redes.</p>
 
-      <p><strong>La solución:</strong> Value Network Analysis (VNA), la metodología desarrollada por Verna Allee, revela cómo el valor se co-crea (o se destruye) a través de interacciones entre personas, equipos, socios y agentes de IA.</p>
+      <p><strong>El problema oculto:</strong> Los métodos tradicionales (BPM, Value Stream Mapping) ignoran las <strong>transacciones intangibles</strong> —confianza, propósito, reconocimiento, bienestar— que son el verdadero pegamento del valor en la era digital. Como dice Melvin Conway: <em>“El software refleja la estructura de comunicación de la organización”</em>. Si esa estructura está rota, el valor no fluye.</p>
 
-      <p><strong>Hallazgos clave:</strong></p>
+      <h2>¿Qué es Value Network Analysis (VNA)?</h2>
+      <p>Desarrollado por <strong>Verna Allee</strong>, VNA es una metodología sistémica que mapea cómo el valor se co-crea a través de <strong>roles</strong>, <strong>transacciones</strong> y <strong>entregables tangibles e intangibles</strong>. A diferencia de los diagramas lineales, VNA revela:</p>
       <ul>
-        <li>Las <strong>pérdidas invisibles</strong> en procesos como Order-to-Cash representan del <strong>3% al 5% del EBITDA</strong>.</li>
-        <li>El <strong>72% de las iniciativas de IA</strong> se desarrollan en silos, impidiendo su integración en flujos de valor reales.</li>
-        <li>Las redes descentralizadas (ej. cadenas de suministro) exigen nuevos marcos de coordinación que los mapas de procesos no ofrecen.</li>
-        <li>La infraestructura heredada frena la innovación en el <strong>87% de las grandes empresas</strong>.</li>
+        <li>Los <strong>roles reales</strong> (no cargos del organigrama) que impulsan el valor</li>
+        <li>Qué <strong>entregables intangibles</strong> están faltando o sobrecargando a ciertos roles</li>
+        <li>Dónde se rompen las <strong>interdependencias</strong> entre equipos, socios y sistemas de IA</li>
+        <li>Por qué los proyectos se estancan en <strong>silos funcionales</strong></li>
       </ul>
 
-      <p><strong>Conclusión estratégica:</strong> La próxima frontera de la eficiencia no está en la automatización de tareas, sino en la <strong>optimización de la red de valor</strong>. El primer paso no es un proyecto de 6 meses… es una <strong>Formación-Acción de 3 horas</strong> para validar el potencial en su contexto real.</p>
+      <h2>Hallazgos críticos en organizaciones de alto presupuesto</h2>
+      <ul>
+        <li>El <strong>72%</strong> de las iniciativas de IA se desarrollan en silos, sin integración en flujos de valor reales</li>
+        <li>Las <strong>pérdidas invisibles</strong> en procesos como Order-to-Cash representan del <strong>3% al 5% del EBITDA</strong></li>
+        <li>El <strong>87%</strong> de las empresas dice que su infraestructura heredada frena la innovación</li>
+        <li>Menos del <strong>3%</strong> de las organizaciones se consideran “listas para la innovación”</li>
+      </ul>
+
+      <h2>¿Por qué VNA funciona?</h2>
+      <p>Porque no busca un único “proceso óptimo”. Como explica Verna Allee: <em>“El objetivo es optimizar múltiples vías y lograr resultados consistentes, permitiendo la variación necesaria para la innovación, la resiliencia y la agilidad de la red.”</em></p>
+
+      <div class="resource-box">
+        <p><strong>Recursos originales de Verna Allee:</strong></p>
+        <ul style="margin: 0;">
+          <li>📚 Libro: <a href="https://www.amazon.com/Value-Networks-True-Nature-Collaboration/dp/1412902489" target="_blank" style="color:#1d4ed8;">Value Networks and the True Nature of Collaboration</a></li>
+          <li>🎥 Video introductorio (en inglés): <a href="https://www.youtube.com/watch?v=4qkT7kFhX9A" target="_blank" style="color:#1d4ed8;">Verna Allee on Value Network Analysis</a></li>
+          <li>🔬 Método aplicado: <a href="https://pantheon.work/blog/2018/11/30/como-hacer-tu-primer-analisis-de-la-red-de-valor/" target="_blank" style="color:#1d4ed8;">Guía paso a paso de Pantheon Work</a></li>
+        </ul>
+      </div>
+
+      <h2>Conclusión estratégica</h2>
+      <p>La próxima frontera de la eficiencia no está en la automatización de tareas, sino en la <strong>optimización de la red de valor</strong>. El primer paso no es un proyecto de 6 meses… es una <strong>Formación-Acción de 3 horas</strong> para diagnosticar su red real.</p>
 
       <div class="cta-box">
-        <p>Este abstract es el punto de partida. La siguiente fase es <strong>aplicar</strong> la metodología a su organización con una sesión práctica y diagnóstico preliminar.</p>
+        <p>Este abstract es el punto de partida. La siguiente fase es <strong>aplicar</strong> la metodología a su organización.</p>
         <a href="formacion.html" class="cta-button">Agendar mi Formación-Acción Inicial</a>
-      </div>
-       <!-- Mapa de Valor Ético-Cooperativo -->
-      <div style="margin: 3rem 0; text-align: center;">
-        <h2 style="font-size: 1.5rem; color: #1e40af; margin-bottom: 1.5rem;">Mapa de Valor Ético-Cooperativo</h2>
-        <p style="max-width: 700px; margin: 0 auto 1.5rem; font-size: 1.05rem; color: #374151;">
-          Este mapa revela cómo las organizaciones más resilientes generan valor no solo con transacciones tangibles (azul), 
-          sino con <strong>transacciones intangibles</strong> (verde punteado): confianza, propósito, bienestar y co-creación.
-        </p>
-        <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); display: inline-block; margin: 0 auto;">
-          <img src="mapa-valor-etico.svg" alt="Mapa de Valor Ético-Cooperativo: roles, transacciones tangibles e intangibles" style="width: 100%; max-width: 800px; height: auto;">
-        </div>
-        <p style="font-size: 0.95rem; color: #6b7280; margin-top: 1rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-          <em>¿Su organización mapea solo los flujos de dinero… o también los flujos de confianza y propósito?</em>
-        </p>
       </div>
     </div>
   </div>
