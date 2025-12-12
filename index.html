@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Value Network Lab | Optimice su red de valor</title>
-  <meta name="description" content="Consultoría estratégica basada en Value Network Analysis para grandes empresas.">
+  <title>Value Network Lab | Recupere valor oculto con VNA</title>
+  <meta name="description" content="Value Network Analysis para equipos directivos de empresas como IKEA. Descubra fugas de valor invisibles en 3 horas.">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -47,7 +47,7 @@
       border-bottom: 2px solid transparent;
       transition: border-color 0.2s;
     }
-    nav a:hover, nav a.active {
+    nav a:hover, .active {
       border-bottom-color: #1e40af;
       color: #1e40af;
     }
@@ -83,12 +83,84 @@
       text-decoration: none;
     }
 
+    .comparison {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+    .card {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+    .card-red { border-top: 4px solid #ef4444; }
+    .card-blue { border-top: 4px solid #1e40af; }
+    .card-green { border-top: 4px solid #10b981; }
+    .card h3 {
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+    }
+    .card-red h3 { color: #ef4444; }
+    .card-blue h3 { color: #1e40af; }
+    .card-green h3 { color: #10b981; }
+    .card ul { padding-left: 1.25rem; line-height: 1.7; }
+    .card li { margin-bottom: 0.6rem; }
+
+    .map-section {
+      text-align: center;
+      margin: 4rem 0;
+    }
+    .map-section h2 {
+      font-size: 1.75rem;
+      color: #0c4a6e;
+      margin-bottom: 1.5rem;
+    }
+    .map-container {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      display: inline-block;
+      margin: 0 auto;
+    }
+    .map-container img {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+    }
+    .map-caption {
+      font-style: italic;
+      color: #6b7280;
+      margin-top: 1rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .final-cta {
+      text-align: center;
+      margin: 4rem 0;
+    }
+    .final-cta h2 {
+      font-size: 2rem;
+      color: #0c4a6e;
+      margin-bottom: 1.25rem;
+    }
+    .final-cta p {
+      font-size: 1.125rem;
+      max-width: 720px;
+      margin: 0 auto 2rem;
+      color: #374151;
+    }
+
     footer {
       background: #1e3a8a;
       color: white;
       padding: 2rem 0;
       text-align: center;
-      margin-top: 4rem;
+      margin-top: 3rem;
     }
     footer a {
       color: #93c5fd;
@@ -110,8 +182,8 @@
       <nav>
         <ul>
           <li><a href="abstract.html">Abstract</a></li>
+          <li><a href="caso-uso.html">Caso de Uso</a></li>
           <li><a href="formacion.html">Formación-Acción</a></li>
-          <li><a href="caso-uso.html" class="active">Caso de Uso</a></li>
           <li><a href="quienes-somos.html">Quiénes Somos</a></li>
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
@@ -119,92 +191,4 @@
     </div>
   </header>
 
-  <section class="hero">
-    <!-- Esquema de valor disruptivo -->
-<div class="container" style="margin: 3rem auto;">
-  <h2 style="text-align: center; font-size: 1.75rem; color: #0c4a6e; margin-bottom: 2.5rem;">
-    ¿Como identificar el valor oculto en su organización con Value Network Analysis?
-  </h2>
-
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-    
-    <!-- Columna 1: Lo que hace su empresa HOY -->
-    <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); border-top: 4px solid #ef4444;">
-      <h3 style="color: #ef4444; margin-bottom: 1rem;">❌ Lo que hace su empresa HOY</h3>
-      <ul style="padding-left: 1.25rem; line-height: 1.7;">
-        <li>Optimiza <strong>procesos lineales</strong> (BPM, Six Sigma)</li>
-        <li>Mide solo lo <strong>tangible</strong>: costos, tiempo, volumen</li>
-        <li>Ignora lo que <strong>no está en el organigrama</strong></li>
-        <li>Desconoce por qué sus <strong>proyectos de IA se estancan en silos</strong></li>
-        <li>Pierde <strong>3–5% del EBITDA</strong> en fugas invisibles</li>
-      </ul>
-    </div>
-
-    <!-- Columna 2: Lo que hace VNA -->
-    <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); border-top: 4px solid #1e40af;">
-      <h3 style="color: #1e40af; margin-bottom: 1rem;">✅ Lo que hace VNA</h3>
-      <ul style="padding-left: 1.25rem; line-height: 1.7;">
-        <li>Mapea <strong>redes vivas</strong>, no procesos rígidos</li>
-        <li>Revela <strong>transacciones intangibles</strong>: confianza, propósito, bienestar</li>
-        <li>Identifica <strong>roles reales</strong>, no cargos del organigrama</li>
-        <li>Muestra cómo <strong>humanos y máquinas co-crean valor</strong></li>
-        <li>Hace visible lo <strong>invisible</strong>… y lo <strong>valorable</strong></li>
-      </ul>
-    </div>
-
-    <!-- Columna 3: El resultado -->
-    <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); border-top: 4px solid #10b981;">
-      <h3 style="color: #10b981; margin-bottom: 1rem;">🎯 El resultado</h3>
-      <ul style="padding-left: 1.25rem; line-height: 1.7;">
-        <li><strong>Alineación real</strong> entre negocio e innovación</li>
-        <li><strong>Mayor ROI en IA</strong> al integrarla en flujos de valor</li>
-        <li><strong>Reducción de silos</strong> y mejora en la toma de decisiones</li>
-        <li><strong>Lealtad de talento</strong> por sentido de pertenencia</li>
-        <li><strong>Valor recuperado</strong> → millones en eficiencia y resiliencia</li>
-      </ul>
-    </div>
-
-  </div>
-
-  <div style="text-align: center; margin-top: 2.5rem; font-style: italic; color: #4b5563;">
-    “VNA no es otro taller de procesos. Es un <strong>diagnóstico sistémico</strong> que le dice exactamente <em>dónde se está perdiendo valor… y cómo recuperarlo</em>.”
-  </div>
-</div>
-   <div style="margin: 2.5rem auto; padding: 1.5rem; max-width: 700px; text-align: center; font-style: italic; font-size: 1.125rem; line-height: 1.6; color: #374151; background: #f8fafc; border-left: 4px solid #1e40af; border-radius: 0 8px 8px 0;">
-  “Este es el mapa de una organización que ya ha empezado a valorar lo invisible.<br>
-  La pregunta no es si su empresa tiene transacciones intangibles…<br>
-  sino si las ve, las mide y las potencia.”
-</div>
-<div class="container" style="margin-top: 3rem; text-align: center;">
-  <h1 style="font-size: 2rem; color: #0c4a6e; margin-bottom: 1.25rem;">
-    ¿Listo para descubrir el valor que su organización no está viendo?
-  </h1>
-  <p style="font-size: 1.125rem; max-width: 720px; margin: 0 auto 2rem; color: #374151;">
-    Escríbanos y le enviaremos una guía ejecutiva gratuita + una propuesta personalizada para su primera Formación-Acción en Value Network Analysis.
-  </p>
-  <a href="mailto:asolache@mac.com?subject=Quiero descubrir el valor oculto en mi organización" 
-     class="cta-button" 
-     style="display: inline-block;">
-    Contáctenos por email
-  </a>
-</div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <p>Basado en la metodología de Verna Allee. Validado en empresas globales.</p>
-      <p id="footer-email"></p>
-    </div>
-  </footer>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const email = 'asolache' + '@' + 'mac.com';
-      const footerEl = document.getElementById('footer-email');
-      if (footerEl) {
-        footerEl.innerHTML = '<a href="mailto:' + email + '">' + email + '</a>';
-      }
-    });
-  </script>
-</body>
-</html>
+ 
