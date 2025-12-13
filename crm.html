@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>CRM - Value Network Lab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      background: #f9fafb;
+      color: #111827;
+    }
+    h1, h2 { color: #1e40af; margin-bottom: 1.5rem; }
+    form, .table-container {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    label { display: block; margin: 0.75rem 0 0.25rem; font-weight: 600; }
+    input, select, textarea { width: 100%; padding: 0.5rem; margin-bottom: 1rem; border: 1px solid #d1d5db; border-radius: 6px; }
+    button { background: #1e40af; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; }
+    button:hover { background: #1d4ed8; }
+    button.secondary { background: #6b7280; }
+    button.secondary:hover { background: #4b5563; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid #e5e7eb; }
+    th { background: #f3f4f6; font-weight: 600; }
+    .actions { display: flex; gap: 0.5rem; }
+    .btn-sm { padding: 0.25rem 0.5rem; font-size: 0.875rem; }
+    .status { padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.875rem; }
+    .status-pendiente { background: #fef3c7; color: #92400e; }
+    .status-contactado { background: #dcfce7; color: #166534; }
+    .status-reunion { background: #dbeafe; color: #1e40af; }
+    .status-cerrado { background: #ede9fe; color: #5b21b6; }
+    .toolbar { display: flex; justify-content: space-between; margin-bottom: 1rem; }
+    .toolbar button { padding: 0.5rem 1rem; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <h1>CRM – Value Network Lab</h1>
+
+  <form id="leadForm">
+    <input type="hidden" id="editId">
+    <label>Nombre del cliente</label>
+    <input type="text" id="cliente" required>
+    <label>Empresa</label>
+    <input type="text" id="empresa" required>
+    <label>Comercial asignado</label>
+    <select id="comercial" required>
+      <option value="Álvaro Solache">Álvaro Solache</option>
+      <option value="Nerea T. Ruiz">Nerea T. Ruiz</option>
+      <option value="Otro">Otro</option>
+    </select>
+    <label>Estado</label>
+    <select id="estado" required>
+      <option value="pendiente">Pendiente de contacto</option>
+      <option value="contactado">Contactado – esperando respuesta</option>
+      <option value="reunion">Reunión agendada</option>
+      <option value="cerrado">Cerrado – presupuesto enviado</option>
+    </select>
+    <label>Notas / Próxima acción</label>
+    <textarea id="notas" rows="3" placeholder="Ej: Enviar caso de uso, llamar el 15/06..."></textarea>
+    <button type="submit">Guardar cliente</button>
+    <button type="button" class="secondary" id="btnCancel" style="display:none;">Cancelar edición</button>
+  </form>
+
+  <div class="toolbar">
+    <h2>Clientes en seguimiento</h2>
+    <button id="exportBtn">.Exportar a CSV</button>
+  </div>
+
+  <div class="table-container">
+    <table id="tablaClientes">
+      <thead>
+        <tr>
+          <th>Cliente</th>
+          <th>Empresa</th>
+          <th>Comercial</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="cuerpoTabla"></tbody>
+    </table>
+  </div>
+
+  <script>
+    let editMode = false;
+
+    document.addEventListener('DOMContentLoaded', () => {
+      cargarClientes();
+      document.getElementById('leadForm').addEventListener('submit', guardarCliente);
+      document.getElementById('btnCancel').addEventListener('click', () => {
+        editMode = false;
+        document.getElementById('editId').value = '';
+        document.getElementById('leadForm').reset();
+        document.getElementById('btnCancel').style.display = 'none';
+      });
+      document.getElementById('exportBtn').addEventListener('click', exportarCSV);
+    });
+
+    function guardarCliente(e) {
+      e.preventDefault();
+      const id = document.getElementById('editId').value || Date.now();
+      const cliente = {
+        id: parseInt(id),
+        nombre: document.getElementById('cliente').value,
+        empresa: document.getElementById('empresa').value,
+        comercial: document.getElementById('comercial').value,
+        estado: document.getElementById('estado').value,
+        notas: document.getElementById('notas').value,
+        fecha: new Date().toLocaleDateString()
+      };
+
+      let clientes = JSON.parse(localStorage.getItem('clientesVNL')) || [];
+      if (editMode) {
+        clientes = clientes.map(c => c.id === cliente.id ? cliente : c);
+      } else {
+        clientes.push(cliente);
+      }
+      localStorage.setItem('clientesVNL', JSON.stringify(clientes));
+      document.getElementById('leadForm').reset();
+      if (editMode) {
+        editMode = false;
+        document.getElementById('btnCancel').style.display = 'none';
+        document.getElementById('editId').value = '';
+      }
+      cargarClientes();
+    }
+
+    function cargarClientes() {
+      const tbody = document.getElementById('cuerpoTabla');
+      const clientes = JSON.parse(localStorage.getItem('clientesVNL')) || [];
+      tbody.innerHTML = '';
+
+      clientes.forEach(c => {
+        const row = tbody.insertRow();
+        row.innerHTML = `
+          <td>${c.nombre}</td>
+          <td>${c.empresa}</td>
+          <td>${c.comercial}</td>
+          <td><span class="status status-${c.estado}">${c.estado.replace(/-/g, ' ')}</span></td>
+          <td>
+            <div class="actions">
+              <button class="btn-sm" onclick="editarRegistro(${c.id})">✏️</button>
+              <button class="btn-sm" onclick="eliminarRegistro(${c.id})">🗑️</button>
+            </div>
+          </td>
+        `;
+      });
+    }
+
+    function editarRegistro(id) {
+      const clientes = JSON.parse(localStorage.getItem('clientesVNL')) || [];
+      const c = clientes.find(item => item.id === id);
+      if (c) {
+        editMode = true;
+        document.getElementById('editId').value = c.id;
+        document.getElementById('cliente').value = c.nombre;
+        document.getElementById('empresa').value = c.empresa;
+        document.getElementById('comercial').value = c.comercial;
+        document.getElementById('estado').value = c.estado;
+        document.getElementById('notas').value = c.notas;
+        document.getElementById('btnCancel').style.display = 'inline-block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+
+    function eliminarRegistro(id) {
+      if (!confirm('¿Eliminar este cliente?')) return;
+      let clientes = JSON.parse(localStorage.getItem('clientesVNL')) || [];
+      clientes = clientes.filter(c => c.id !== id);
+      localStorage.setItem('clientesVNL', JSON.stringify(clientes));
+      cargarClientes();
+    }
+
+    function exportarCSV() {
+      const clientes = JSON.parse(localStorage.getItem('clientesVNL')) || [];
+      if (clientes.length === 0) {
+        alert('No hay datos para exportar.');
+        return;
+      }
+
+      const headers = ['ID', 'Cliente', 'Empresa', 'Comercial', 'Estado', 'Notas', 'Fecha'];
+      const rows = clientes.map(c => [
+        c.id,
+        `"${c.nombre}"`,
+        `"${c.empresa}"`,
+        `"${c.comercial}"`,
+        c.estado,
+        `"${c.notas.replace(/"/g, '""')}"`,
+        c.fecha
+      ]);
+
+      let csv = headers.join(',') + '\n' + rows.map(r => r.join(',')).join('\n');
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'crm-value-network-lab.csv';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+  </script>
+</body>
+</html>
