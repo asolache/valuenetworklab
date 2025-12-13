@@ -86,6 +86,7 @@
       font-size: 1.125rem;
       max-width: 750px;
       margin: 0 auto 1.5rem;
+      line-height: 1.7;
     }
 
     .cta-button {
@@ -133,6 +134,7 @@
       <a href="index.html" class="logo">Value Network Lab</a>
       <nav>
         <ul>
+          <li><a href="abstract.html">Abstract</a></li>
           <li><a href="caso-uso.html">Caso de Uso</a></li>
           <li><a href="formacion.html">Formación-Acción</a></li>
           <li><a href="quienes-somos.html">Quiénes Somos</a></li>
@@ -145,21 +147,12 @@
   <div class="container">
     <div class="page-content">
       <h1>¿Listo para transformar su red de valor?</h1>
-      <p>No necesitamos una reunión para empezar. Solo una pregunta clara.</p>
+      <p>No necesitamos una reunión para empezar. Solo una pregunta clara:</p>
 
       <div class="hero-cta">
         <h2>“¿Dónde se está perdiendo valor en su organización… y cómo lo vamos a recuperar?”</h2>
-       <h1>¿Listo para transformar su red de valor?</h1>
-<p>No necesitamos una reunión para empezar. Solo una pregunta clara:</p>
-
-<div class="hero-cta">
-  <h2>“¿Dónde se está perdiendo valor en su organización… y cómo lo vamos a recuperar?”</h2>
-  <p>Contáctenos y en 48h recibirá una propuesta personalizada para una <strong>sesión artesanal de Formación-Acción</strong>: una intervención estratégica de 3 horas en la que su equipo mapeará en vivo una red crítica de su organización y descubrirá, juntos, dónde fluye —y dónde se atasca— el valor.</p>
-  <a id="cta-mailto" class="cta-button">Enviar solicitud de sesión artesanal</a>
-</div>
-
-<p>Trabajamos solo con organizaciones que entienden que <strong>el verdadero valor no está en los procesos… está en las relaciones</strong>.</p>
-        <a id="cta-mailto" class="cta-button">Enviar solicitud de presupuesto</a>
+        <p>Contáctenos y en 48h recibirá una propuesta personalizada para una <strong>sesión artesanal de Formación-Acción</strong>: una intervención estratégica de 3 horas en la que su equipo mapeará en vivo una red crítica de su organización y descubrirá, juntos, dónde fluye —y dónde se atasca— el valor.</p>
+        <a id="cta-mailto" class="cta-button">Enviar solicitud de sesión artesanal</a>
       </div>
 
       <p>Trabajamos solo con organizaciones que entienden que <strong>el verdadero valor no está en los procesos… está en las relaciones</strong>.</p>
@@ -180,7 +173,7 @@
       const footerEl = document.getElementById('footer-email');
       
       if (cta) {
-        cta.href = 'mailto:' + email + '?subject=Solicitud de presupuesto para Value Network Analysis';
+        cta.href = 'mailto:' + email + '?subject=Solicitud de sesión artesanal Value Network Analysis';
       }
       if (footerEl) {
         footerEl.innerHTML = '<a href="mailto:' + email + '">' + email + '</a>';
