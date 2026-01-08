@@ -3,211 +3,144 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Quiénes Somos | Value Network Lab</title>
-  <meta name="description" content="Conozca a los fundadores de Value Network Lab: Álvaro Solache y Nerea T. Ruiz. Expertos en redes de valor, innovación y transformación en empresas globales.">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.65;
-      color: #111827;
-      background-color: #f9fafb;
+  <title>Quiénes Somos – Value Network Lab | Expertos en Redes de Valor</title>
+  <meta name="description" content="Conozca a los fundadores de Value Network Lab: Álvaro Solache y Nerea T. Ruiz. Expertos en Value Network Analysis, IA humano-máquina y transformación sistémica en organizaciones complejas." />
+  
+  <!-- Favicon -->
+  <link rel="icon" href="image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>V</text></svg>" type="image/svg+xml">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#003366',
+            secondary: '#F97316',
+          }
+        }
+      }
     }
-    .container { width: 90%; max-width: 1100px; margin: 0 auto; padding: 2rem 0; text-align: center; }
-
-    header {
-      background: #fff;
-      box-shadow: 0 1px 8px rgba(0,0,0,0.08);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    .header-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 0;
-    }
-    .logo {
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: #1e40af;
-      text-decoration: none;
-    }
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 1.5rem;
-    }
-    nav a {
-      color: #374151;
-      font-weight: 600;
-      text-decoration: none;
-      padding: 0.25rem 0;
-      border-bottom: 2px solid transparent;
-      transition: border-color 0.2s;
-    }
-    nav a:hover, nav a.active {
-      border-bottom-color: #1e40af;
-      color: #1e40af;
-    }
-
-    .page-content {
-      background: white;
-      border-radius: 16px;
-      padding: 2.5rem;
-      margin: 2rem 0;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-    }
-    .page-content h1 {
-      font-size: 2rem;
-      color: #1e40af;
-      margin-bottom: 2rem;
-    }
-    .profile-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2.5rem;
-      margin-top: 2rem;
-    }
-    .profile {
-      text-align: center;
-    }
-    .profile img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 1rem;
-      border: 3px solid #dbeafe;
-    }
-    .profile h2 {
-      color: #1e40af;
-      margin: 0.5rem 0;
-    }
-    .profile p.role {
-      color: #4b5563;
-      font-style: italic;
-      margin-bottom: 1rem;
-    }
-    .profile p {
-      margin-bottom: 1rem;
-      font-size: 1.05rem;
-    }
-    .profile a {
-      color: #1d4ed8;
-      font-weight: 600;
-      text-decoration: none;
-    }
-    .profile a:hover {
-      text-decoration: underline;
-    }
-
-    .contact-box {
-      background: #eff6ff;
-      border-left: 4px solid #1e40af;
-      padding: 1.5rem;
-      margin-top: 2.5rem;
-      border-radius: 8px;
-      text-align: center;
-    }
-
-    footer {
-      background: #1e3a8a;
-      color: white;
-      padding: 2rem 0;
-      text-align: center;
-      margin-top: 4rem;
-    }
-    footer a {
-      color: #93c5fd;
-    }
-    footer a:hover {
-      color: white;
-    }
-
-    @media (max-width: 700px) {
-      nav ul { gap: 1rem; font-size: 0.9rem; }
-      .page-content { padding: 1.75rem; }
-      .page-content h1 { font-size: 1.6rem; }
-      .profile-grid { gap: 1.5rem; }
-    }
-  </style>
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>body { font-family: 'Inter', sans-serif; }</style>
 </head>
-<body>
-  <header>
-    <div class="container header-content">
-      <a href="index.html" class="logo">Value Network Lab</a>
-      <nav>
-        <ul>
-          <li><a href="caso-uso.html">Caso de Uso</a></li>
-          <li><a href="formacion.html">Formación-Acción</a></li>
-          <li><a href="quienes-somos.html" class="active">Quiénes Somos</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Header -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="index.html" class="font-bold text-xl text-primary">Value Network Lab</a>
+      <a href="https://cursovna.netlify.app/" class="bg-primary text-white px-3 py-1 rounded text-sm font-medium hover:bg-blue-800 transition">Curso VNA</a>
     </div>
   </header>
 
-  <div class="container">
-    <div class="page-content">
-      <h1>Quiénes Somos</h1>
-      <p>En <strong>Value Network Lab</strong>, combinamos experiencia práctica en innovación sistémica, redes de valor y transformación organizacional en empresas globales como IKEA. Nuestro enfoque se basa en la metodología de Verna Allee, adaptada a los desafíos reales de la colaboración humano-máquina y los ecosistemas de alto presupuesto.</p>
+  <!-- Main Content -->
+  <main class="max-w-3xl mx-auto px-4 py-12">
+    <h1 class="text-3xl md:text-4xl font-bold text-primary mb-6">Quiénes Somos</h1>
 
-      <div class="profile-grid">
-        <div class="profile">
-          <img src="alvaro.jpg" alt="Álvaro Solache" />
-          <h2>Álvaro Solache</h2>
-          <p class="role">Socio Fundador | Estrategia de Redes de Valor</p>
-          <p>Consultor estratégico con experiencia en el análisis de redes de valor en organizaciones complejas. Ha aplicado la metodología de Verna Allee en contextos como IKEA, mapeando flujos intangibles y tangibles para revelar oportunidades de co-creación de valor. Profundo conocedor de sistemas vivos, gobernanza distribuida y diseño de ecosistemas colaborativos.</p>
+    <p class="text-lg mb-8">
+      En **Value Network Lab**, no creemos en optimizar procesos lineales.  
+      Creemos en **optimizar redes vivas** donde personas, sistemas y máquinas co-crean valor.
+    </p>
+
+    <!-- Origen -->
+    <section class="mb-10 p-5 bg-white rounded-lg border-l-4 border-primary">
+      <h2 class="text-xl font-semibold text-primary mb-3">¿Por qué nació Value Network Lab?</h2>
+      <p>
+        Porque vimos cómo las grandes organizaciones invierten millones en IA, innovación y transformación…  
+        pero los resultados no aparecen. No por falta de tecnología, sino por <strong>redes rotas</strong>.
+      </p>
+      <p class="mt-3">
+        Inspirados en la obra pionera de <strong>Verna Allee</strong> y con experiencia en ecosistemas complejos (como IKEA), creamos una metodología práctica para:
+      </p>
+      <ul class="list-disc pl-5 mt-3">
+        <li>Revelar fugas invisibles de valor (3–5% de EBITDA)</li>
+        <li>Integrar IA donde realmente fluye el conocimiento</li>
+        <li>Convertir silos en redes resilientes y co-creativas</li>
+      </ul>
+    </section>
+
+    <!-- Fundadores -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-primary mb-8 text-center">Nuestro equipo fundador</h2>
+
+      <!-- Álvaro Solache -->
+      <div class="flex flex-col md:flex-row gap-6 mb-12 items-center">
+        <div class="flex-shrink-0">
+          <img 
+            src="https://valuenetworklab.netlify.app/alvaro.jpg" 
+            alt="Álvaro Solache – Socio Fundador de Value Network Lab"
+            class="w-32 h-32 rounded-full object-cover border-2 border-primary"
+          />
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-primary">Álvaro Solache</h3>
+          <p class="text-secondary font-medium mb-2">Socio Fundador | Estrategia de Redes de Valor</p>
           <p>
-            <a href="https://www.linkedin.com/in/alvarosolache" target="_blank">LinkedIn</a> · 
-            <a href="https://pantheon.work/sobre-pantheon/" target="_blank">Pantheon.Work</a>
+            Consultor estratégico con experiencia en el análisis de redes de valor en organizaciones complejas. Ha aplicado la metodología de Verna Allee en contextos como IKEA, mapeando flujos intangibles y tangibles para revelar oportunidades de co-creación. Profundo conocedor de sistemas vivos, gobernanza distribuida y diseño de ecosistemas colaborativos.
           </p>
         </div>
+      </div>
 
-        <div class="profile">
-          <img src="nerea.jpg" alt="Nerea T. Ruiz" />
-          <h2>Nerea T. Ruiz</h2>
-          <p class="role">Socia Fundadora | Transformación y Coordinación Humano-Máquina</p>
-          <p>Experta en la intersección entre personas, procesos y agentes inteligentes. Su trabajo se centra en cómo los equipos directivos pueden rediseñar sus redes de coordinación para integrar eficazmente la IA, reducir silos y acelerar la toma de decisiones. Combina metodologías de análisis de redes con enfoques prácticos de implementación en entornos de alta complejidad.</p>
+      <!-- Nerea T. Ruiz -->
+      <div class="flex flex-col md:flex-row-reverse gap-6 items-center">
+        <div class="flex-shrink-0">
+          <img 
+            src="https://valuenetworklab.netlify.app/nerea.jpg" 
+            alt="Nerea T. Ruiz – Socia Fundadora de Value Network Lab"
+            class="w-32 h-32 rounded-full object-cover border-2 border-primary"
+          />
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-primary">Nerea T. Ruiz</h3>
+          <p class="text-secondary font-medium mb-2">Socia Fundadora | Transformación y Coordinación Humano-Máquina</p>
           <p>
-            <a href="https://www.linkedin.com/in/nerea-t-ruiz-17800747/" target="_blank">LinkedIn</a>
+            Experta en la intersección entre personas, procesos y agentes inteligentes. Su trabajo se centra en cómo los equipos directivos pueden rediseñar sus redes de coordinación para integrar eficazmente la IA, reducir silos y acelerar la toma de decisiones. Combina metodologías de análisis de redes con enfoques prácticos de implementación en entornos de alta complejidad.
           </p>
         </div>
       </div>
-      <div class="partner-box" style="background: #f8fafc; border-left: 4px solid #1e40af; padding: 1.25rem; margin: 2.5rem 0; border-radius: 0 8px 8px 0; text-align: left;">
-          <h3 style="color: #1e40af; margin-bottom: 0.5rem;">Aliado metodológico</h3>
-          <p>Value Network Lab aplica y extiende la metodología de <strong>Pantheon Work</strong>, pionero en la enseñanza y aplicación del Value Network Analysis en entornos organizacionales complejos. Reconocemos su contribución esencial en la difusión de la obra de Verna Allee y en la democratización de una herramienta capaz de revelar el valor invisible en las redes humanas.</p>
-          <p><a href="https://pantheon.work" target="_blank" style="color: #1d4ed8; font-weight: 600;">→ Visitar Pantheon Work</a></p>
-      </div>
-      <div class="contact-box">
-        <p>¿Quiere trabajar con nosotros o tiene una pregunta sobre su red de valor?</p>
-        <p id="contact-email"></p>
-      </div>
-    </div>
-  </div>
+    </section>
 
-  <footer>
-    <div class="container">
-      <p>Value Network Lab — Basado en la metodología de Verna Allee. Validado en empresas globales como IKEA.</p>
-      <p id="footer-email"></p>
+    <!-- Enfoque único -->
+    <section class="mb-10 p-5 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg">
+      <h2 class="text-2xl font-bold text-primary mb-3">Nuestro enfoque único</h2>
+      <p>
+        No vendemos teoría. Ofrecemos <strong>Formación-Acción</strong>:  
+        intervenciones estratégicas de 3 horas que revelan valor invisible y generan insights ejecutivos en 48h.
+      </p>
+      <p class="mt-3">
+        Trabajamos con líderes que entienden que la próxima frontera de la eficiencia no está en la automatización de tareas…  
+        sino en la <strong>optimización de la red de valor</strong>.
+      </p>
+    </section>
+
+    <!-- CTA final -->
+    <div class="text-center bg-gradient-to-r from-primary to-blue-800 text-white p-8 rounded-lg">
+      <h3 class="text-2xl font-bold mb-4">¿Quiere trabajar con nosotros?</h3>
+      <p class="mb-6">Escríbanos para una sesión exploratoria sin compromiso o conozca nuestra formación online.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="https://cursovna.netlify.app/" class="bg-white text-primary font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition">🎓 Acceda al curso</a>
+        <a id="contact-link" href="#" class="bg-secondary text-white font-bold py-3 px-8 rounded-lg hover:bg-orange-600 transition">📧 Contáctenos</a>
+      </div>
     </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6 text-center text-sm">
+    <p>Value Network Lab – Inspirado en Verna Allee | Basado en <a href="https://pantheon.work/" class="text-secondary hover:underline" target="_blank">Pantheon Work</a></p>
   </footer>
 
+  <!-- Script para proteger email -->
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const email = 'asolache' + '@' + 'mac.com';
-      const contactEl = document.getElementById('contact-email');
-      const footerEl = document.getElementById('footer-email');
-      
-      if (contactEl) {
-        contactEl.innerHTML = '<a href="mailto:' + email + '">' + email + '</a>';
+    (function() {
+      const email = ['a', 's', 'o', 'l', 'a', 'c', 'h', 'e', '@', 'm', 'a', 'c', '.', 'c', 'o', 'm'].join('');
+      const mailto = 'mailto:' + email;
+      const link = document.getElementById('contact-link');
+      if (link) {
+        link.href = mailto;
       }
-      if (footerEl) {
-        footerEl.innerHTML = '<a href="mailto:' + email + '">' + email + '</a>';
-      }
-    });
+    })();
   </script>
 </body>
 </html>
