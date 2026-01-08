@@ -27,8 +27,23 @@
   <style>body { font-family: 'Inter', sans-serif; }</style>
 </head>
 <body class="bg-gray-50 text-gray-800">
+  <!-- Header con menú -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center gap-4">
+      <div class="font-bold text-xl text-primary">Value Network Lab</div>
+      <nav class="flex flex-wrap gap-4 md:gap-6 text-sm md:text-base">
+        <a href="abstract.html" class="text-gray-700 hover:text-primary transition">Abstract</a>
+        <a href="caso-de-uso.html" class="text-gray-700 hover:text-primary transition">Caso de Uso</a>
+        <a href="formacion-accion.html" class="text-gray-700 hover:text-primary transition">Formación-Acción</a>
+        <a href="quienes-somos.html" class="text-gray-700 hover:text-primary transition">Quiénes Somos</a>
+        <a href="contacto.html" class="text-gray-700 hover:text-primary transition">Contacto</a>
+        <a href="https://cursovna.netlify.app/" class="bg-primary text-white px-3 py-1 rounded font-medium hover:bg-blue-800 transition">Curso VNA</a>
+      </nav>
+    </div>
+  </header>
+
   <!-- Hero -->
-  <header class="bg-gradient-to-r from-primary to-blue-800 text-white py-16 px-4">
+  <section class="bg-gradient-to-r from-primary to-blue-800 text-white py-16 px-4">
     <div class="max-w-4xl mx-auto text-center">
       <h1 class="text-4xl md:text-5xl font-bold mb-6">¿Por qué tu organización pierde valor… sin saberlo?</h1>
       <p class="text-xl mb-8 max-w-2xl mx-auto">
@@ -39,12 +54,24 @@
       </p>
       <div class="flex flex-col sm:flex-row justify-center gap-4">
         <a href="https://cursovna.netlify.app/" class="bg-white text-primary font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition">🎓 Accede al curso online</a>
-        <a href="mailto:asolache@mac.com?subject=Consulta%20VNA%20–%20Value%20Network%20Lab" class="bg-secondary text-white font-bold py-3 px-8 rounded-lg hover:bg-orange-600 transition">💼 Solicita consultoría</a>
+        <a id="consultoria-link" href="#" class="bg-secondary text-white font-bold py-3 px-8 rounded-lg hover:bg-orange-600 transition">💼 Solicita consultoría</a>
       </div>
     </div>
-  </header>
+  </section>
 
-  <!-- Problema -->
+  <!-- Script para proteger el email -->
+  <script>
+    (function() {
+      const email = ['a', 's', 'o', 'l', 'a', 'c', 'h', 'e', '@', 'm', 'a', 'c', '.', 'c', 'o', 'm'].join('');
+      const mailto = 'mailto:' + email;
+      const link = document.getElementById('consultoria-link');
+      if (link) {
+        link.href = mailto;
+      }
+    })();
+  </script>
+
+  <!-- Contenido principal -->
   <section class="max-w-4xl mx-auto px-4 py-12">
     <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-r mb-12">
       <h2 class="text-2xl font-bold text-red-800 mb-3">❌ El dolor que nadie nombra</h2>
@@ -56,7 +83,6 @@
       </ul>
     </div>
 
-    <!-- Solución -->
     <div class="bg-white p-8 rounded-lg shadow mb-12">
       <h2 class="text-3xl font-bold text-primary mb-6 text-center">✅ La solución deliciosa: Value Network Analysis (VNA)</h2>
       <p class="mb-6 text-lg">
@@ -116,7 +142,7 @@
       <h3 class="text-2xl font-bold mb-4">¿Listo para descubrir el valor que tu organización no está viendo?</h3>
       <div class="flex flex-col sm:flex-row justify-center gap-4">
         <a href="https://cursovna.netlify.app/" class="bg-white text-primary font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition">🎓 Curso online gratis</a>
-        <a href="mailto:asolache@mac.com?subject=Consulta%20VNA%20–%20Value%20Network%20Lab" class="bg-secondary text-white font-bold py-3 px-8 rounded-lg hover:bg-orange-600 transition">📧 Guía ejecutiva + propuesta</a>
+        <a id="consultoria-link-2" href="#" class="bg-secondary text-white font-bold py-3 px-8 rounded-lg hover:bg-orange-600 transition">📧 Guía ejecutiva + propuesta</a>
       </div>
     </div>
   </section>
@@ -125,5 +151,17 @@
   <footer class="bg-gray-800 text-white py-6 text-center text-sm">
     <p>Value Network Lab – Inspirado en Verna Allee | Basado en <a href="https://pantheon.work/" class="text-secondary hover:underline" target="_blank">Pantheon Work</a></p>
   </footer>
+
+  <!-- Script adicional para segundo enlace -->
+  <script>
+    (function() {
+      const email = ['a', 's', 'o', 'l', 'a', 'c', 'h', 'e', '@', 'm', 'a', 'c', '.', 'c', 'o', 'm'].join('');
+      const mailto = 'mailto:' + email;
+      const link2 = document.getElementById('consultoria-link-2');
+      if (link2) {
+        link2.href = mailto;
+      }
+    })();
+  </script>
 </body>
 </html>
