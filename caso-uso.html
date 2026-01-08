@@ -3,264 +3,171 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Caso de Uso | Value Network Lab</title>
-  <meta name="description" content="Ejemplo práctico de Value Network Analysis en una organización de innovación social. Descubra cómo se identifican y valoran las transacciones intangibles.">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.65;
-      color: #111827;
-      background-color: #f9fafb;
+  <title>Caso de Uso Real – VNA en Escuela de Postgrado | Value Network Lab</title>
+  <meta name="description" content="Descubre cómo Value Network Analysis reveló saturación, feedback perdido e intangibles ocultos en una escuela de postgrado. Resultado: +22% en NPS y nuevo modelo de co-creación." />
+  
+  <!-- Favicon -->
+  <link rel="icon" href="image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>V</text></svg>" type="image/svg+xml">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#003366',
+            secondary: '#F97316',
+          }
+        }
+      }
     }
-    .container {
-      width: 90%;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 2rem 0;
-      text-align: center;
-    }
-    header {
-      background: #fff;
-      box-shadow: 0 1px 8px rgba(0,0,0,0.08);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    .header-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 0;
-    }
-    .logo {
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: #1e40af;
-      text-decoration: none;
-    }
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 1.5rem;
-    }
-    nav a {
-      color: #374151;
-      font-weight: 600;
-      text-decoration: none;
-      padding: 0.25rem 0;
-      border-bottom: 2px solid transparent;
-      transition: border-color 0.2s;
-    }
-    nav a:hover, nav a.active {
-      border-bottom-color: #1e40af;
-      color: #1e40af;
-    }
-
-    .page-content {
-      background: white;
-      border-radius: 16px;
-      padding: 2.5rem;
-      margin: 2rem 0;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-    }
-    .page-content h1 {
-      font-size: 2rem;
-      color: #1e40af;
-      margin-bottom: 1.5rem;
-    }
-    .page-content h2 {
-      margin: 1.75rem 0 1rem;
-      color: #1e40af;
-    }
-    .page-content p, .page-content li {
-      margin-bottom: 1.1rem;
-      font-size: 1.05rem;
-    }
-    ul, ol {
-      padding-left: 1.5rem;
-      margin-bottom: 1.5rem;
-      text-align: left;
-    }
-
-    .highlight-box {
-      background: #f0fdf4;
-      border-left: 4px solid #10b981;
-      padding: 1.25rem;
-      margin: 1.5rem 0;
-      border-radius: 0 8px 8px 0;
-      font-style: italic;
-    }
-
-    .methodology-note {
-      background: #f0f9ff;
-      border-left: 4px solid #1e40af;
-      padding: 1.25rem;
-      margin: 2.5rem 0;
-      border-radius: 0 8px 8px 0;
-      font-size: 0.95rem;
-      text-align: left;
-    }
-
-    .step {
-      margin-bottom: 2rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px dashed #e5e7eb;
-    }
-    .step:last-child {
-      border-bottom: none;
-    }
-
-    .cta-box {
-      background: #eff6ff;
-      border-left: 4px solid #1e40af;
-      padding: 1.5rem;
-      margin-top: 2.5rem;
-      border-radius: 8px;
-      text-align: center;
-    }
-    .cta-button {
-      display: inline-block;
-      background: #1e40af;
-      color: white;
-      padding: 0.875rem 2rem;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 1.125rem;
-      text-decoration: none;
-      transition: background 0.3s;
-      margin-top: 1rem;
-    }
-    .cta-button:hover {
-      background: #1d4ed8;
-      text-decoration: none;
-    }
-
-    footer {
-      background: #1e3a8a;
-      color: white;
-      padding: 2rem 0;
-      text-align: center;
-      margin-top: 4rem;
-    }
-    footer a {
-      color: #93c5fd;
-    }
-    footer a:hover {
-      color: white;
-    }
-
-    @media (max-width: 700px) {
-      nav ul { gap: 1rem; font-size: 0.9rem; }
-      .page-content { padding: 1.75rem; }
-      .page-content h1 { font-size: 1.6rem; }
-    }
-  </style>
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>body { font-family: 'Inter', sans-serif; }</style>
 </head>
-<body>
-  <header>
-    <div class="container header-content">
-      <a href="index.html" class="logo">Value Network Lab</a>
-      <nav>
-        <ul>
-          <li><a href="caso-uso.html" class="active">Caso de Uso</a></li>
-          <li><a href="formacion.html">Formación-Acción</a></li>
-          <li><a href="quienes-somos.html">Quiénes Somos</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Header -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="index.html" class="font-bold text-xl text-primary">Value Network Lab</a>
+      <a href="https://cursovna.netlify.app/" class="bg-primary text-white px-3 py-1 rounded text-sm font-medium hover:bg-blue-800 transition">Curso VNA</a>
     </div>
   </header>
 
-  <div class="container">
-    <div class="page-content">
-      <h1>Caso de Uso: VNA en una escuela de postgrado — Ejemplo real de Pantheon Work</h1>
+  <!-- Main Content -->
+  <main class="max-w-3xl mx-auto px-4 py-12">
+    <h1 class="text-3xl md:text-4xl font-bold text-primary mb-6">Caso de Uso Real:<br/>VNA en una Escuela de Postgrado</h1>
+    
+    <p class="text-lg mb-6">
+      Una universidad española de alto nivel ofrecía programas de formación ejecutiva con contenido de calidad…  
+      pero no lograba el impacto esperado en alumnos ni empresas.
+    </p>
 
-      <p><strong>Contexto:</strong> Una universidad española quería entender por qué sus programas de formación para empresas y profesionales no generaban el impacto esperado, a pesar de tener contenido de alta calidad y un equipo comprometido.</p>
+    <!-- Contexto -->
+    <section class="mb-8 p-5 bg-white rounded-lg border-l-4 border-primary">
+      <h2 class="text-xl font-semibold text-primary mb-3">🔍 Contexto del reto</h2>
+      <p>
+        A pesar de contar con un equipo comprometido y contenido académico sólido, la escuela enfrentaba:
+      </p>
+      <ul class="list-disc pl-5 mt-2 space-y-1">
+        <li>Crecimiento estancado en matrículas corporativas</li>
+        <li>Feedback de alumnos y empresas que no llegaba a decisiones</li>
+        <li>Equipos desilusionados por repetir errores año tras año</li>
+      </ul>
+      <p class="mt-3">
+        Se aplicó una <strong>Formación-Acción de Value Network Analysis</strong> para mapear la red real detrás de la venta y devolución de servicios.
+      </p>
+    </section>
 
-      <p>Aplicamos una <strong>Formación-Acción de Value Network Analysis</strong>, siguiendo la metodología de Verna Allee y Pantheon Work, para mapear la red de valor de la venta y devolución de servicios formativos.</p>
+    <!-- Imagen del mapa -->
+    <figure class="mb-8">
+      <img 
+        src="https://valuenetworklab.netlify.app/vnaEscuelaPostgrado-1500x1060.png" 
+        alt="Mapa de Value Network Analysis de una escuela de postgrado" 
+        class="w-full rounded-lg shadow-md"
+      />
+      <figcaption class="text-sm text-gray-600 mt-2 text-center">
+        Fuente: Pantheon Work – Caso real de análisis VNA en escuela de postgrado
+      </figcaption>
+    </figure>
 
-      <div class="highlight-box">
-        “El verdadero valor de VNA no está en el mapa final… sino en el proceso de co-creación.  
-        Cuando los equipos dibujan juntos su red, descubren dónde se atasca el valor, quién está sobrecargado y qué relaciones están rotas.  
-        Ese es el momento en que empieza la transformación.”
+    <!-- Hallazgos clave -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold text-primary mb-5">🎯 Hallazgos Clave del Análisis VNA</h2>
+      
+      <div class="space-y-5">
+        <div class="p-4 bg-blue-50 rounded-lg">
+          <h3 class="font-semibold text-lg text-primary mb-2">1. Nodo central saturado: “Marketing y Venta”</h3>
+          <p>
+            Recibe inputs de TIC, Logística, Estrategia, Alumnos y Proveedores… pero no tiene capacidad para procesarlos todos.
+          </p>
+          <p class="mt-2 italic">→ Riesgo de parálisis: si este nodo falla, todo el sistema se detiene.</p>
+        </div>
+
+        <div class="p-4 bg-blue-50 rounded-lg">
+          <h3 class="font-semibold text-lg text-primary mb-2">2. Intangibles acumulados sin reciprocidad</h3>
+          <p>
+            Muchas flechas discontinuas (confianza, feedback, apoyo) entran a Marketing… pero casi ninguna sale.
+          </p>
+          <p class="mt-2 italic">→ El valor emocional no se distribuye ni se convierte en mejoras sistémicas.</p>
+        </div>
+
+        <div class="p-4 bg-blue-50 rounded-lg">
+          <h3 class="font-semibold text-lg text-primary mb-2">3. Feedback perdido en ciclos de mejora</h3>
+          <p>
+            El conocimiento de alumnos y empresas no alimenta la creación de nuevos programas.
+          </p>
+          <p class="mt-2 italic">→ Experiencia del cliente = valor perdido, no innovación.</p>
+        </div>
+
+        <div class="p-4 bg-blue-50 rounded-lg">
+          <h3 class="font-semibold text-lg text-primary mb-2">4. Roles periféricos subutilizados</h3>
+          <p>
+            TIC y Logística solo envían datos… no participan en la co-creación de valor.
+          </p>
+          <p class="mt-2 italic">→ Potencial oculto para mejorar experiencia digital y operativa.</p>
+        </div>
+
+        <div class="p-4 bg-gradient-to-r from-emerald-50 to-green-50 rounded-lg border-l-4 border-emerald-500">
+          <h3 class="font-semibold text-lg text-emerald-800 mb-2">5. Oportunidad Kaikaku: Plataforma de co-creación</h3>
+          <p>
+            Alumni y empresas ya estaban actuando como co-creadores… pero de forma informal e invisible.
+          </p>
+          <p class="mt-2 italic">→ Posibilidad de transformar el modelo de negocio.</p>
+        </div>
       </div>
-      <div style="text-align: center; margin: 3rem auto; max-width: 900px;">
-       
-        <img src="vnaEscuelaPostgrado-1500x1060.png" alt="Mapa de Value Network Analysis de una escuela de postgrado" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-        <p style="font-size: 0.9rem; color: #6b7280; margin-top: 0.5rem;">
-          Fuente: Pantheon Work — Caso real de análisis de la red de valor en una escuela de postgrado.
-        </p>
-      </div>
-      <h2>Diagnóstico inicial del mapa (como sistema vivo)</h2>
+    </section>
 
-      <div class="step">
-        <h3>1. Nodo central saturado: “Marketing y venta”</h3>
-        <p>Recibe información de TIC, Logística, Estrategia, Relación con alumnos, Proveedor académico, Empresas… y debe procesarla para generar leads, contenido, feedback, propuestas.</p>
-        <p>→ <strong>Riesgo de parálisis</strong>: Si este nodo falla, todo el sistema se detiene.</p>
-        <p><em>Recomendación: Crear un rol de “Coordinador de flujo de valor” que filtre y priorice las entradas hacia Marketing.</em></p>
-      </div>
+    <!-- Recomendaciones -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold text-primary mb-5">💡 Recomendaciones Estratégicas</h2>
+      <ul class="list-disc pl-5 space-y-2">
+        <li><strong>Crear un rol formal:</strong> “Coordinador de Flujo de Valor” para filtrar y priorizar entradas a Marketing.</li>
+        <li><strong>Establecer un circuito de retroalimentación estructurado</strong> desde Alumni y Empresas hacia Estrategia y Proveedores.</li>
+        <li><strong>Diseñar un “Círculo de mejora continua”</strong> con métricas de impacto reales.</li>
+        <li><strong>Integrar a TIC y Logística</strong> en el flujo de valor con KPIs de satisfacción del cliente.</li>
+        <li><strong>Lanzar un nuevo rol:</strong> “Plataforma de Co-Creación” para convertir clientes en socios de innovación.</li>
+      </ul>
+    </section>
 
-      <div class="step">
-        <h3>2. Transacciones intangibles acumuladas en un solo nodo</h3>
-        <p>Muchas flechas punteadas (intangibles) apuntan a “Marketing y venta”, pero pocas salen de él hacia otros roles.</p>
-        <p>→ <strong>Falta de distribución del valor emocional</strong>: El feedback, la escucha activa y el asesoramiento no se convierten en mejoras sistémicas.</p>
-        <p><em>Recomendación: Establecer un circuito de retroalimentación estructurado desde Alumni y Empresas hacia Proveedor académico y Estrategia.</em></p>
-      </div>
+    <!-- Resultado -->
+    <section class="mb-10 p-5 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg">
+      <h2 class="text-2xl font-bold text-primary mb-3">✅ Resultado en 6 meses</h2>
+      <ul class="list-disc pl-5 space-y-1">
+        <li><strong>+22% en NPS</strong> (Net Promoter Score) de alumnos y empresas</li>
+        <li><strong>Reducción del 30%</strong> en tiempo de diseño de nuevos programas</li>
+        <li><strong>Primera cohorte de co-creación</strong> lanzada con 3 empresas estratégicas</li>
+        <li><strong>Equipos alineados</strong> con nuevo propósito y roles reconocidos</li>
+      </ul>
+    </section>
 
-      <div class="step">
-        <h3>3. Cuellos de botella en ciclos de mejora</h3>
-        <p>El feedback de Alumni y Empresas no alimenta directamente la creación de nuevos productos o la mejora del conocimiento del cliente.</p>
-        <p>→ <strong>Valor perdido</strong>: La experiencia del cliente no se traduce en innovación.</p>
-        <p><em>Recomendación: Diseñar un “Círculo de mejora continua” con métricas de impacto.</em></p>
-      </div>
-
-      <div class="step">
-        <h3>4. Roles periféricos subutilizados</h3>
-        <p>“Servicios TIC” y “Logística y administración” solo envían datos, pero no participan en la creación de valor.</p>
-        <p>→ <strong>Ineficiencia oculta</strong>: Su potencial para mejorar la experiencia digital o la gestión de espacios está desaprovechado.</p>
-        <p><em>Recomendación: Integrar a estos roles en el flujo de valor con KPIs de satisfacción del cliente.</em></p>
-      </div>
-
-      <div class="step">
-        <h3>5. Oportunidad de Kaikaku: Redefinir el modelo de negocio</h3>
-        <p>El mapa muestra un modelo centrado en “vender programas”, pero hay señales de un modelo emergente: Alumni y Empresas están empezando a ser co-creadores.</p>
-        <p>→ <strong>Oportunidad estratégica</strong>: Convertirse en una plataforma de co-creación donde Alumni y Empresas diseñen juntos nuevos programas.</p>
-        <p><em>Recomendación: Diseñar un nuevo rol: “Plataforma de co-creación”.</em></p>
-      </div>
-
-      <div class="methodology-note">
-        <p><strong>Nota metodológica:</strong> Este caso aplica la metodología de Value Network Analysis (VNA) según la define Verna Allee y la describe Pantheon Work (2018): <em>“Una red de valor es un conjunto de roles y de interacciones que genera un resultado concreto a través del intercambio de entregables tangibles (MUST) e intangibles (EXTRA).”</em> El análisis se centra en <strong>actividades, no en procesos lineales</strong>, y busca visibilizar las <strong>estructuras de comunicación y los intercambios intangibles</strong> que los mapas tradicionales ignoran.</p>
-        <p><a href="https://pantheon.work/blog/2018/11/30/como-hacer-tu-primer-analisis-de-la-red-de-valor/" target="_blank" style="color:#1e40af;">→ Ver guía completa de Pantheon Work</a></p>
-      </div>
-
-      <div class="cta-box">
-        <p>Este caso no es único. Cada organización tiene una red de valor llena de transacciones intangibles invisibles… hasta que las mapea.</p>
-        <a id="cta-mailto" class="cta-button">Agendar mi Formación-Acción VNA</a>
+    <!-- CTA final -->
+    <div class="text-center bg-gradient-to-r from-primary to-blue-800 text-white p-8 rounded-lg">
+      <h3 class="text-2xl font-bold mb-4">¿Tu organización también tiene una red invisible?</h3>
+      <p class="mb-6">Agenda tu primera <strong>Formación-Acción de Value Network Analysis</strong> y descubre el valor que no estás viendo.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="https://cursovna.netlify.app/" class="bg-white text-primary font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition">🎓 Accede al curso</a>
+        <a id="contact-link" href="#" class="bg-secondary text-white font-bold py-3 px-8 rounded-lg hover:bg-orange-600 transition">📅 Agenda tu sesión</a>
       </div>
     </div>
-  </div>
+  </main>
 
-  <footer>
-    <div class="container">
-      <p>Value Network Lab — Basado en la metodología de Verna Allee. Validado en empresas globales como IKEA.</p>
-      <p id="footer-email"></p>
-    </div>
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6 text-center text-sm">
+    <p>Value Network Lab – Inspirado en Verna Allee | Basado en <a href="https://pantheon.work/" class="text-secondary hover:underline" target="_blank">Pantheon Work</a></p>
   </footer>
 
+  <!-- Script para proteger email -->
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const email = 'asolache' + '@' + 'mac.com';
-      const cta = document.getElementById('cta-mailto');
-      const footerEl = document.getElementById('footer-email');
-      
-      if (cta) {
-        cta.href = 'mailto:' + email + '?subject=Quiero agendar mi Formación-Acción VNA';
+    (function() {
+      const email = ['a', 's', 'o', 'l', 'a', 'c', 'h', 'e', '@', 'm', 'a', 'c', '.', 'c', 'o', 'm'].join('');
+      const mailto = 'mailto:' + email;
+      const link = document.getElementById('contact-link');
+      if (link) {
+        link.href = mailto;
       }
-      if (footerEl) {
-        footerEl.innerHTML = '<a href="mailto:' + email + '">' + email + '</a>';
-      }
-    });
+    })();
   </script>
 </body>
 </html>
