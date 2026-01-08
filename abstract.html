@@ -3,212 +3,152 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Abstract Ejecutivo | Value Network Lab</title>
-  <meta name="description" content="Abstract gratuito: cómo las grandes empresas recuperan valor oculto con Value Network Analysis. Para directivos de innovación y operaciones.">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.65;
-      color: #111827;
-      background-color: #f9fafb;
+  <title>Abstract Ejecutivo – Value Network Analysis | Value Network Lab</title>
+  <meta name="description" content="Descubre la fractura invisible en tu red de valor. Por qué el 72% de las iniciativas de IA fracasan y cómo VNA recupera 3-5% de EBITDA. Basado en Verna Allee." />
+  
+  <!-- Favicon -->
+  <link rel="icon" href="image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>V</text></svg>" type="image/svg+xml">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#003366',
+            secondary: '#F97316',
+          }
+        }
+      }
     }
-    .container { width: 90%; max-width: 1100px; margin: 0 auto; padding: 2rem 0; }
-
-    header {
-      background: #fff;
-      box-shadow: 0 1px 8px rgba(0,0,0,0.08);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    .header-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1;
-      padding: 1rem 0;
-    }
-    .logo {
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: #1e40af;
-      text-decoration: none;
-    }
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 1.5rem;
-    }
-    nav a {
-      color: #374151;
-      font-weight: 600;
-      text-decoration: none;
-      padding: 0.25rem 0;
-      border-bottom: 2px solid transparent;
-      transition: border-color 0.2s;
-    }
-    nav a:hover, nav a.active {
-      border-bottom-color: #1e40af;
-      color: #1e40af;
-    }
-
-    .page-content {
-      background: white;
-      border-radius: 16px;
-      padding: 2.5rem;
-      margin: 2rem 0;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-    }
-    .page-content h1 {
-      font-size: 2rem;
-      color: #1e40af;
-      margin-bottom: 1.5rem;
-      text-align: center;
-    }
-    .page-content h2 {
-      margin: 1.5rem 0 1rem;
-      color: #1e40af;
-    }
-    .page-content p, .page-content li {
-      margin-bottom: 1.1rem;
-      font-size: 1.05rem;
-    }
-    ul, ol {
-      padding-left: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .resource-box {
-      background: #f0f9ff;
-      border-left: 4px solid #1e40af;
-      padding: 1.25rem;
-      margin: 2rem 0;
-      border-radius: 0 8px 8px 0;
-    }
-
-    .cta-box {
-      background: #eff6ff;
-      border-left: 4px solid #1e40af;
-      padding: 1.5rem;
-      margin-top: 2rem;
-      border-radius: 8px;
-      text-align: center;
-    }
-    .cta-button {
-      display: inline-block;
-      background: #1e40af;
-      color: white;
-      padding: 0.75rem 1.75rem;
-      border-radius: 8px;
-      font-weight: 600;
-      text-decoration: none;
-      margin-top: 1rem;
-    }
-    .cta-button:hover {
-      background: #1d4ed8;
-      text-decoration: none;
-    }
-
-    footer {
-      background: #1e3a8a;
-      color: white;
-      padding: 2rem 0;
-      text-align: center;
-      margin-top: 4rem;
-    }
-    footer a {
-      color: #93c5fd;
-    }
-    footer a:hover {
-      color: white;
-    }
-
-    @media (max-width: 700px) {
-      nav ul { gap: 1rem; font-size: 0.9rem; }
-      .page-content { padding: 1.75rem; }
-      .page-content h1 { font-size: 1.6rem; }
-    }
-  </style>
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>body { font-family: 'Inter', sans-serif; }</style>
 </head>
-<body>
-  <header>
-    <div class="container header-content">
-      <a href="index.html" class="logo">Value Network Lab</a>
-      <nav>
-        <ul>
-          <li><a href="abstract.html" class="active">Abstract</a></li>
-          <li><a href="caso-uso.html">Caso de Uso</a></li>
-          <li><a href="formacion.html">Formación-Acción</a></li>
-          <li><a href="quienes-somos.html">Quiénes Somos</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Header -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="index.html" class="font-bold text-xl text-primary">Value Network Lab</a>
+      <a href="https://cursovna.netlify.app/" class="bg-primary text-white px-3 py-1 rounded text-sm font-medium hover:bg-blue-800 transition">Curso VNA</a>
     </div>
   </header>
 
-  <div class="container">
-    <div class="page-content">
-      <h1>Abstract Ejecutivo:<br>“La Fractura Invisible en su Red de Valor”</h1>
+  <!-- Main Content -->
+  <main class="max-w-3xl mx-auto px-4 py-12">
+    <h1 class="text-3xl md:text-4xl font-bold text-primary mb-6">Abstract Ejecutivo:<br/>“La Fractura Invisible en su Red de Valor”</h1>
 
-      <p><strong>El dilema:</strong> Las empresas invierten millones en IA, transformación digital y R&D —entre el 6% y el 19% de sus ingresos—, pero menos del 20% ven un impacto material en su EBIT. ¿Por qué? Porque optimizan procesos… no redes.</p>
+    <!-- El dilema -->
+    <section class="mb-8">
+      <p class="text-lg mb-4">
+        Las empresas invierten entre el <strong>6% y el 19% de sus ingresos</strong> en IA, transformación digital y R&D…  
+        pero <strong>menos del 20% ven un impacto material en su EBIT</strong>.
+      </p>
+      <p class="mb-4">
+        ¿Por qué? Porque optimizan <em>procesos</em>… no <em>redes</em>.
+      </p>
+    </section>
 
-      <p><strong>El problema oculto:</strong> Los métodos tradicionales (BPM, Value Stream Mapping) ignoran las <strong>transacciones intangibles</strong> —confianza, propósito, reconocimiento, bienestar— que son el verdadero pegamento del valor en la era digital. Como dice Melvin Conway: <em>“El software refleja la estructura de comunicación de la organización”</em>. Si esa estructura está rota, el valor no fluye.</p>
-
-      <h2>¿Qué es Value Network Analysis (VNA)?</h2>
-      <p>Desarrollado por <strong>Verna Allee</strong>, VNA es una metodología sistémica que mapea cómo el valor se co-crea a través de <strong>roles</strong>, <strong>transacciones</strong> y <strong>entregables tangibles e intangibles</strong>. A diferencia de los diagramas lineales, VNA revela:</p>
-      <ul>
-        <li>Los <strong>roles reales</strong> (no cargos del organigrama) que impulsan el valor</li>
-        <li>Qué <strong>entregables intangibles</strong> están faltando o sobrecargando a ciertos roles</li>
-        <li>Dónde se rompen las <strong>interdependencias</strong> entre equipos, socios y sistemas de IA</li>
-        <li>Por qué los proyectos se estancan en <strong>silos funcionales</strong></li>
+    <!-- El problema oculto -->
+    <section class="mb-8 p-5 bg-white rounded-lg border-l-4 border-red-500">
+      <h2 class="text-xl font-semibold text-red-800 mb-3">El problema oculto</h2>
+      <p class="mb-3">
+        Los métodos tradicionales (BPM, Value Stream Mapping) ignoran las <strong>transacciones intangibles</strong> que son el verdadero pegamento del valor en la era digital:
+      </p>
+      <ul class="list-disc pl-5 mb-3">
+        <li>Confianza entre equipos</li>
+        <li>Propósito compartido</li>
+        <li>Reconocimiento informal</li>
+        <li>Bienestar y apoyo emocional</li>
       </ul>
+      <blockquote class="italic border-l-4 border-primary pl-4 mt-4">
+        “El software refleja la estructura de comunicación de la organización.”<br/>
+        <span class="font-medium">— Melvin Conway, 1967</span>
+      </blockquote>
+      <p class="mt-3">
+        Si esa estructura está rota, el valor no fluye… sin importar cuánta IA implementes.
+      </p>
+    </section>
 
-      <h2>Hallazgos críticos en organizaciones de alto presupuesto</h2>
-      <ul>
-        <li>El <strong>72%</strong> de las iniciativas de IA se desarrollan en silos, sin integración en flujos de valor reales</li>
-        <li>Las <strong>pérdidas invisibles</strong> en procesos como Order-to-Cash representan del <strong>3% al 5% del EBITDA</strong></li>
-        <li>El <strong>87%</strong> de las empresas dice que su infraestructura heredada frena la innovación</li>
-        <li>Menos del <strong>3%</strong> de las organizaciones se consideran “listas para la innovación”</li>
+    <!-- ¿Qué es VNA? -->
+    <section class="mb-8 p-5 bg-blue-50 rounded-lg border-l-4 border-primary">
+      <h2 class="text-xl font-semibold text-primary mb-3">¿Qué es Value Network Analysis (VNA)?</h2>
+      <p class="mb-3">
+        Desarrollado por <strong>Verna Allee</strong>, VNA es una metodología sistémica que mapea cómo el valor se co-crea a través de:
+      </p>
+      <ul class="list-disc pl-5">
+        <li><strong>Roles reales</strong> (no cargos del organigrama)</li>
+        <li><strong>Transacciones</strong> (intercambios tangibles e intangibles)</li>
+        <li><strong>Entregables</strong> que sostienen —o rompen— la red</li>
       </ul>
+      <blockquote class="italic border-l-4 border-secondary pl-4 mt-4 text-primary">
+        “El objetivo es optimizar múltiples vías y lograr resultados consistentes, permitiendo la variación necesaria para la innovación, la resiliencia y la agilidad de la red.”<br/>
+        <span class="font-medium">— Verna Allee</span>
+      </blockquote>
+    </section>
 
-      <h2>¿Por qué VNA funciona?</h2>
-      <p>Porque no busca un único “proceso óptimo”. Como explica Verna Allee: <em>“El objetivo es optimizar múltiples vías y lograr resultados consistentes, permitiendo la variación necesaria para la innovación, la resiliencia y la agilidad de la red.”</em></p>
-
-      <div class="resource-box">
-        <p><strong>Recursos originales de Verna Allee:</strong></p>
-        <ul style="margin: 0;">
-          <li>📚 Libro: <a href="https://www.amazon.com/Value-Networks-True-Nature-Collaboration/dp/1412902489" target="_blank" style="color:#1d4ed8;">Value Networks and the True Nature of Collaboration</a></li>
-          <li>🎥 Video introductorio (en inglés): <a href="https://www.youtube.com/watch?v=4qkT7kFhX9A" target="_blank" style="color:#1d4ed8;">Verna Allee on Value Network Analysis</a></li>
-          <li>🔬 Método aplicado: <a href="https://pantheon.work/blog/2018/11/30/como-hacer-tu-primer-analisis-de-la-red-de-valor/" target="_blank" style="color:#1d4ed8;">Guía paso a paso de Pantheon Work</a></li>
-        </ul>
+    <!-- Hallazgos críticos -->
+    <section class="mb-8">
+      <h2 class="text-2xl font-bold text-primary mb-5">Hallazgos críticos en organizaciones de alto presupuesto</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="bg-white p-4 rounded border">
+          <span class="text-red-600 font-bold">72%</span><br/>
+          <small>de iniciativas de IA se desarrollan en silos, sin integración en flujos reales de valor</small>
+        </div>
+        <div class="bg-white p-4 rounded border">
+          <span class="text-red-600 font-bold">3–5% EBITDA</span><br/>
+          <small>perdido en procesos como Order-to-Cash por ineficiencias invisibles</small>
+        </div>
+        <div class="bg-white p-4 rounded border">
+          <span class="text-red-600 font-bold">87%</span><br/>
+          <small>dicen que su infraestructura heredada frena la innovación</small>
+        </div>
+        <div class="bg-white p-4 rounded border">
+          <span class="text-red-600 font-bold">&lt;3%</span><br/>
+          <small>se consideran “listas para la innovación”</small>
+        </div>
       </div>
+    </section>
 
-      <h2>Conclusión estratégica</h2>
-      <p>La próxima frontera de la eficiencia no está en la automatización de tareas, sino en la <strong>optimización de la red de valor</strong>. El primer paso no es un proyecto de 6 meses… es una <strong>Formación-Acción de 3 horas</strong> para diagnosticar su red real.</p>
+    <!-- Conclusión estratégica -->
+    <section class="mb-10 p-5 bg-gradient-to-r from-emerald-50 to-green-50 rounded-lg">
+      <h2 class="text-2xl font-bold text-emerald-800 mb-3">Conclusión estratégica</h2>
+      <p class="mb-4">
+        La próxima frontera de la eficiencia no está en la automatización de tareas,  
+        sino en la <strong>optimización de la red de valor</strong>.
+      </p>
+      <p>
+        El primer paso no es un proyecto de 6 meses…  
+        es una <strong>Formación-Acción de 3 horas</strong> para diagnosticar su red real.
+      </p>
+    </section>
 
-      <div class="cta-box">
-        <p>Este abstract es el punto de partida. La siguiente fase es <strong>aplicar</strong> la metodología a su organización.</p>
-        <a href="formacion.html" class="cta-button">Agendar mi Formación-Acción Inicial</a>
+    <!-- CTA -->
+    <div class="text-center bg-gradient-to-r from-primary to-blue-800 text-white p-8 rounded-lg">
+      <h3 class="text-2xl font-bold mb-4">¿Listo para diagnosticar su red de valor?</h3>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="https://cursovna.netlify.app/" class="bg-white text-primary font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition">🎓 Acceda al curso</a>
+        <a id="contact-link" href="#" class="bg-secondary text-white font-bold py-3 px-8 rounded-lg hover:bg-orange-600 transition">📧 Solicite consultoría</a>
       </div>
     </div>
-  </div>
+  </main>
 
-  <footer>
-    <div class="container">
-      <p>Value Network Lab — Basado en la metodología de Verna Allee. Validado en empresas globales como IKEA.</p>
-      <p id="footer-email"></p>
-    </div>
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6 text-center text-sm">
+    <p>Value Network Lab – Inspirado en Verna Allee | <a href="https://pantheon.work/" class="text-secondary hover:underline" target="_blank">Pantheon Work</a></p>
   </footer>
 
+  <!-- Script para proteger email -->
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const email = 'asolache' + '@' + 'mac.com';
-      const footerEl = document.getElementById('footer-email');
-      if (footerEl) {
-        footerEl.innerHTML = '<a href="mailto:' + email + '">' + email + '</a>';
+    (function() {
+      const email = ['a', 's', 'o', 'l', 'a', 'c', 'h', 'e', '@', 'm', 'a', 'c', '.', 'c', 'o', 'm'].join('');
+      const mailto = 'mailto:' + email;
+      const link = document.getElementById('contact-link');
+      if (link) {
+        link.href = mailto;
       }
-    });
+    })();
   </script>
 </body>
 </html>
