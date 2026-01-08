@@ -3,198 +3,133 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Formación-Acción Inicial | Value Network Lab</title>
-  <meta name="description" content="Sesión práctica de 3 horas para equipos directivos: descubra fugas de valor y diseñe su primer proyecto de Value Network Analysis.">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.65;
-      color: #111827;
-      background-color: #f9fafb;
+  <title>Formación-Acción VNA – Diagnóstico Estratégico en 3 Horas | Value Network Lab</title>
+  <meta name="description" content="Descubra fugas invisibles de valor en solo 3 horas con una Formación-Acción de Value Network Analysis. Ideal para validar ROI antes de un proyecto grande. Basado en Verna Allee." />
+  
+  <!-- Favicon -->
+  <link rel="icon" href="image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>V</text></svg>" type="image/svg+xml">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#003366',
+            secondary: '#F97316',
+          }
+        }
+      }
     }
-    .container { width: 90%; max-width: 1100px; margin: 0 auto; padding: 2rem 0; text-align: center; }
-
-    header {
-      background: #fff;
-      box-shadow: 0 1px 8px rgba(0,0,0,0.08);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    .header-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 0;
-    }
-    .logo {
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: #1e40af;
-      text-decoration: none;
-    }
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 1.5rem;
-    }
-    nav a {
-      color: #374151;
-      font-weight: 600;
-      text-decoration: none;
-      padding: 0.25rem 0;
-      border-bottom: 2px solid transparent;
-      transition: border-color 0.2s;
-    }
-    nav a:hover, nav a.active {
-      border-bottom-color: #1e40af;
-      color: #1e40af;
-    }
-
-    .page-content {
-      background: white;
-      border-radius: 16px;
-      padding: 2.5rem;
-      margin: 2rem 0;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-    }
-    .page-content h1 {
-      font-size: 2rem;
-      color: #1e40af;
-      margin-bottom: 1.5rem;
-    }
-    .page-content h2 {
-      margin: 1.75rem 0 1rem;
-      color: #1e40af;
-    }
-    .page-content p, .page-content li {
-      margin-bottom: 1.1rem;
-      font-size: 1.05rem;
-    }
-    ul, ol {
-      padding-left: 1.5rem;
-      margin-bottom: 1.5rem;
-      text-align: left;
-    }
-
-    .highlight {
-      background: #fffbeb;
-      border-left: 4px solid #d97706;
-      padding: 1.25rem;
-      margin: 1.5rem 0;
-      border-radius: 0 8px 8px 0;
-      text-align: left;
-      font-style: italic;
-    }
-
-    .cta-button {
-      display: inline-block;
-      background: #1e40af;
-      color: white;
-      padding: 0.875rem 2rem;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 1.125rem;
-      text-decoration: none;
-      transition: background 0.3s;
-      margin-top: 1rem;
-    }
-    .cta-button:hover {
-      background: #1d4ed8;
-      text-decoration: none;
-    }
-
-    footer {
-      background: #1e3a8a;
-      color: white;
-      padding: 2rem 0;
-      text-align: center;
-      margin-top: 4rem;
-    }
-    footer a {
-      color: #93c5fd;
-    }
-    footer a:hover {
-      color: white;
-    }
-
-    @media (max-width: 700px) {
-      nav ul { gap: 1rem; font-size: 0.9rem; }
-      .page-content { padding: 1.75rem; }
-      .page-content h1 { font-size: 1.6rem; }
-    }
-  </style>
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>body { font-family: 'Inter', sans-serif; }</style>
 </head>
-<body>
-  <header>
-    <div class="container header-content">
-      <a href="index.html" class="logo">Value Network Lab</a>
-      <nav>
-        <ul>
-          <li><a href="caso-uso.html">Caso de Uso</a></li>
-          <li><a href="formacion.html" class="active">Formación-Acción</a></li>
-          <li><a href="quienes-somos.html">Quiénes Somos</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Header -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="index.html" class="font-bold text-xl text-primary">Value Network Lab</a>
+      <a href="https://cursovna.netlify.app/" class="bg-primary text-white px-3 py-1 rounded text-sm font-medium hover:bg-blue-800 transition">Curso VNA</a>
     </div>
   </header>
 
-  <div class="container">
-    <div class="page-content">
-      <h1>Formación-Acción Inicial:  
-        El arte de mapear su red de valor</h1>
+  <!-- Main Content -->
+  <main class="max-w-3xl mx-auto px-4 py-12">
+    <h1 class="text-3xl md:text-4xl font-bold text-primary mb-6">Formación-Acción VNA:<br/>Diagnóstico Estratégico en 3 Horas</h1>
 
-      <p>Esta no es una charla, ni una presentación. Es una <strong>sesión artesanal de co-creación</strong> en la que su equipo dibuja, juntos, el mapa vivo de su red de valor.</p>
+    <p class="text-lg mb-6">
+      Esta no es una charla teórica. Es una <strong>intervención estratégica acotada</strong> diseñada para que su equipo experimente en vivo cómo Value Network Analysis revela fugas de valor invisibles… y las convierte en oportunidades accionables.
+    </p>
 
-      <p>Trabajamos sobre una actividad crítica de su organización —innovación, logística, atención al cliente, R&D— y revelamos, con sus propias manos, dónde se atascan los flujos, quién está sobrecargado y qué relaciones están invisibles pero sostienen el valor.</p>
+    <!-- Qué es -->
+    <section class="mb-10 p-5 bg-white rounded-lg border-l-4 border-primary">
+      <h2 class="text-xl font-semibold text-primary mb-3">🔍 ¿Qué es exactamente?</h2>
+      <p>
+        Un <em>zoom estratégico</em> sobre una red crítica de su organización:  
+        Order-to-Cash, integración de IA, experiencia de cliente, innovación interna, etc.
+      </p>
+      <p class="mt-3">
+        No analizamos toda la empresa. Solo una parte clave donde el valor se atasca, se pierde o podría escalar.
+      </p>
+      <p class="mt-3 font-semibold">
+        Es la forma más inteligente de responder:  
+        <em>“¿Vale la pena aplicar VNA en nuestra organización?”</em>
+      </p>
+    </section>
 
-      <div class="highlight">
-        “El verdadero valor no está en el mapa final…  
-        sino en el momento en que su equipo ve, por primera vez,  
-        cómo se crea (o se destruye) el valor en su red.”
+    <!-- Para quién -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold text-primary mb-5">🎯 ¿Para quién es esta inversión?</h2>
+      <div class="space-y-4">
+        <div class="p-4 bg-blue-50 rounded-lg">
+          <h3 class="font-semibold text-lg">PYMEs con estructura ágil</h3>
+          <p>Este diagnóstico puede ser suficiente para diseñar mejoras inmediatas con impacto en EBITDA y cultura.</p>
+        </div>
+        <div class="p-4 bg-blue-50 rounded-lg">
+          <h3 class="font-semibold text-lg">Grandes organizaciones (ej. IKEA, Siemens)</h3>
+          <p>Este es el <strong>punto de partida validado</strong> antes de un proyecto a medida. En IKEA, se aplica VNA a servicios específicos (sostenibilidad, experiencia en tienda) como fase inicial de transformación.</p>
+        </div>
+        <div class="p-4 bg-blue-50 rounded-lg">
+          <h3 class="font-semibold text-lg">Equipos de innovación o transformación digital</h3>
+          <p>Ideal para desbloquear iniciativas de IA estancadas: el 72% fracasan por silos, no por tecnología.</p>
+        </div>
       </div>
+    </section>
 
-      <h2>Este es nuestro proceso artesanal</h2>
-      <ul>
-        <li><strong>Entrevista previa</strong> para definir el foco: ¿qué actividad clave queremos mapear?</li>
-        <li><strong>Sesión colaborativa</strong> (online o presencial) con su equipo directivo y roles clave</li>
-        <li><strong>Mapeo en vivo</strong> sobre pared (física o digital): roles, transacciones tangibles e intangibles, entregables</li>
-        <li><strong>Diagnóstico compartido</strong>: identificación de cuellos de botella, sobrecargas y oportunidades ocultas</li>
-        <li><strong>Informe ejecutivo personalizado</strong> con el mapa final, hallazgos y recomendaciones iniciales (entregado en 48h)</li>
+    <!-- Qué incluye -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold text-primary mb-5">📦 ¿Qué incluye?</h2>
+      <ul class="list-disc pl-5 space-y-2">
+        <li><strong>Entrevista previa (30 min):</strong> Definimos juntos el foco estratégico y los participantes clave.</li>
+        <li><strong>Sesión colaborativa de 3 horas:</strong> Online o presencial, con su equipo real y stakeholders relevantes.</li>
+        <li><strong>Mapeo en vivo:</strong> Roles reales, entregables tangibles e intangibles, y transacciones críticas.</li>
+        <li><strong>Diagnóstico preliminar:</strong> 3–5 hallazgos con impacto estimado en tiempo, coste o experiencia.</li>
+        <li><strong>Informe ejecutivo personalizado:</strong> Entregado en 48h, listo para compartir con dirección.</li>
       </ul>
+    </section>
 
-      <p>El resultado es un <strong>objeto vivo</strong> que su equipo puede seguir usando: un mapa que habla, que muestra dónde hay valor… y dónde hay ruido.</p>
+    <!-- Resultado esperado -->
+    <section class="mb-10 p-5 bg-gradient-to-r from-emerald-50 to-green-50 rounded-lg">
+      <h2 class="text-2xl font-bold text-emerald-800 mb-3">✅ Resultado esperado</h2>
+      <p>
+        Al finalizar, su equipo tendrá:
+      </p>
+      <ul class="list-disc pl-5 mt-2 space-y-1">
+        <li>Una <strong>foto real</strong> de cómo fluye (o no) el valor en su red crítica.</li>
+        <li>Claridad sobre <strong>nodos saturados, feedback perdido o intangibles no reconocidos</strong>.</li>
+        <li>Una <strong>hoja de ruta priorizada</strong> con acciones de alto impacto y bajo esfuerzo.</li>
+        <li>La confianza para decidir si VNA es la herramienta estratégica que necesitan… <strong>antes de comprometer presupuesto mayor</strong>.</li>
+      </ul>
+    </section>
 
-      <p>Para ver un ejemplo real de lo que obtendría, le invitamos a explorar nuestro <a href="caso-uso.html" style="color:#1e40af; text-decoration: underline;">caso de uso con una escuela de postgrado</a>.</p>
-
-      <div style="margin-top: 2rem;">
-        <a id="cta-mailto" class="cta-button">Agendar Entrevista previa</a>
+    <!-- CTA final -->
+    <div class="text-center bg-gradient-to-r from-primary to-blue-800 text-white p-8 rounded-lg">
+      <h3 class="text-2xl font-bold mb-4">¿Listo para ver lo que su organización no está viendo?</h3>
+      <p class="mb-6">Agende su primera Formación-Acción y reciba un diagnóstico ejecutivo en 48h.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="https://cursovna.netlify.app/" class="bg-white text-primary font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition">🎓 Conozca VNA antes</a>
+        <a id="contact-link" href="#" class="bg-secondary text-white font-bold py-3 px-8 rounded-lg hover:bg-orange-600 transition">📅 Solicite su sesión</a>
       </div>
     </div>
-  </div>
+  </main>
 
-  <footer>
-    <div class="container">
-      <p>Value Network Lab — Basado en la metodología de Verna Allee. Validado en empresas globales como IKEA.</p>
-      <p id="footer-email"></p>
-    </div>
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6 text-center text-sm">
+    <p>Value Network Lab – Inspirado en Verna Allee | Basado en <a href="https://pantheon.work/" class="text-secondary hover:underline" target="_blank">Pantheon Work</a></p>
   </footer>
 
+  <!-- Script para proteger email -->
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const email = 'asolache' + '@' + 'mac.com';
-      const cta = document.getElementById('cta-mailto');
-      const footerEl = document.getElementById('footer-email');
-      
-      if (cta) {
-        cta.href = 'mailto:' + email + '?subject=Quiero agendar mi Formación-Acción VNA';
+    (function() {
+      const email = ['a', 's', 'o', 'l', 'a', 'c', 'h', 'e', '@', 'm', 'a', 'c', '.', 'c', 'o', 'm'].join('');
+      const mailto = 'mailto:' + email;
+      const link = document.getElementById('contact-link');
+      if (link) {
+        link.href = mailto;
       }
-      if (footerEl) {
-        footerEl.innerHTML = '<a href="mailto:' + email + '">' + email + '</a>';
-      }
-    });
+    })();
   </script>
 </body>
 </html>
