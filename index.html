@@ -179,5 +179,16 @@
       }
     })();
   </script>
+  <script>
+  // Resaltar enlace activo según la URL actual
+  document.querySelectorAll('.menu-link').forEach(link => {
+    const currentPath = window.location.pathname.split('/').pop();
+    const linkPath = new URL(link.href, window.location.origin).pathname.split('/').pop();
+    
+    if (currentPath === linkPath || (currentPath === '' && linkPath === 'index.html')) {
+      link.classList.add('text-primary', 'font-semibold', 'border-b-2', 'border-primary');
+    }
+  });
+</script>
 </body>
 </html>
