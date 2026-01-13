@@ -1,279 +1,129 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
- <meta charset="UTF-8" />
- <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
- <title>VNA Mapper – Value Network Lab</title>
- <style>
-   body {
-     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-     margin: 0;
-     padding: 20px;
-     background: #f9fafb;
-     color: #111827;
-   }
-   h1 {
-     color: #1e40af;
-     text-align: center;
-     margin-bottom: 1rem;
-   }
-   .container {
-     max-width: 1200px;
-     margin: 0 auto;
-     display: grid;
-     grid-template-columns: 1fr 2fr;
-     gap: 20px;
-   }
-   textarea {
-     width: 100%;
-     height: 400px;
-     padding: 12px;
-     border: 1px solid #d1d5db;
-     border-radius: 8px;
-     font-family: monospace;
-     font-size: 14px;
-   }
-   .instructions {
-     background: #f0f9ff;
-     padding: 12px;
-     border-radius: 8px;
-     margin-bottom: 12px;
-     font-size: 0.9rem;
-   }
-   svg {
-     background: white;
-     border: 1px solid #e5e7eb;
-     border-radius: 8px;
-     width: 100%;
-     min-height: 400px;
-   }
-   button {
-     background: #1e40af;
-     color: white;
-     border: none;
-     padding: 10px 16px;
-     border-radius: 6px;
-     font-weight: 600;
-     cursor: pointer;
-     margin-top: 10px;
-   }
-   button:hover {
-     background: #1d4ed8;
-   }
-   @media (max-width: 900px) {
-     .container {
-       grid-template-columns: 1fr;
-     }
-   }
- </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Value Network Lab Mapper – Prototipado Rápido de Redes de Valor</title>
+  <meta name="description" content="Herramienta simple para crear tu primer prototipo de red de valor en minutos. Formato texto plano compatible con Miro, Draw.io o ValueNetworks.com." />
+  
+  <!-- Favicon -->
+  <link rel="icon" href="image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>V</text></svg>" type="image/svg+xml">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#003366',
+            secondary: '#F97316',
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>body { font-family: 'Inter', sans-serif; }</style>
 </head>
-<body>
- <h1>Value Network Lab Mapper – Dibuja tu red de valor</h1>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Header con menú global -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center gap-4">
+      <a href="index.html" class="font-bold text-xl text-primary">Value Network Lab</a>
+      <nav class="flex flex-wrap gap-4 md:gap-6 text-sm md:text-base">
+        <a href="abstract.html" class="menu-link text-gray-700 hover:text-primary transition">Abstract</a>
+        <a href="caso-de-uso.html" class="menu-link text-gray-700 hover:text-primary transition">Caso de Uso</a>
+        <a href="formacion-accion.html" class="menu-link text-gray-700 hover:text-primary transition">Formación-Acción</a>
+        <a href="quienes-somos.html" class="menu-link text-gray-700 hover:text-primary transition">Quiénes Somos</a>
+        <a href="contacto.html" class="menu-link text-gray-700 hover:text-primary transition">Contacto</a>
+        <a href="https://cursovna.netlify.app/" class="bg-primary text-white px-3 py-1 rounded font-medium hover:bg-blue-800 transition">Curso VNA</a>
+      </nav>
+    </div>
+  </header>
 
+  <!-- Main Content -->
+  <main class="max-w-3xl mx-auto px-4 py-12">
+    <h1 class="text-3xl md:text-4xl font-bold text-primary mb-6">Value Network Lab Mapper</h1>
+    <p class="text-lg mb-6">Dibuja tu primera red de valor en minutos —sin herramientas complejas.</p>
 
- <div class="container">
-   <div>
-     <div class="instructions">
-       <p><strong>Formato:</strong> Una línea por transacción</p>
-       <p><code>Origen → Destino | tipo | Entregable</code></p>
-       <p>Tipo: <code>tangible</code> o <code>intangible</code></p>
-       <p>Ejemplo:</p>
-       <p><code>Cliente → Vendedor | tangible | Pedido</code><br>
-       <code>Vendedor → Cliente | intangible | Confianza</code></p>
-     </div>
-     <textarea id="input" placeholder="Cliente → Vendedor | tangible | Pedido&#10;Vendedor → Diseñador | intangible | Feedback&#10;Diseñador → Cliente | tangible | Producto"></textarea>
-     <br>
-     <button onclick="drawNetwork()">Dibujar red de valor</button>
-   </div>
+    <section class="mb-8 p-5 bg-white rounded-lg border-l-4 border-primary">
+      <h2 class="text-xl font-semibold text-primary mb-3">📌 ¿Qué es esto?</h2>
+      <p>
+        Una plantilla de texto plano para prototipar rápidamente una red de valor usando los tres elementos esenciales de VNA:
+      </p>
+      <ul class="list-disc pl-5 mt-2 space-y-1">
+        <li><strong>Roles reales</strong> (no cargos del organigrama)</li>
+        <li><strong>Transacciones</strong> (intercambios entre roles)</li>
+        <li><strong>Entregables verificables</strong> (tangibles o intangibles)</li>
+      </ul>
+    </section>
 
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold text-primary mb-4">✏️ Formato recomendado</h2>
+      <p class="mb-4">
+        Usa una línea por transacción. Copia este formato en cualquier editor de texto, Miro, Draw.io o ValueNetworks.com.
+      </p>
 
-   <div>
-     <div id="svg-container">
-       <svg id="network-svg" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg"></svg>
-     </div>
-   </div>
- </div>
+      <div class="bg-gray-100 p-4 rounded font-mono text-sm">
+        Origen → Destino | tipo | Entregable<br/>
+        Tipo: <code>tangible</code> o <code>intangible</code>
+      </div>
 
+      <p class="mt-4"><strong>Ejemplos:</strong></p>
+      <ul class="list-none space-y-1 mt-2">
+        <li><code>Cliente → Vendedor | tangible | Pedido</code></li>
+        <li><code>Vendedor → Cliente | intangible | Confianza</code></li>
+        <li><code>IT → Marketing | tangible | Informe de uso web</code></li>
+        <li><code>Marketing → IT | intangible | Feedback de campaña</code></li>
+      </ul>
+    </section>
 
- <script>
-   function drawNetwork() {
-     const svg = document.getElementById('network-svg');
-     svg.innerHTML = '';
+    <section class="mb-10 p-5 bg-gradient-to-r from-emerald-50 to-green-50 rounded-lg">
+      <h2 class="text-2xl font-bold text-emerald-800 mb-3">💡 Consejos prácticos</h2>
+      <ul class="list-disc pl-5 space-y-1">
+        <li>Empieza con un <strong>proceso o actividad concreta</strong> (ej. “venta de servicio complejo”).</li>
+        <li>Identifica entre <strong>6 y 12 roles reales</strong> (personas, equipos o entidades externas).</li>
+        <li>Usa <strong>sustantivos</strong> para los entregables (“informe”, “acuerdo”, “visibilidad”), nunca verbos (“colaborar”).</li>
+        <li>Una vez listo, pégalo en <a href="https://miro.com/" target="_blank" class="text-secondary hover:underline">Miro</a> o <a href="https://draw.io/" target="_blank" class="text-secondary hover:underline">Draw.io</a> para visualizarlo.</li>
+      </ul>
+    </section>
 
+    <div class="text-center bg-gradient-to-r from-primary to-blue-800 text-white p-8 rounded-lg">
+      <h3 class="text-2xl font-bold mb-4">¿Listo para mapear tu red de valor?</h3>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="https://cursovna.netlify.app/" class="bg-white text-primary font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition">🎓 Accede al curso</a>
+        <a id="contact-link" href="#" class="bg-secondary text-white font-bold py-3 px-8 rounded-lg hover:bg-orange-600 transition">📧 Solicite apoyo</a>
+      </div>
+    </div>
+  </main>
 
-     const input = document.getElementById('input').value;
-     if (!input.trim()) return;
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6 text-center text-sm">
+    <p>
+      Value Network Lab – Inspirado en Verna Allee y 
+      <a href="pantheon-work.html" class="text-secondary hover:underline">Pantheon Work</a>
+    </p>
+  </footer>
 
+  <!-- Script para resaltar página activa y proteger email -->
+  <script>
+    // Resaltar enlace activo
+    document.querySelectorAll('.menu-link').forEach(link => {
+      const currentPath = window.location.pathname.split('/').pop();
+      const linkPath = new URL(link.href, window.location.origin).pathname.split('/').pop();
+      
+      if (currentPath === linkPath || (currentPath === '' && linkPath === 'index.html')) {
+        link.classList.add('text-primary', 'font-semibold', 'border-b-2', 'border-primary');
+      }
+    });
 
-     const lines = input.trim().split('\n');
-     const nodes = new Set();
-     const links = [];
-
-
-     // Parsear líneas
-     for (let line of lines) {
-       line = line.trim();
-       if (!line || line.startsWith('#')) continue;
-
-
-       const parts = line.split('|').map(p => p.trim());
-       if (parts.length !== 3) continue;
-
-
-       const roles = parts[0].split('→').map(r => r.trim());
-       if (roles.length !== 2) continue;
-
-
-       const source = roles[0];
-       const target = roles[1];
-       const type = parts[1].toLowerCase();
-       const deliverable = parts[2];
-
-
-       if (!['tangible', 'intangible'].includes(type)) continue;
-
-
-       nodes.add(source);
-       nodes.add(target);
-       links.push({ source, target, type, deliverable });
-     }
-
-
-     const nodeArray = Array.from(nodes);
-     const nodeCount = nodeArray.length;
-     if (nodeCount === 0) return;
-
-
-     // Posicionar nodos en círculo
-     const centerX = 400;
-     const centerY = 300;
-     const radius = Math.min(250, 150 + nodeCount * 15);
-
-
-     const positions = {};
-     nodeArray.forEach((node, i) => {
-       const angle = (i / nodeCount) * 2 * Math.PI - Math.PI / 2;
-       positions[node] = {
-         x: centerX + radius * Math.cos(angle),
-         y: centerY + radius * Math.sin(angle)
-       };
-     });
-
-
-     // Dibujar enlaces (flechas)
-     links.forEach(link => {
-       const start = positions[link.source];
-       const end = positions[link.target];
-       if (!start || !end) return;
-
-
-       // Calcular desplazamiento para evitar superposición (simple)
-       const dx = end.x - start.x;
-       const dy = end.y - start.y;
-       const len = Math.sqrt(dx*dx + dy*dy);
-       const normX = dx / len;
-       const normY = dy / len;
-
-
-       const arrowStartX = start.x + 40 * normX;
-       const arrowStartY = start.y + 40 * normY;
-       const arrowEndX = end.x - 40 * normX;
-       const arrowEndY = end.y - 40 * normY;
-
-
-       // Flecha
-       const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
-       line.setAttribute("x1", arrowStartX);
-       line.setAttribute("y1", arrowStartY);
-       line.setAttribute("x2", arrowEndX);
-       line.setAttribute("y2", arrowEndY);
-       line.setAttribute("stroke", link.type === 'tangible' ? '#1e40af' : '#10b981');
-       line.setAttribute("stroke-width", "2");
-       if (link.type === 'intangible') {
-         line.setAttribute("stroke-dasharray", "6,4");
-       }
-
-
-       // Flecha punta
-       const headLen = 12;
-       const angle = Math.atan2(arrowEndY - arrowStartY, arrowEndX - arrowStartX);
-       const headX1 = arrowEndX - headLen * Math.cos(angle - Math.PI / 6);
-       const headY1 = arrowEndY - headLen * Math.sin(angle - Math.PI / 6);
-       const headX2 = arrowEndX - headLen * Math.cos(angle + Math.PI / 6);
-       const headY2 = arrowEndY - headLen * Math.sin(angle + Math.PI / 6);
-
-
-       const head = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
-       head.setAttribute("points", `${arrowEndX},${arrowEndY} ${headX1},${headY1} ${headX2},${headY2}`);
-       head.setAttribute("fill", link.type === 'tangible' ? '#1e40af' : '#10b981');
-
-
-       svg.appendChild(line);
-       svg.appendChild(head);
-
-
-       // Etiqueta del entregable
-       const midX = (arrowStartX + arrowEndX) / 2;
-       const midY = (arrowStartY + arrowEndY) / 2;
-       const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
-       text.setAttribute("x", midX);
-       text.setAttribute("y", midY - 8);
-       text.setAttribute("font-family", "sans-serif");
-       text.setAttribute("font-size", "12");
-       text.setAttribute("text-anchor", "middle");
-       text.setAttribute("fill", "#374151");
-       text.textContent = link.deliverable;
-       svg.appendChild(text);
-     });
-
-
-     // Dibujar nodos
-     nodeArray.forEach(node => {
-       const pos = positions[node];
-       const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-       circle.setAttribute("cx", pos.x);
-       circle.setAttribute("cy", pos.y);
-       circle.setAttribute("r", "40");
-       circle.setAttribute("fill", "#dbeafe");
-       circle.setAttribute("stroke", "#1e40af");
-       circle.setAttribute("stroke-width", "2");
-       svg.appendChild(circle);
-
-
-       const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
-       text.setAttribute("x", pos.x);
-       text.setAttribute("y", pos.y + 4);
-       text.setAttribute("font-family", "sans-serif");
-       text.setAttribute("font-size", "14");
-       text.setAttribute("text-anchor", "middle");
-       text.setAttribute("fill", "#1e40af");
-       text.setAttribute("font-weight", "600");
-       // Ajustar texto largo
-       const words = node.split(' ');
-       if (words.length === 1) {
-         text.textContent = node;
-       } else {
-         const tspan1 = document.createElementNS("http://www.w3.org/2000/svg", "tspan");
-         tspan1.setAttribute("x", pos.x);
-         tspan1.setAttribute("dy", "-0.4em");
-         tspan1.textContent = words[0];
-         const tspan2 = document.createElementNS("http://www.w3.org/2000/svg", "tspan");
-         tspan2.setAttribute("x", pos.x);
-         tspan2.setAttribute("dy", "1.2em");
-         tspan2.textContent = words.slice(1).join(' ');
-         text.appendChild(tspan1);
-         text.appendChild(tspan2);
-       }
-       svg.appendChild(text);
-     });
-   }
-
-
-   // Dibujar al cargar
-   window.onload = () => {
-     drawNetwork();
-   };
- </script>
+    // Proteger email
+    const contactLink = document.getElementById('contact-link');
+    if (contactLink) {
+      const email = ['a', 's', 'o', 'l', 'a', 'c', 'h', 'e', '@', 'm', 'a', 'c', '.', 'c', 'o', 'm'].join('');
+      contactLink.href = 'mailto:' + email;
+    }
+  </script>
 </body>
 </html>
-
