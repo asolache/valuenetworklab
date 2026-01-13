@@ -25,35 +25,18 @@
   </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>body { font-family: 'Inter', sans-serif; }</style>
-  <!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          primary: '#003366',
-          secondary: '#F97316',
-        }
-      }
-    }
-  }
-</script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<style>body { font-family: 'Inter', sans-serif; }</style>
 </head>
 <body class="bg-gray-50 text-gray-800">
-  <!-- Header -->
-  <!-- Header con menú -->
+  <!-- Header con menú global -->
   <header class="bg-white shadow-sm sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center gap-4">
-      <div class="font-bold text-xl text-primary">Value Network Lab</div>
+    <div class="max-w-4xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center gap-4">
+      <a href="index.html" class="font-bold text-xl text-primary">Value Network Lab</a>
       <nav class="flex flex-wrap gap-4 md:gap-6 text-sm md:text-base">
-        <a href="abstract.html" class="text-gray-700 hover:text-primary transition">Abstract</a>
-        <a href="caso-uso.html" class="text-gray-700 hover:text-primary transition">Caso de Uso</a>
-        <a href="formacion.html" class="text-gray-700 hover:text-primary transition">Formación-Acción</a>
-        <a href="quienes-somos.html" class="text-gray-700 hover:text-primary transition">Quiénes Somos</a>
-        <a href="contacto.html" class="text-gray-700 hover:text-primary transition">Contacto</a>
+        <a href="abstract.html" class="menu-link text-gray-700 hover:text-primary transition font-semibold text-primary border-b-2 border-primary">Abstract</a>
+        <a href="caso-uso.html" class="menu-link text-gray-700 hover:text-primary transition">Caso de Uso</a>
+        <a href="formacion.html" class="menu-link text-gray-700 hover:text-primary transition">Formación-Acción</a>
+        <a href="quienes-somos.html" class="menu-link text-gray-700 hover:text-primary transition">Quiénes Somos</a>
+        <a href="contacto.html" class="menu-link text-gray-700 hover:text-primary transition">Contacto</a>
         <a href="https://cursovna.netlify.app/" class="bg-primary text-white px-3 py-1 rounded font-medium hover:bg-blue-800 transition">Curso VNA</a>
       </nav>
     </div>
@@ -61,7 +44,7 @@
 
   <!-- Main Content -->
   <main class="max-w-3xl mx-auto px-4 py-12">
-    <h1 class="text-3xl md:text-4xl font-bold text-primary mb-6">Abstract Ejecutivo:<br/>“La Fractura Invisible en su Red de Valor”</h1>
+    <h1 class="text-3xl md:text-4xl font-bold text-primary mb-6">Abstract Ejecutivo:<br/>"La Fractura Invisible en su Red de Valor"</h1>
 
     <!-- El dilema -->
     <section class="mb-8">
@@ -87,7 +70,7 @@
         <li>Bienestar y apoyo emocional</li>
       </ul>
       <blockquote class="italic border-l-4 border-primary pl-4 mt-4">
-        “El software refleja la estructura de comunicación de la organización.”<br/>
+        "El software refleja la estructura de comunicación de la organización."<br/>
         <span class="font-medium">— Melvin Conway, 1967</span>
       </blockquote>
       <p class="mt-3">
@@ -107,7 +90,7 @@
         <li><strong>Entregables</strong> que sostienen —o rompen— la red</li>
       </ul>
       <blockquote class="italic border-l-4 border-secondary pl-4 mt-4 text-primary">
-        “El objetivo es optimizar múltiples vías y lograr resultados consistentes, permitiendo la variación necesaria para la innovación, la resiliencia y la agilidad de la red.”<br/>
+        "El objetivo es optimizar múltiples vías y lograr resultados consistentes, permitiendo la variación necesaria para la innovación, la resiliencia y la agilidad de la red."<br/>
         <span class="font-medium">— Verna Allee</span>
       </blockquote>
     </section>
@@ -130,7 +113,7 @@
         </div>
         <div class="bg-white p-4 rounded border">
           <span class="text-red-600 font-bold">&lt;3%</span><br/>
-          <small>se consideran “listas para la innovación”</small>
+          <small>se consideran "listas para la innovación"</small>
         </div>
       </div>
     </section>
@@ -153,37 +136,26 @@
       <h3 class="text-2xl font-bold mb-4">¿Listo para diagnosticar su red de valor?</h3>
       <div class="flex flex-col sm:flex-row justify-center gap-4">
         <a href="https://cursovna.netlify.app/" class="bg-white text-primary font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition">🎓 Acceda al curso</a>
-        <a id="contact-link" href="#" class="bg-secondary text-white font-bold py-3 px-8 rounded-lg hover:bg-orange-600 transition">📧 Solicite consultoría</a>
+        <a id="contact-link" href="contacto.html" class="bg-secondary text-white font-bold py-3 px-8 rounded-lg hover:bg-orange-600 transition">📧 Solicite consultoría</a>
       </div>
     </div>
   </main>
 
   <!-- Footer -->
- <footer class="bg-gray-800 text-white py-6 text-center text-sm">
-    <p>Value Network Lab – Inspirado en  <a href="https://valuenetworklab.netlify.app/verna-allee.html" class="text-secondary hover:underline"> Verna Allee </a> | Basado en <a href="https://valuenetworklab.netlify.app/pantheon-work.html" class="text-secondary hover:underline" target="_blank">Pantheon Work</a></p>
+  <footer class="bg-gray-800 text-white py-6 text-center text-sm">
+    <p>Value Network Lab – Inspirado en Verna Allee | <a href="https://pantheon.work/" class="text-secondary hover:underline" target="_blank">Pantheon Work</a></p>
   </footer>
 
-  <!-- Script para proteger email -->
+  <!-- Script para resaltar página activa -->
   <script>
-    (function() {
-      const email = ['a', 's', 'o', 'l', 'a', 'c', 'h', 'e', '@', 'm', 'a', 'c', '.', 'c', 'o', 'm'].join('');
-      const mailto = 'mailto:' + email;
-      const link = document.getElementById('contact-link');
-      if (link) {
-        link.href = mailto;
+    document.querySelectorAll('.menu-link').forEach(link => {
+      const currentPath = window.location.pathname.split('/').pop();
+      const linkPath = new URL(link.href, window.location.origin).pathname.split('/').pop();
+      
+      if (currentPath === linkPath || (currentPath === '' && linkPath === 'index.html')) {
+        link.classList.add('text-primary', 'font-semibold', 'border-b-2', 'border-primary');
       }
-    })();
+    });
   </script>
-  <script>
-  // Resaltar enlace activo según la URL actual
-  document.querySelectorAll('.menu-link').forEach(link => {
-    const currentPath = window.location.pathname.split('/').pop();
-    const linkPath = new URL(link.href, window.location.origin).pathname.split('/').pop();
-    
-    if (currentPath === linkPath || (currentPath === '' && linkPath === 'index.html')) {
-      link.classList.add('text-primary', 'font-semibold', 'border-b-2', 'border-primary');
-    }
-  });
-</script>
 </body>
 </html>
