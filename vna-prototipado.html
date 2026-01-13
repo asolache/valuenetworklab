@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Prototipado de Redes de Valor – Value Network Lab</title>
-  <meta name="description" content="Aprende los 3 elementos esenciales de Value Network Analysis (VNA): roles reales, transacciones tangibles/intangibles y entregables verificables. Crea tu primer prototipo en minutos." />
+  <meta name="description" content="Aprende los 3 elementos esenciales de Value Network Analysis (VNA): roles reales, transacciones tangibles/intangibles y entregables verificables. Crea tu primer prototipo en minutos con nuestra herramienta interactiva." />
   
   <!-- Favicon -->
   <link rel="icon" href="image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>V</text></svg>" type="image/svg+xml">
@@ -24,7 +24,57 @@
     }
   </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>body { font-family: 'Inter', sans-serif; }</style>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .canvas-container {
+      border: 2px dashed #cbd5e1;
+      border-radius: 0.5rem;
+      min-height: 400px;
+      background: #f8fafc;
+      position: relative;
+      overflow: hidden;
+    }
+    .draggable {
+      cursor: move;
+      position: absolute;
+      z-index: 10;
+    }
+    textarea {
+      width: 100%;
+      height: 300px;
+      padding: 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-family: monospace;
+      font-size: 14px;
+    }
+    #network-svg {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      width: 100%;
+      min-height: 400px;
+    }
+    .role-card {
+      background: #dbeafe;
+      border: 2px solid #1e40af;
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 1rem;
+      transition: all 0.2s;
+    }
+    .role-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .tangible {
+      border-left: 4px solid #1e40af;
+    }
+    .intangible {
+      border-left: 4px solid #F97316;
+      border-style: dashed;
+    }
+  </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
   <!-- Header con menú global -->
@@ -43,111 +93,191 @@
   </header>
 
   <!-- Main Content -->
-  <main class="max-w-3xl mx-auto px-4 py-12">
+  <main class="max-w-4xl mx-auto px-4 py-12">
     <h1 class="text-3xl md:text-4xl font-bold text-primary mb-6">Prototipado de Redes de Valor</h1>
-
-    <p class="mb-6">
-      Antes de mapear su red de valor, entienda los tres conceptos esenciales. Luego, use esta guía para crear su primer prototipo en minutos.
+    <p class="mb-6 text-lg">
+      Antes de mapear su red de valor, entienda los tres conceptos esenciales. Luego, use nuestra herramienta interactiva para crear su primer prototipo en minutos.
     </p>
 
     <!-- ¿Por qué no basta con los procesos tradicionales? -->
-    <section class="mb-8 p-5 bg-white rounded-lg border-l-4 border-red-500">
+    <section class="mb-10 p-5 bg-white rounded-lg border-l-4 border-red-500">
       <h2 class="text-xl font-semibold text-red-800 mb-3">¿Por qué no basta con los procesos tradicionales?</h2>
       <p class="mb-3">
         Los mapas de procesos lineales optimizan <em>cómo</em> se hace algo, pero ignoran <em>quién</em> lo hace, <em>con quién</em> se coordina y <em>qué intangibles</em> (confianza, reconocimiento, propósito) sostienen el valor real.
       </p>
       <blockquote class="italic border-l-4 border-primary pl-4 mt-3">
-        “El software refleja la estructura de comunicación de la organización.”<br/>
+        "El software refleja la estructura de comunicación de la organización."<br/>
         <span class="font-medium">— Melvin Conway</span>
       </blockquote>
       <p class="mt-3">
         <strong>Value Network Analysis (VNA)</strong> revela lo invisible: las interacciones humanas y sistémicas que verdaderamente generan valor.
       </p>
+      <p class="mt-3 font-semibold">
+        Y todo empieza con tres elementos fundamentales.
+      </p>
     </section>
 
     <!-- Los 3 elementos esenciales -->
-    <section class="mb-10">
-      <h2 class="text-2xl font-bold text-primary mb-6">Los 3 elementos esenciales de VNA</h2>
-
-      <div class="space-y-6">
-        <div class="p-5 bg-blue-50 rounded-lg">
-          <h3 class="text-xl font-semibold text-primary mb-3">1. Roles (no cargos)</h3>
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-primary mb-6 text-center">Los 3 Elementos Esenciales de VNA</h2>
+      
+      <div class="grid md:grid-cols-3 gap-6 mb-8">
+        <!-- Elemento 1: Roles -->
+        <div class="role-card">
+          <div class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold mb-3">1</div>
+          <h3 class="text-lg font-bold text-primary mb-2">Roles (no cargos)</h3>
           <p>
             Un rol es la forma en que una persona o entidad <strong>contribuye a una actividad</strong>.
           </p>
-          <p class="mt-2">
-            No es su puesto en el organigrama, sino su función real en la red de valor.
-          </p>
-          <p class="mt-2 italic">
-            Ejemplos: “Guardián del propósito”, “Puente comunitario”, “Diseñador de experiencia”.
+          <p class="mt-2 italic text-sm">
+            <strong>Ejemplos:</strong> "Guardián del propósito", "Puente comunitario", "Diseñador de experiencia"
           </p>
         </div>
-
-        <div class="p-5 bg-blue-50 rounded-lg">
-          <h3 class="text-xl font-semibold text-primary mb-3">2. Transacciones (de valor)</h3>
+        
+        <!-- Elemento 2: Transacciones -->
+        <div class="role-card">
+          <div class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold mb-3">2</div>
+          <h3 class="text-lg font-bold text-primary mb-2">Transacciones (de valor)</h3>
           <p>
             Una transacción es un intercambio entre dos roles.
           </p>
           <p class="mt-2">
-            Puede ser <strong>tangible</strong> (pedido, factura) o <strong>intangible</strong> (confianza, feedback, reconocimiento).
-          </p>
-          <p class="mt-2">
-            En VNA: <span class="font-mono">flechas continuas = tangibles</span>; <span class="font-mono">flechas discontinuas = intangibles</span>.
+            Puede ser <span class="text-primary font-medium">tangible</span> (pedido, factura) o <span class="text-secondary font-medium">intangible</span> (confianza, feedback, reconocimiento).
           </p>
         </div>
-
-        <div class="p-5 bg-blue-50 rounded-lg">
-          <h3 class="text-xl font-semibold text-primary mb-3">3. Entregables (verificables)</h3>
+        
+        <!-- Elemento 3: Entregables -->
+        <div class="role-card">
+          <div class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold mb-3">3</div>
+          <h3 class="text-lg font-bold text-primary mb-2">Entregables (verificables)</h3>
           <p>
             Un entregable es lo que se intercambia en una transacción.
           </p>
           <p class="mt-2">
-            Debe ser <strong>observable y verificable</strong> (nunca un verbo como “colaborar”, sino un sustantivo como “informe”, “acuerdo”, “visibilidad”).
+            Debe ser <strong>observable y verificable</strong> (nunca un verbo como "colaborar", sino un sustantivo como "informe", "acuerdo", "visibilidad").
           </p>
-          <p class="mt-2">
-            Según Pantheon Work, hay <strong>MUST</strong> (exigibles) e <strong>EXTRA</strong> (cortesía que fortalece la red).
+          <p class="mt-2 italic text-sm">
+            Según Pantheon Work, hay <span class="text-primary">MUST</span> (exigibles) e <span class="text-secondary">EXTRA</span> (cortesía que fortalece la red)
           </p>
         </div>
       </div>
     </section>
 
     <!-- Regla de oro -->
-    <section class="mb-8 p-5 bg-gradient-to-r from-emerald-50 to-green-50 rounded-lg">
+    <section class="mb-10 p-5 bg-gradient-to-r from-emerald-50 to-green-50 rounded-lg">
       <h2 class="text-xl font-bold text-emerald-800 mb-3">Regla de oro para empezar</h2>
-      <p class="italic">
-        “Trabaje siempre en términos de <strong>actividad, no de proceso</strong>.”
+      <p class="italic text-xl">
+        "Trabaje siempre en términos de <strong>actividad, no de proceso</strong>."
       </p>
       <p class="mt-3">
-        En lugar de “proceso de venta”, pregúntese:  
-        <strong>“¿Qué roles, transacciones y entregables hacen posible la venta de un servicio complejo?”</strong>
+        En lugar de "proceso de venta", pregúntese:  
+        <strong>"¿Qué roles, transacciones y entregables hacen posible la venta de un servicio complejo?"</strong>
       </p>
     </section>
 
-    <!-- Prototipo práctico -->
-    <section class="mb-10">
-      <h2 class="text-2xl font-bold text-primary mb-4">Cree su primer prototipo de red de valor</h2>
-      <p class="mb-4">
-        Use este formato simple. Una línea por transacción:
-      </p>
-      <div class="bg-gray-100 p-4 rounded font-mono text-sm">
-        Origen → Destino | tipo | Entregable<br/>
-        Tipo: <code>tangible</code> o <code>intangible</code>
+    <!-- App interactiva -->
+    <section class="mb-12 bg-white p-6 rounded-lg shadow">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 gap-4">
+        <h2 class="text-xl font-bold text-primary">🎨 Editor Interactivo de Redes de Valor</h2>
+        <div class="flex gap-2">
+          <button id="export-btn" class="bg-gray-200 text-gray-800 px-4 py-2 rounded hover:bg-gray-300 transition text-sm">Exportar SVG</button>
+        </div>
       </div>
-      <p class="mt-4"><strong>Ejemplo:</strong></p>
-      <ul class="list-disc pl-5 space-y-1">
-        <li><code>Cliente → Vendedor | tangible | Pedido</code></li>
-        <li><code>Vendedor → Cliente | intangible | Confianza</code></li>
-      </ul>
-      <p class="mt-4">
-        Este formato le permite comenzar sin herramientas complejas. Más adelante, puede usar Miro, Draw.io o ValueNetworks.com para visualizarlo.
+      
+      <div class="mb-6 p-4 bg-blue-50 rounded border border-primary">
+        <p class="font-medium mb-2">💡 Instrucciones rápidas:</p>
+        <ul class="list-disc pl-5 space-y-1 text-sm">
+          <li>Escriba una transacción por línea en el formato: <code>Origen → Destino | tipo | Entregable</code></li>
+          <li>Tipo: <code>tangible</code> o <code>intangible</code></li>
+          <li>Haga clic en "Dibujar red de valor" para visualizar</li>
+          <li>Use "Exportar SVG" para guardar su mapa</li>
+        </ul>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Editor de texto -->
+        <div>
+          <h3 class="text-lg font-semibold mb-3 text-primary">✏️ Editor de Transacciones</h3>
+          <textarea id="input" placeholder="Cliente → Vendedor | tangible | Pedido&#10;Vendedor → Cliente | intangible | Confianza&#10;Vendedor → Marketing | tangible | Datos de cliente&#10;Marketing → Cliente | intangible | Conocimiento de mercado&#10;Vendedor → IT | tangible | Requerimientos&#10;IT → Vendedor | intangible | Soporte técnico"></textarea>
+          <div class="mt-4">
+            <button onclick="drawNetwork()" class="bg-primary text-white px-4 py-2 rounded hover:bg-blue-800 transition w-full">
+              🎨 Dibujar Red de Valor
+            </button>
+          </div>
+          
+          <div class="mt-6 p-3 bg-gray-50 rounded">
+            <h4 class="font-medium mb-2 text-primary">📌 Leyenda:</h4>
+            <div class="flex items-center mb-1">
+              <div class="w-4 h-1 bg-primary mr-2"></div>
+              <span>Tangible (MUST) - Entregables contractuales</span>
+            </div>
+            <div class="flex items-center">
+              <div class="w-4 h-1 bg-secondary border-dashed border-b-2 mr-2"></div>
+              <span>Intangible (EXTRA) - Confianza, conocimiento, apoyo</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Vista gráfica -->
+        <div>
+          <h3 class="text-lg font-semibold mb-3 text-primary">📊 Vista Gráfica de tu Red</h3>
+          <div id="svg-container">
+            <svg id="network-svg" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg"></svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-6 p-3 bg-gray-50 rounded border border-gray-200">
+        <p class="text-sm mb-2">
+          <strong>💡 Consejo profesional:</strong> En VNA las flechas continuas representan entregables <span class="text-primary font-medium">tangibles (MUST)</span> y las discontinuas, entregables <span class="text-secondary font-medium">intangibles (EXTRA)</span>.
+        </p>
+        <p class="text-xs text-gray-500">
+          Esta herramienta guarda temporalmente tu mapa en el navegador. Para guardar permanentemente, usa "Exportar SVG" o toma una captura de pantalla.
+        </p>
+      </div>
+    </section>
+
+    <!-- Caso práctico -->
+    <section class="mb-10 p-5 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg">
+      <h2 class="text-2xl font-bold text-primary mb-4">📌 Caso Práctico: Venta de Servicios Complejos</h2>
+      <p class="mb-4">
+        Veamos cómo se aplican los tres elementos en un escenario real:
+      </p>
+      
+      <div class="space-y-4">
+        <div class="bg-white p-4 rounded-lg border-l-4 border-primary tangible">
+          <h4 class="font-semibold mb-1">Transacción tangible:</h4>
+          <p><code>Vendedor → Cliente | tangible | Propuesta comercial detallada</code></p>
+          <p class="mt-1 text-sm italic text-gray-600">Este entregable es medible, contractual y verificable.</p>
+        </div>
+        
+        <div class="bg-white p-4 rounded-lg border-l-4 border-secondary intangible">
+          <h4 class="font-semibold mb-1">Transacción intangible:</h4>
+          <p><code>Cliente → Vendedor | intangible | Confianza en la solución</code></p>
+          <p class="mt-1 text-sm italic text-gray-600">Este entregable no es contractual, pero es crítico para cerrar la venta.</p>
+        </div>
+        
+        <div class="bg-white p-4 rounded-lg border-l-4 border-primary tangible">
+          <h4 class="font-semibold mb-1">Transacción tangibile:</h4>
+          <p><code>Vendedor → IT | tangible | Requerimientos técnicos</code></p>
+        </div>
+        
+        <div class="bg-white p-4 rounded-lg border-l-4 border-secondary intangible">
+          <h4 class="font-semibold mb-1">Transacción intangible:</h4>
+          <p><code>IT → Vendedor | intangible | Asesoramiento estratégico</code></p>
+        </div>
+      </div>
+      
+      <p class="mt-4 italic">
+        "En este caso, el valor real no está en los documentos entregados, sino en los <strong>intangibles</strong> que permiten la venta: confianza, conocimiento compartido y apoyo estratégico."
       </p>
     </section>
 
     <!-- CTA final -->
     <div class="text-center bg-gradient-to-r from-primary to-blue-800 text-white p-8 rounded-lg">
-      <h3 class="text-2xl font-bold mb-4">¿Listo para mapear su primera red de valor?</h3>
+      <h3 class="text-2xl font-bold mb-4">¿Listo para mapear tu primera red de valor?</h3>
       <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="https://cursovna.netlify.app/" class="bg-white text-primary font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition">🎓 Acceda al curso</a>
+        <a href="https://cursovna.netlify.app/" class="bg-white text-primary font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition">🎓 Accede al curso completo</a>
         <a id="contact-link" href="#" class="bg-secondary text-white font-bold py-3 px-8 rounded-lg hover:bg-orange-600 transition">📧 Solicite apoyo</a>
       </div>
     </div>
@@ -161,8 +291,14 @@
     </p>
   </footer>
 
-  <!-- Script para resaltar página activa y proteger email -->
+  <!-- Script para funcionalidad interactiva -->
   <script>
+    // Proteger email
+    const contactLink = document.getElementById('contact-link');
+    if (contactLink) {
+      contactLink.href = 'mailto:' + ['a', 's', 'o', 'l', 'a', 'c', 'h', 'e', '@', 'm', 'a', 'c', '.', 'c', 'o', 'm'].join('');
+    }
+
     // Resaltar enlace activo
     document.querySelectorAll('.menu-link').forEach(link => {
       const currentPath = window.location.pathname.split('/').pop();
@@ -173,12 +309,179 @@
       }
     });
 
-    // Proteger email
-    const contactLink = document.getElementById('contact-link');
-    if (contactLink) {
-      const email = ['a', 's', 'o', 'l', 'a', 'c', 'h', 'e', '@', 'm', 'a', 'c', '.', 'c', 'o', 'm'].join('');
-      contactLink.href = 'mailto:' + email;
+    // Mapper interactivo de redes de valor
+    function drawNetwork() {
+      const svg = document.getElementById('network-svg');
+      svg.innerHTML = '';
+
+      const input = document.getElementById('input').value;
+      if (!input.trim()) return;
+
+      const lines = input.trim().split('\n');
+      const nodes = new Set();
+      const links = [];
+
+      // Parsear líneas
+      for (let line of lines) {
+        line = line.trim();
+        if (!line || line.startsWith('#')) continue;
+
+        const parts = line.split('|').map(p => p.trim());
+        if (parts.length !== 3) continue;
+
+        const roles = parts[0].split('→').map(r => r.trim());
+        if (roles.length !== 2) continue;
+
+        const source = roles[0];
+        const target = roles[1];
+        const type = parts[1].toLowerCase();
+        const deliverable = parts[2];
+
+        if (!['tangible', 'intangible'].includes(type)) continue;
+
+        nodes.add(source);
+        nodes.add(target);
+        links.push({ source, target, type, deliverable });
+      }
+
+      const nodeArray = Array.from(nodes);
+      const nodeCount = nodeArray.length;
+      if (nodeCount === 0) return;
+
+      // Posicionar nodos en círculo
+      const centerX = 400;
+      const centerY = 300;
+      const radius = Math.min(250, 150 + nodeCount * 15);
+
+      const positions = {};
+      nodeArray.forEach((node, i) => {
+        const angle = (i / nodeCount) * 2 * Math.PI - Math.PI / 2;
+        positions[node] = {
+          x: centerX + radius * Math.cos(angle),
+          y: centerY + radius * Math.sin(angle)
+        };
+      });
+
+      // Dibujar enlaces (flechas)
+      links.forEach(link => {
+        const start = positions[link.source];
+        const end = positions[link.target];
+        if (!start || !end) return;
+
+        // Calcular desplazamiento para evitar superposición (simple)
+        const dx = end.x - start.x;
+        const dy = end.y - start.y;
+        const len = Math.sqrt(dx*dx + dy*dy);
+        const normX = dx / len;
+        const normY = dy / len;
+
+        const arrowStartX = start.x + 40 * normX;
+        const arrowStartY = start.y + 40 * normY;
+        const arrowEndX = end.x - 40 * normX;
+        const arrowEndY = end.y - 40 * normY;
+
+        // Flecha
+        const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        line.setAttribute("x1", arrowStartX);
+        line.setAttribute("y1", arrowStartY);
+        line.setAttribute("x2", arrowEndX);
+        line.setAttribute("y2", arrowEndY);
+        line.setAttribute("stroke", link.type === 'tangible' ? '#003366' : '#F97316');
+        line.setAttribute("stroke-width", "2");
+        if (link.type === 'intangible') {
+          line.setAttribute("stroke-dasharray", "6,4");
+        }
+
+        // Flecha punta
+        const headLen = 12;
+        const angle = Math.atan2(arrowEndY - arrowStartY, arrowEndX - arrowStartX);
+        const headX1 = arrowEndX - headLen * Math.cos(angle - Math.PI / 6);
+        const headY1 = arrowEndY - headLen * Math.sin(angle - Math.PI / 6);
+        const headX2 = arrowEndX - headLen * Math.cos(angle + Math.PI / 6);
+        const headY2 = arrowEndY - headLen * Math.sin(angle + Math.PI / 6);
+
+        const head = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+        head.setAttribute("points", `${arrowEndX},${arrowEndY} ${headX1},${headY1} ${headX2},${headY2}`);
+        head.setAttribute("fill", link.type === 'tangible' ? '#003366' : '#F97316');
+
+        svg.appendChild(line);
+        svg.appendChild(head);
+
+        // Etiqueta del entregable
+        const midX = (arrowStartX + arrowEndX) / 2;
+        const midY = (arrowStartY + arrowEndY) / 2;
+        const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        text.setAttribute("x", midX);
+        text.setAttribute("y", midY - 8);
+        text.setAttribute("font-family", "'Inter', sans-serif");
+        text.setAttribute("font-size", "12");
+        text.setAttribute("text-anchor", "middle");
+        text.setAttribute("fill", "#374151");
+        text.textContent = link.deliverable;
+        svg.appendChild(text);
+      });
+
+      // Dibujar nodos
+      nodeArray.forEach(node => {
+        const pos = positions[node];
+        if (!pos) return;
+        
+        const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+        circle.setAttribute("cx", pos.x);
+        circle.setAttribute("cy", pos.y);
+        circle.setAttribute("r", "35");
+        circle.setAttribute("fill", "#dbeafe");
+        circle.setAttribute("stroke", "#003366");
+        circle.setAttribute("stroke-width", "2");
+        svg.appendChild(circle);
+
+        const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        text.setAttribute("x", pos.x);
+        text.setAttribute("y", pos.y + 4);
+        text.setAttribute("font-family", "'Inter', sans-serif");
+        text.setAttribute("font-size", "14");
+        text.setAttribute("text-anchor", "middle");
+        text.setAttribute("fill", "#003366");
+        text.setAttribute("font-weight", "600");
+        
+        // Ajustar texto largo
+        const words = node.split(' ');
+        if (words.length === 1) {
+          text.textContent = node;
+        } else {
+          const tspan1 = document.createElementNS("http://www.w3.org/2000/svg", "tspan");
+          tspan1.setAttribute("x", pos.x);
+          tspan1.setAttribute("dy", "-0.4em");
+          tspan1.textContent = words[0];
+          const tspan2 = document.createElementNS("http://www.w3.org/2000/svg", "tspan");
+          tspan2.setAttribute("x", pos.x);
+          tspan2.setAttribute("dy", "1.2em");
+          tspan2.textContent = words.slice(1).join(' ');
+          text.appendChild(tspan1);
+          text.appendChild(tspan2);
+        }
+        svg.appendChild(text);
+      });
     }
+
+    function exportSVG() {
+      const svg = document.getElementById('network-svg');
+      const svgData = new XMLSerializer().serializeToString(svg);
+      const svgBlob = new Blob([svgData], {type:"image/svg+xml;charset=utf-8"});
+      const svgUrl = URL.createObjectURL(svgBlob);
+      
+      const downloadLink = document.createElement("a");
+      downloadLink.href = svgUrl;
+      downloadLink.download = "red-valor-" + new Date().toISOString().slice(0,10) + ".svg";
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      document.body.removeChild(downloadLink);
+    }
+
+    // Dibujar al cargar
+    window.onload = () => {
+      drawNetwork();
+    };
   </script>
 </body>
 </html>
