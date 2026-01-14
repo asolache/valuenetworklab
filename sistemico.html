@@ -3,482 +3,280 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sistemas Vivientes – Programa Integral de Pensamiento Sistémico y Redes de Valor</title>
-  <meta name="description" content="Programa de formación que integra Value Network Analysis, pensamiento sistémico, learning organizations y modelos cooperativos para transformar organizaciones complejas. Basado en metodologías validadas y casos reales." />
-  
-  <!-- Favicon -->
-  <link rel="icon" href="image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>V</text></svg>" type="image/svg+xml">
-  
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#003366',
-            secondary: '#F97316',
-          }
-        }
+  <title>Transforma Organizaciones como Sistemas Vivos | Value Network Lab</title>
+  <meta name="description" content="Integramos Value Network Analysis, pensamiento sistémico y aprendizaje cooperativo para revelar patrones ocultos y liberar el potencial adaptativo de tu organización." />
+  <style>
+    :root {
+      --color-text: #2d3748;
+      --color-link: #1d3557;
+      --color-accent: #2a9d8f;
+      --color-border: #e2e8f0;
+      --color-light: #f8f9fa;
+      --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      color: var(--color-text);
+      background-color: white;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+    h1, h2, h3, h4 {
+      margin-top: 2rem;
+      margin-bottom: 0.8rem;
+      color: var(--color-link);
+      font-weight: 600;
+    }
+    h1 {
+      font-size: 2.2rem;
+      border-bottom: 2px solid var(--color-accent);
+      padding-bottom: 0.5rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+      position: relative;
+    }
+    h2::before {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 3px;
+      background: var(--color-accent);
+      margin-bottom: 0.5rem;
+    }
+    p, ul, ol {
+      margin-bottom: 1rem;
+    }
+    a {
+      color: var(--color-link);
+      text-decoration: underline;
+      font-weight: 500;
+    }
+    a:hover {
+      color: var(--color-accent);
+      text-decoration: none;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    .highlight {
+      background: var(--color-light);
+      padding: 1.5rem;
+      border-left: 4px solid var(--color-accent);
+      border-radius: 0 6px 6px 0;
+      margin: 2rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--color-border);
+      font-size: 0.95rem;
+    }
+    @media (max-width: 600px) {
+      body {
+        padding: 1.5rem 1rem;
+      }
+      h1 {
+        font-size: 1.8rem;
       }
     }
-  </script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>body { font-family: 'Inter', sans-serif; }</style>
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-  <!-- Header con menú global -->
-  <header class="bg-white shadow-sm sticky top-0 z-50">
-    <div class="max-w-4xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center gap-4">
-      <a href="index.html" class="font-bold text-xl text-primary">Value Network Lab</a>
-      <nav class="flex flex-wrap gap-4 md:gap-6 text-sm md:text-base">
-        <a href="abstract.html" class="menu-link text-gray-700 hover:text-primary transition">Abstract</a>
-        <a href="caso-de-uso.html" class="menu-link text-gray-700 hover:text-primary transition">Caso de Uso</a>
-        <a href="formacion-accion.html" class="menu-link text-gray-700 hover:text-primary transition">Formación-Acción</a>
-        <a href="quienes-somos.html" class="menu-link text-gray-700 hover:text-primary transition">Quiénes Somos</a>
-        <a href="contacto.html" class="menu-link text-gray-700 hover:text-primary transition">Contacto</a>
-        <a href="https://cursovna.netlify.app/" class="bg-primary text-white px-3 py-1 rounded font-medium hover:bg-blue-800 transition">Curso VNA</a>
-      </nav>
-    </div>
-  </header>
+<body>
 
-  <!-- Hero -->
-  <section class="bg-gradient-to-r from-primary to-blue-800 text-white py-16 px-4">
-    <div class="max-w-4xl mx-auto text-center">
-      <h1 class="text-4xl md:text-5xl font-bold mb-6">Transforma Organizaciones como Sistemas Vivientes</h1>
-      <p class="text-xl mb-8 max-w-2xl mx-auto">
-        Integramos <strong>Value Network Analysis</strong>, <strong>pensamiento sistémico</strong> y <strong>aprendizaje cooperativo</strong> para revelar patrones ocultos y liberar el potencial adaptativo de tu organización.
-      </p>
-      <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="#programa" class="bg-white text-primary font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition">📘 Conoce el programa</a>
-        <a id="consultoria-link" href="#" class="bg-secondary text-white font-bold py-3 px-8 rounded-lg hover:bg-orange-600 transition">💬 Agenda conversación</a>
-      </div>
-    </div>
-  </section>
+<h1>Transforma Organizaciones como Sistemas Vivos</h1>
+<p>Integramos <strong>Value Network Analysis</strong>, <strong>pensamiento sistémico</strong> y <strong>aprendizaje cooperativo</strong> para revelar patrones ocultos y liberar el potencial adaptativo de tu organización.</p>
 
-  <!-- Script para proteger email -->
-  <script>
-    (function() {
-      const email = ['a', 's', 'o', 'l', 'a', 'c', 'h', 'e', '@', 'm', 'a', 'c', '.', 'c', 'o', 'm'].join('');
-      const mailto = 'mailto:' + email;
-      const links = document.querySelectorAll('#consultoria-link, .contact-link');
-      links.forEach(link => {
-        if (link) link.href = mailto;
-      });
-    })();
-  </script>
+<h2>❌ El dolor de organizar como máquinas en un mundo vivo</h2>
+<p>Las organizaciones tratan de aplicar recetas prefabricadas, sin entender que son <strong>sistemas adaptativos complejos</strong>. El resultado: iniciativas de transformación que fracasan, equipos frustrados y oportunidades perdidas.</p>
 
-  <!-- Pérdida real -->
-  <section class="max-w-4xl mx-auto px-4 py-16">
-    <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-r mb-12">
-      <h2 class="text-2xl font-bold text-red-800 mb-3">❌ El dolor de organizar como máquinas en un mundo vivo</h2>
-      <p>
-        Las organizaciones tratan de aplicar recetas prefabricadas, sin entender que son <strong>sistemas adaptativos complejos</strong>. El resultado: iniciativas de transformación que fracasan, equipos frustrados y oportunidades perdidas.
-      </p>
-      <ul class="list-disc pl-5 mt-3 space-y-1">
-        <li><strong>87%</strong> de las transformaciones digitales fracasan por enfoque mecanicista (McKinsey)</li>
-        <li><strong>El 72%</strong> de las iniciativas de IA no se implementan por silos invisibles</li>
-        <li><strong>El 3-5%</strong> del EBITDA se pierde en ineficiencias invisibles</li>
-        <li>Equipos con alto talento pero baja coherencia sistémica</li>
-      </ul>
-    </div>
+<h2>La respuesta integrada: Sistemas Vivos</h2>
+<p>No se trata de elegir entre <em>pensamiento sistémico</em>, <em>VNA</em>, <em>learning organizations</em> o <em>aprendizaje cooperativo</em>. Se trata de integrar lo mejor de cada enfoque para abordar problemas reales en organizaciones complejas.</p>
 
-    <!-- Solución integrada -->
-    <section class="mb-12">
-      <h2 class="text-3xl font-bold text-primary mb-6 text-center" id="programa">La respuesta integrada: Sistemas Vivientes</h2>
-      <div class="bg-white p-8 rounded-lg shadow">
-        <p class="mb-6 text-lg">
-          No se trata de elegir entre <em>pensamiento sistémico</em>, <em>VNA</em>, <em>learning organizations</em> o <em>aprendizaje cooperativo</em>. Se trata de integrar lo mejor de cada enfoque para abordar problemas reales en organizaciones complejas.
-        </p>
-        
-        <div class="grid md:grid-cols-2 gap-8 mb-8">
-          <div>
-            <h3 class="font-semibold text-lg mb-3 flex items-center">
-              <span class="w-2 h-2 bg-secondary rounded-full mr-2"></span>
-              Fundamentos Sistémicos
-            </h3>
-            <p>Arquetipos sistémicos de Peter Senge + patrones de complejidad adaptativa</p>
-          </div>
-          <div>
-            <h3 class="font-semibold text-lg mb-3 flex items-center">
-              <span class="w-2 h-2 bg-secondary rounded-full mr-2"></span>
-              Redes de Valor VNA
-            </h3>
-            <p>Mapeo de roles reales y transacciones tangibles/intangibles (Verna Allee)</p>
-          </div>
-          <div>
-            <h3 class="font-semibold text-lg mb-3 flex items-center">
-              <span class="w-2 h-2 bg-secondary rounded-full mr-2"></span>
-              Aprendizaje Cooperativo
-            </h3>
-            <p>Modelos Team Academy (Finlandia) y LEINN (Mondragón) para equipos autónomos</p>
-          </div>
-          <div>
-            <h3 class="font-semibold text-lg mb-3 flex items-center">
-              <span class="w-2 h-2 bg-secondary rounded-full mr-2"></span>
-              Diagnóstico de Salud Sistémica
-            </h3>
-            <p>Indicadores de vitalidad organizacional (pulse points y heartbeat)</p>
-          </div>
-        </div>
-        
-        <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-primary">
-          <p class="italic">
-            "Las organizaciones no son máquinas para optimizar, sino <strong>ecosistemas para cultivar</strong>. Nuestro programa te enseña a ser jardinero sistémico, no mecánico."
-          </p>
-        </div>
-      </div>
-    </section>
+<h3>Fundamentos Sistémicos</h3>
+<p>Arquetipos sistémicos de Peter Senge + patrones de complejidad adaptativa</p>
 
-    <!-- Estructura del programa -->
-    <section class="mb-16">
-      <h2 class="text-3xl font-bold text-primary mb-8 text-center">Estructura del Programa: 12 Semanas Transformadoras</h2>
-      
-      <div class="space-y-10">
-        <!-- Módulo 1 -->
-        <div class="bg-white p-6 rounded-lg shadow">
-          <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-            <h3 class="text-xl font-bold text-primary">Módulo 1: Fundamentos de Sistemas Vivos (Semanas 1-3)</h3>
-            <span class="bg-blue-100 text-primary px-3 py-1 rounded text-sm font-medium mt-2 md:mt-0">Base teórica + ejercicios prácticos</span>
-          </div>
-          <div class="grid md:grid-cols-2 gap-6">
-            <div>
-              <h4 class="font-semibold mb-2">Contenido principal:</h4>
-              <ul class="list-disc pl-5 space-y-1">
-                <li>Arquetipos sistémicos de Peter Senge aplicados a casos reales</li>
-                <li>Principios de complejidad adaptativa: desde máquinas a sistemas vivos</li>
-                <li>Diagnóstico de mental models limitantes en equipos y dirección</li>
-                <li>Introducción a Value Network Analysis (VNA) como lente sistémico</li>
-              </ul>
-            </div>
-            <div>
-              <h4 class="font-semibold mb-2">Experiencia práctica:</h4>
-              <ul class="list-disc pl-5 space-y-1">
-                <li>Ejercicio "Cadena de suposiciones": revelar mental models ocultos</li>
-                <li>Mapeo inicial de redes de valor en tu organización</li>
-                <li>Análisis de casos históricos de fracaso por enfoque mecanicista</li>
-                <li>Team Learning inspirado en Team Academy (Finlandia)</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Módulo 2 -->
-        <div class="bg-white p-6 rounded-lg shadow">
-          <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-            <h3 class="text-xl font-bold text-primary">Módulo 2: Diagnóstico Sistémico Avanzado (Semanas 4-6)</h3>
-            <span class="bg-blue-100 text-primary px-3 py-1 rounded text-sm font-medium mt-2 md:mt-0">Herramientas de diagnóstico + aplicación real</span>
-          </div>
-          <div class="grid md:grid-cols-2 gap-6">
-            <div>
-              <h4 class="font-semibold mb-2">Contenido principal:</h4>
-              <ul class="list-disc pl-5 space-y-1">
-                <li>VNA avanzado: mapeo de transacciones intangibles críticas</li>
-                <li>Identificación de "pulse points" y "heartbeat" (según Verna Allee)</li>
-                <li>Indicadores de salud sistémica en organizaciones complejas</li>
-                <li>Modelo LEINN aplicado: emprendimiento cooperativo y transformación</li>
-              </ul>
-            </div>
-            <div>
-              <h4 class="font-semibold mb-2">Experiencia práctica:</h4>
-              <ul class="list-disc pl-5 space-y-1">
-                <li>Diagnóstico completo de una red crítica en tu organización</li>
-                <li>Análisis de tensiones y puntos de ruptura sistémica</li>
-                <li>Ejercicio "¿Quién sostiene la red?" - identificación de roles críticos invisibles</li>
-                <li>Simulación de respuesta a crisis mediante pensamiento sistémico</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Módulo 3 -->
-        <div class="bg-white p-6 rounded-lg shadow">
-          <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-            <h3 class="text-xl font-bold text-primary">Módulo 3: Intervenciones para Sistemas Vivos (Semanas 7-9)</h3>
-            <span class="bg-blue-100 text-primary px-3 py-1 rounded text-sm font-medium mt-2 md:mt-0">Diseño de intervenciones + prototipado</span>
-          </div>
-          <div class="grid md:grid-cols-2 gap-6">
-            <div>
-              <h4 class="font-semibold mb-2">Contenido principal:</h4>
-              <ul class="list-disc pl-5 space-y-1">
-                <li>Diseño de intervenciones no lineales (principio de leverage points)</li>
-                <li>Enfoques para nutrir intangibles críticos (confianza, propósito compartido)</li>
-                <li>Redistribución estratégica de nodos saturados</li>
-                <li>Modelos de gobernanza adaptativa inspirados en Mondragón</li>
-              </ul>
-            </div>
-            <div>
-              <h4 class="font-semibold mb-2">Experiencia práctica:</h4>
-              <ul class="list-disc pl-5 space-y-1">
-                <li>Diseño de "semillas de cambio" para tu organización</li>
-                <li>Prototipado de nuevos roles y transacciones críticas</li>
-                <li>Ejercicio Team Tower (inspirado en TeamTowers.eu) para visualizar patrones</li>
-                <li>Plan de comunicación para intervenciones sistémicas</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Módulo 4 -->
-        <div class="bg-white p-6 rounded-lg shadow">
-          <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-            <h3 class="text-xl font-bold text-primary">Módulo 4: Sostenibilidad y Escalabilidad (Semanas 10-12)</h3>
-            <span class="bg-blue-100 text-primary px-3 py-1 rounded text-sm font-medium mt-2 md:mt-0">Implementación + comunidad de práctica</span>
-          </div>
-          <div class="grid md:grid-cols-2 gap-6">
-            <div>
-              <h4 class="font-semibold mb-2">Contenido principal:</h4>
-              <ul class="list-disc pl-5 space-y-1">
-                <li>Métricas de éxito para sistemas vivos (más allá de ROI financiero)</li>
-                <li>Comunidades de práctica para aprendizaje continuo</li>
-                <li>Narrativas de cambio que honran la complejidad</li>
-                <li>Modelos de financiación y sostenibilidad para transformación sistémica</li>
-              </ul>
-            </div>
-            <div>
-              <h4 class="font-semibold mb-2">Experiencia práctica:</h4>
-              <ul class="list-disc pl-5 space-y-1">
-                <li>Presentación ejecutiva de proyecto final ante panel diverso</li>
-                <li>Diseño de plan de sostenibilidad para 12-24 meses</li>
-                <li>Creación de comunidad de práctica con compañeros del programa</li>
-                <li>Plan personal de desarrollo como "jardinero sistémico"</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+<h3>Redes de Valor VNA</h3>
+<p>Mapeo de roles reales y transacciones tangibles/intangibles (Verna Allee)</p>
 
-    <!-- Metodología única -->
-    <section class="mb-16">
-      <h2 class="text-3xl font-bold text-primary mb-6 text-center">Nuestra Metodología: Donde se Encuentran Todas las Disciplinas</h2>
-      
-      <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-lg">
-        <div class="grid md:grid-cols-3 gap-8 mb-8">
-          <div class="text-center">
-            <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl">1</div>
-            <h3 class="font-bold text-lg mb-2">Aprendizaje Experiencial</h3>
-            <p>Inspirado en Team Academy (Finlandia): 70% práctica real, 30% teoría. Aprendes haciendo, no escuchando.</p>
-          </div>
-          
-          <div class="text-center">
-            <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl">2</div>
-            <h3 class="font-bold text-lg mb-2">Diagnóstico Riguroso</h3>
-            <p>Combinamos VNA, arquetipos sistémicos y modelos de aprendizaje para revelar la verdadera arquitectura de tu organización.</p>
-          </div>
-          
-          <div class="text-center">
-            <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl">3</div>
-            <h3 class="font-bold text-lg mb-2">Intervenciones Contextuales</h3>
-            <p>Ningún "kit de transformación" prefabricado. Diseñamos intervenciones para tus patrones específicos y contexto único.</p>
-          </div>
-        </div>
-        
-        <div class="mt-8 p-6 bg-white rounded-lg">
-          <h4 class="text-xl font-bold text-primary mb-4">El ciclo de aprendizaje que aplicamos:</h4>
-          <div class="grid grid-cols-1 md:grid-cols-5 gap-2 text-center">
-            <div>
-              <div class="w-10 h-10 bg-secondary text-white rounded-full flex items-center justify-center mx-auto font-bold mb-2">1</div>
-              <p class="font-medium">Observar</p>
-              <p class="text-sm">Diagnosticar el sistema real</p>
-            </div>
-            <div>
-              <div class="w-10 h-10 bg-secondary text-white rounded-full flex items-center justify-center mx-auto font-bold mb-2">2</div>
-              <p class="font-medium">Reflexionar</p>
-              <p class="text-sm">Patrones y modelos mentales</p>
-            </div>
-            <div>
-              <div class="w-10 h-10 bg-secondary text-white rounded-full flex items-center justify-center mx-auto font-bold mb-2">3</div>
-              <p class="font-medium">Teorizar</p>
-              <p class="text-sm">Conocimiento sistémico</p>
-            </div>
-            <div>
-              <div class="w-10 h-10 bg-secondary text-white rounded-full flex items-center justify-center mx-auto font-bold mb-2">4</div>
-              <p class="font-medium">Experimentar</p>
-              <p class="text-sm">Intervenciones seguras</p>
-            </div>
-            <div>
-              <div class="w-10 h-10 bg-secondary text-white rounded-full flex items-center justify-center mx-auto font-bold mb-2">5</div>
-              <p class="font-medium">Integrar</p>
-              <p class="text-sm">Nuevos hábitos colectivos</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+<h3>Aprendizaje Cooperativo</h3>
+<p>Modelos Team Academy (Finlandia) y LEINN (Mondragón) para equipos autónomos</p>
 
-    <!-- Casos de aplicación -->
-    <section class="mb-16">
-      <h2 class="text-3xl font-bold text-primary mb-8 text-center">Casos de Aplicación por Sector</h2>
-      
-      <div class="grid md:grid-cols-2 gap-6">
-        <!-- Sector corporativo -->
-        <div class="bg-white p-6 rounded-lg border">
-          <h3 class="text-xl font-bold text-primary mb-3">🚀 Transformación Corporativa</h3>
-          <p class="mb-4">Para grandes empresas con silos funcionales y complejidad operativa.</p>
-          <ul class="list-disc pl-5 mb-4 space-y-2">
-            <li><strong>Diagnóstico:</strong> Mapeo de redes críticas (ej. Order-to-Cash) con VNA + análisis de arquetipos sistémicos</li>
-            <li><strong>Intervención:</strong> Rediseño de roles y transacciones para liberar 3-5% de EBITDA oculto</li>
-            <li><strong>Resultados:</strong> Equipos más resilientes, adopción exitosa de IA, reducción de tiempos de ciclo</li>
-          </ul>
-          <p class="italic">"Descubrimos que la función de planificación era el 'heart beat' invisible que sostenía toda la cadena de suministro. Al fortalecer este rol, redujimos los retrasos un 40%."</p>
-        </div>
-        
-        <!-- Psicología de grupos -->
-        <div class="bg-white p-6 rounded-lg border">
-          <h3 class="text-xl font-bold text-primary mb-3">👥 Psicología de Equipos y Grupos</h3>
-          <p class="mb-4">Para profesionales que trabajan con dinámicas grupales complejas.</p>
-          <ul class="list-disc pl-5 mb-4 space-y-2">
-            <li><strong>Diagnóstico:</strong> Análisis de redes relacionales y flujos emocionales con herramientas VNA adaptadas</li>
-            <li><strong>Intervención:</strong> Diseño de rituales y prácticas para nutrir intangibles críticos (confianza, seguridad psicológica)</li>
-            <li><strong>Resultados:</strong> Mayor cohesión, reducción de conflictos tóxicos, aumento de la creatividad colectiva</li>
-          </ul>
-          <p class="italic">"Aplicamos el modelo de Team Academy con equipos de alto rendimiento estancados. Al revelar las transacciones intangibles bloqueadas, recuperamos un 65% de la energía creativa perdida."</p>
-        </div>
-        
-        <!-- Psicología comunitaria -->
-        <div class="bg-white p-6 rounded-lg border">
-          <h3 class="text-xl font-bold text-primary mb-3">🌱 Psicología Comunitaria y Desarrollo Social</h3>
-          <p class="mb-4">Para ONGs, iniciativas comunitarias y transformación social.</p>
-          <ul class="list-disc pl-5 mb-4 space-y-2">
-            <li><strong>Diagnóstico:</strong> Mapeo de activos comunitarios y flujos de valor social con metodología LEINN</li>
-            <li><strong>Intervención:</strong> Diseño participativo de ecosistemas de apoyo basado en redes naturales</li>
-            <li><strong>Resultados:</strong> Mayor sostenibilidad, empoderamiento local, impacto social multiplicado</li>
-          </ul>
-          <p class="italic">"Revelamos cómo un pequeño grupo de líderes informales sostenía toda la red comunitaria. Al fortalecer sus conexiones y visibilizar su rol, el proyecto pasó de 3 a 17 comunidades atendidas."</p>
-        </div>
-        
-        <!-- Educación e innovación -->
-        <div class="bg-white p-6 rounded-lg border">
-          <h3 class="text-xl font-bold text-primary mb-3">🎓 Educación e Innovación</h3>
-          <p class="mb-4">Para instituciones educativas y equipos de innovación.</p>
-          <ul class="list-disc pl-5 mb-4 space-y-2">
-            <li><strong>Diagnóstico:</strong> Análisis de flujos de conocimiento y barreras al aprendizaje colectivo</li>
-            <li><strong>Intervención:</strong> Diseño de "arquitecturas de aprendizaje" basadas en sistemas vivos</li>
-            <li><strong>Resultados:</strong> Mayor adaptabilidad, innovación sostenible, satisfacción estudiantil/docente</li>
-          </ul>
-          <p class="italic">"Transformamos una escuela tradicional aplicando principios de Team Academy y VNA. El resultado: un 45% más de proyectos estudiantiles implementados en la comunidad real."</p>
-        </div>
-      </div>
-    </section>
+<h3>Diagnóstico de Salud Sistémica</h3>
+<p>Indicadores de vitalidad organizacional (pulse points y heartbeat)</p>
 
-    <!-- Beneficios por perfil -->
-    <section class="mb-16">
-      <h2 class="text-3xl font-bold text-primary mb-8 text-center">Beneficios por Perfil Profesional</h2>
-      
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-white p-6 rounded-lg shadow text-center">
-          <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl">📊</div>
-          <h3 class="text-xl font-bold mb-2">Directivos y Líderes</h3>
-          <ul class="list-disc pl-5 text-left space-y-1 mt-3">
-            <li>Diagnóstico estratégico de fugas de valor invisibles</li>
-            <li>Capacidad para anticipar efectos sistémicos de decisiones</li>
-            <li>Lenguaje para comunicar complejidad al consejo</li>
-            <li>ROI cuantificable de intervenciones sistémicas</li>
-          </ul>
-        </div>
-        
-        <div class="bg-white p-6 rounded-lg shadow text-center">
-          <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl">🧠</div>
-          <h3 class="text-xl font-bold mb-2">Psicólogos de Equipos</h3>
-          <ul class="list-disc pl-5 text-left space-y-1 mt-3">
-            <li>Herramientas para visualizar dinámicas grupales ocultas</li>
-            <li>Intervenciones basadas en patrones, no en personalidades</li>
-            <li>Modelos para transformar conflictos en co-creación</li>
-            <li>Enfoque preventivo, no solo reactivo</li>
-          </ul>
-        </div>
-        
-        <div class="bg-white p-6 rounded-lg shadow text-center">
-          <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl">🌍</div>
-          <h3 class="text-xl font-bold mb-2">Agentes de Cambio Social</h3>
-          <ul class="list-disc pl-5 text-left space-y-1 mt-3">
-            <li>Mapas de activos comunitarios y flujos de valor social</li>
-            <li>Estrategias para escalar impacto manteniendo esencia</li>
-            <li>Modelos de gobernanza distribuida inspirados en Mondragón</li>
-            <li>Resiliencia ante crisis y cambios de contexto</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+<blockquote>
+  "Las organizaciones no son máquinas para optimizar, sino <strong>ecosistemas para cultivar</strong>. Nuestro programa te enseña a ser jardinero sistémico, no mecánico."
+</blockquote>
 
-    <!-- Testimonios -->
-    <section class="mb-16">
-      <h2 class="text-3xl font-bold text-primary mb-8 text-center">Voces de Transformación</h2>
-      
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-gray-100 p-6 rounded-lg italic">
-          <p>"Como directora de transformación digital, había probado todas las metodologías. Sistemas Vivientes fue la primera que me permitió ver realmente cómo fluía el valor en la organización. Recuperamos 4.2M€ en eficiencia en el primer año."</p>
-          <div class="mt-4 font-semibold">— María T., Director de Transformación, Industria Manufacturera</div>
-        </div>
-        
-        <div class="bg-gray-100 p-6 rounded-lg italic">
-          <p>"Trabajo con equipos de alto rendimiento que estaban estancados. El diagnóstico con VNA reveló que el problema no era de personas, sino de transacciones intangibles bloqueadas. Hoy mis equipos tienen un 70% más de proyectos exitosos."</p>
-          <div class="mt-4 font-semibold">— Carlos R., Psicólogo Organizacional, Consultoría Internacional</div>
-        </div>
-        
-        <div class="bg-gray-100 p-6 rounded-lg italic">
-          <p>"En nuestra ONG, aplicar el modelo LEINN junto con el pensamiento sistémico nos permitió escalar nuestro impacto sin perder la esencia. Pasamos de atender 200 a 1,200 familias manteniendo la misma estructura básica."</p>
-          <div class="mt-4 font-semibold">— Ana M., Directora de Programas, ONG de Desarrollo Comunitario</div>
-        </div>
-      </div>
-    </section>
+<h2>Estructura del Programa: 12 Semanas Transformadoras</h2>
 
-    <!-- CTA final -->
-    <div class="text-center bg-gradient-to-r from-primary to-blue-800 text-white p-10 rounded-lg mb-12">
-      <h3 class="text-2xl md:text-3xl font-bold mb-4">¿Listo para transformar sistemas, no solo solucionar problemas?</h3>
-      <p class="mb-8 max-w-2xl mx-auto text-lg">
-        Agenda una conversación exploratoria sin compromiso. Descubriremos juntos cuál es el patrón sistémico que está limitando tu organización o comunidad.
-      </p>
-      <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="https://cursovna.netlify.app/" class="bg-white text-primary font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition">🎓 Explora nuestro curso gratuito de VNA</a>
-        <a id="consultoria-link-2" href="#" class="bg-secondary text-white font-bold py-3 px-8 rounded-lg hover:bg-orange-600 transition">📅 Agenda tu conversación exploratoria</a>
-      </div>
-    </div>
+<h3>Módulo 1: Fundamentos de Sistemas Vivos (Semanas 1-3)</h3>
+<p>Base teórica + ejercicios prácticos</p>
+<h4>Contenido principal:</h4>
+<ul>
+  <li>Teoría de sistemas vivos y complejidad adaptativa</li>
+  <li>Arquetipos sistémicos de Peter Senge</li>
+  <li>Introducción a Value Network Analysis</li>
+  <li>Principios del aprendizaje cooperativo (Team Academy / LEINN)</li>
+</ul>
+<h4>Experiencia práctica:</h4>
+<ul>
+  <li>Mapeo de tu primera red de valor</li>
+  <li>Identificación de patrones sistémicos en tu contexto real</li>
+</ul>
 
-    <!-- FAQ -->
-    <section class="mb-12">
-      <h2 class="text-2xl font-bold text-primary mb-6 text-center">Preguntas Frecuentes</h2>
-      
-      <div class="space-y-4 max-w-3xl mx-auto">
-        <div class="bg-white p-4 rounded-lg">
-          <h4 class="font-bold mb-2">¿Este programa es para mi organización, que es muy jerárquica y tradicional?</h4>
-          <p>Sí, especialmente para organizaciones con estructuras tradicionales que sienten que sus iniciativas de transformación no calan. Comenzamos donde estás y avanzamos a tu ritmo, sin dogmas.</p>
-        </div>
-        
-        <div class="bg-white p-4 rounded-lg">
-          <h4 class="font-bold mb-2">¿Cómo se diferencia de otros programas de pensamiento sistémico o VNA?</h4>
-          <p>La diferencia está en la integración práctica de múltiples enfoques (VNA, Team Academy, LEINN, arquetipos de Senge) y en nuestro foco en resultados comerciales y sociales medibles, no solo en cambios culturales abstractos.</p>
-        </div>
-        
-        <div class="bg-white p-4 rounded-lg">
-          <h4 class="font-bold mb-2">¿Puedo aplicar esto como profesional independiente (psicólogo, consultor)?</h4>
-          <p>Absolutamente. Muchos de nuestros participantes son profesionales independientes que transforman su práctica con estas metodologías. Ofrecemos rutas específicas para consultores y coaches.</p>
-        </div>
-        
-        <div class="bg-white p-4 rounded-lg">
-          <h4 class="font-bold mb-2">¿Necesito conocimientos previos de sistemas o VNA?</h4>
-          <p>No. Diseñamos el programa para que sea accesible, partiendo de casos concretos y avanzando gradualmente. Lo único necesario es apertura al cambio y compromiso con la transformación.</p>
-        </div>
-      </div>
-    </section>
-  </section>
+<h3>Módulo 2: Diagnóstico Sistémico Avanzado (Semanas 4-6)</h3>
+<p>Herramientas de diagnóstico + aplicación real</p>
+<h4>Contenido principal:</h4>
+<ul>
+  <li>Diagnóstico de salud sistémica</li>
+  <li>Análisis de redes organizacionales (ONA)</li>
+  <li>Transacciones intangibles y su impacto en resultados</li>
+</ul>
+<h4>Experiencia práctica:</h4>
+<ul>
+  <li>Diagnóstico completo de una unidad de tu organización</li>
+  <li>Visualización de flujos bloqueados en compartimentos estancos</li>
+</ul>
 
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-white py-6 text-center text-sm">
-    <p>Value Network Lab – Transformando organizaciones a través del pensamiento sistémico y las redes de valor | <a href="pantheon-work.html" class="text-secondary hover:underline">Pantheon Work</a></p>
-  </footer>
+<h3>Módulo 3: Intervenciones para Sistemas Vivos (Semanas 7-9)</h3>
+<p>Diseño de intervenciones + prototipado</p>
+<h4>Contenido principal:</h4>
+<ul>
+  <li>Diseño de intervenciones sistémicas seguras</li>
+  <li>Prototipado de nuevas estructuras de gobernanza</li>
+  <li>Modelos tokenómicos y contabilidad de valor (Timefounder)</li>
+</ul>
+<h4>Experiencia práctica:</h4>
+<ul>
+  <li>Implementación de una micro-intervención en tu entorno</li>
+  <li>Medición de impacto en flujos de valor</li>
+</ul>
 
-  <!-- Script para resaltar página activa -->
-  <script>
-    document.querySelectorAll('.menu-link').forEach(link => {
-      const currentPath = window.location.pathname.split('/').pop();
-      const linkPath = new URL(link.href, window.location.origin).pathname.split('/').pop();
-      
-      if (currentPath === linkPath || (currentPath === '' && linkPath === 'index.html')) {
-        link.classList.add('text-primary', 'font-semibold', 'border-b-2', 'border-primary');
-      }
-    });
-  </script>
+<h3>Módulo 4: Sostenibilidad y Escalabilidad (Semanas 10-12)</h3>
+<p>Implementación + comunidad de práctica</p>
+<h4>Contenido principal:</h4>
+<ul>
+  <li>Estrategias de escalado orgánico</li>
+  <li>Comunidades de práctica y aprendizaje distribuido</li>
+  <li>Sostenibilidad sin dependencia de consultores</li>
+</ul>
+<h4>Experiencia práctica:</h4>
+<ul>
+  <li>Diseño de tu plan de sostenibilidad a 12 meses</li>
+  <li>Incorporación a la red de practicantes de Value Network Lab</li>
+</ul>
+
+<h2>Nuestra Metodología: Donde se Encuentran Todas las Disciplinas</h2>
+
+<h3>Aprendizaje Experiencial</h3>
+<p>Inspirado en Team Academy (Finlandia): 70% práctica real, 30% teoría. Aprendes haciendo, no escuchando.</p>
+
+<h3>Diagnóstico Riguroso</h3>
+<p>Combinamos VNA, arquetipos sistémicos y modelos de aprendizaje para revelar la verdadera arquitectura de tu organización.</p>
+
+<h3>Intervenciones Contextuales</h3>
+<p>Ningún "kit de transformación" prefabricado. Diseñamos intervenciones para tus patrones específicos y contexto único.</p>
+
+<h4>El ciclo de aprendizaje que aplicamos:</h4>
+<ul>
+  <li><strong>Observar</strong>: Diagnosticar el sistema real</li>
+  <li><strong>Reflexionar</strong>: Patrones y modelos mentales</li>
+  <li><strong>Teorizar</strong>: Conocimiento sistémico</li>
+  <li><strong>Experimentar</strong>: Intervenciones seguras</li>
+  <li><strong>Integrar</strong>: Nuevos hábitos colectivos</li>
+</ul>
+
+<h2>Casos de Aplicación por Sector</h2>
+
+<h3>Transformación Corporativa</h3>
+<p>Para grandes empresas con compartimentos estancos funcionales y complejidad operativa.</p>
+<blockquote>
+  "Descubrimos que la función de planificación era el 'heart beat' invisible que sostenía toda la cadena de suministro. Al fortalecer este rol, redujimos los retrasos un 40%."
+</blockquote>
+
+<h3>Psicología de Equipos y Grupos</h3>
+<p>Para profesionales que trabajan con dinámicas grupales complejas.</p>
+<blockquote>
+  "Aplicamos el modelo de Team Academy con equipos de alto rendimiento estancados. Al revelar las transacciones intangibles bloqueadas, recuperamos un 65% de la energía creativa perdida."
+</blockquote>
+
+<h3>Psicología Comunitaria y Desarrollo Social</h3>
+<p>Para ONGs, iniciativas comunitarias y transformación social.</p>
+<blockquote>
+  "Revelamos cómo un pequeño grupo de líderes informales sostenía toda la red comunitaria. Al fortalecer sus conexiones y visibilizar su rol, el proyecto pasó de 3 a 17 comunidades atendidas."
+</blockquote>
+
+<h3>Educación e Innovación</h3>
+<p>Para instituciones educativas y equipos de innovación.</p>
+<blockquote>
+  "Transformamos una escuela tradicional aplicando principios de Team Academy y VNA. El resultado: un 45% más de proyectos estudiantiles implementados en la comunidad real."
+</blockquote>
+
+<h2>Beneficios por Perfil Profesional</h2>
+
+<h3>Directivos y Líderes</h3>
+<ul>
+  <li>Visión sistémica para tomar decisiones estratégicas</li>
+  <li>Capacidad de detectar cuellos de botella invisibles</li>
+  <li>Herramientas para romper compartimentos estancos sin imponer cambios</li>
+</ul>
+
+<h3>Psicólogos de Equipos</h3>
+<ul>
+  <li>Diagnóstico preciso de dinámicas grupales</li>
+  <li>Intervenciones basadas en roles reales, no en jerarquías</li>
+  <li>Enfoque en transacciones intangibles que sostienen la cohesión</li>
+</ul>
+
+<h3>Agentes de Cambio Social</h3>
+<ul>
+  <li>Escalabilidad sin pérdida de esencia comunitaria</li>
+  <li>Gobernanza distribuida y justa</li>
+  <li>Contabilidad de valor para reconocer aportes invisibles</li>
+</ul>
+
+<h2>Voces de Transformación</h2>
+<blockquote>
+  "Como directora de transformación digital, había probado todas las metodologías. Sistemas Vivos fue la primera que me permitió ver realmente cómo fluía el valor en la organización. Recuperamos 4.2M€ en eficiencia en el primer año."
+</blockquote>
+<blockquote>
+  "Trabajo con equipos de alto rendimiento que estaban estancados. El diagnóstico con VNA reveló que el problema no era de personas, sino de transacciones intangibles bloqueadas. Hoy mis equipos tienen un 70% más de proyectos exitosos."
+</blockquote>
+<blockquote>
+  "En nuestra ONG, aplicar el modelo LEINN junto con el pensamiento sistémico nos permitió escalar nuestro impacto sin perder la esencia. Pasamos de atender 200 a 1,200 familias manteniendo la misma estructura básica."
+</blockquote>
+
+<div class="highlight">
+  <h3>¿Listo para transformar sistemas, no solo solucionar problemas?</h3>
+  <p>Agenda una conversación exploratoria sin compromiso. Descubriremos juntos cuál es el patrón sistémico que está limitando tu organización o comunidad.</p>
+  <p><strong>➡️ <a href="https://valuenetworklab.netlify.app/contacto">Solicita una propuesta personalizada</a></strong></p>
+</div>
+
+<h2>Preguntas Frecuentes</h2>
+
+<h4>¿Este programa es para mi organización, que es muy jerárquica y tradicional?</h4>
+<p>Sí, especialmente para organizaciones con estructuras tradicionales que sienten que sus iniciativas de transformación no calan. Comenzamos donde estás y avanzamos a tu ritmo, sin dogmas.</p>
+
+<h4>¿Cómo se diferencia de otros programas de pensamiento sistémico o VNA?</h4>
+<p>La diferencia está en la integración práctica de múltiples enfoques (VNA, Team Academy, LEINN, arquetipos de Senge) y en nuestro foco en resultados comerciales y sociales medibles, no solo en cambios culturales abstractos.</p>
+
+<h4>¿Puedo aplicar esto como profesional independiente (psicólogo, consultor)?</h4>
+<p>Absolutamente. Muchos de nuestros participantes son profesionales independientes que transforman su práctica con estas metodologías. Ofrecemos rutas específicas para consultores y coaches.</p>
+
+<h4>¿Necesito conocimientos previos de sistemas o VNA?</h4>
+<p>No. Diseñamos el programa para que sea accesible, partiendo de casos concretos y avanzando gradualmente. Lo único necesario es apertura al cambio y compromiso con la transformación.</p>
+
+<footer>
+  <p>Propuesta creada por el equipo de <a href="https://valuenetworklab.netlify.app/">Value Network Lab</a> — especialistas en Value Network Analysis, pensamiento sistémico y contabilidad de valor desde 2020.</p>
+  <p>“El valor no fluye por procesos… fluye por redes.”</p>
+</footer>
+
 </body>
 </html>
